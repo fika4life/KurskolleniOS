@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA3DEAE11AC963CE006F60AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */; };
+		BA3DEAE31AC963CE006F60AA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAE21AC963CE006F60AA /* FirstViewController.swift */; };
+		BA3DEAE51AC963CF006F60AA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAE41AC963CE006F60AA /* SecondViewController.swift */; };
+		BA3DEAE81AC963CF006F60AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3DEAE61AC963CF006F60AA /* Main.storyboard */; };
+		BA3DEAEA1AC963CF006F60AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3DEAE91AC963CF006F60AA /* Images.xcassets */; };
+		BA3DEAED1AC963CF006F60AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3DEAEB1AC963CF006F60AA /* LaunchScreen.xib */; };
+		BA3DEAF91AC963CF006F60AA /* KurskollenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA3DEAF31AC963CF006F60AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA3DEAD31AC963CE006F60AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA3DEADA1AC963CE006F60AA;
+			remoteInfo = Kurskollen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA3DEADB1AC963CE006F60AA /* Kurskollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kurskollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3DEADF1AC963CE006F60AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA3DEAE21AC963CE006F60AA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		BA3DEAE41AC963CE006F60AA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BA3DEAE71AC963CF006F60AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA3DEAE91AC963CF006F60AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA3DEAEC1AC963CF006F60AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BA3DEAF21AC963CF006F60AA /* KurskollenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KurskollenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3DEAF71AC963CF006F60AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurskollenTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA3DEAD81AC963CE006F60AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA3DEAEF1AC963CF006F60AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA3DEAD21AC963CE006F60AA = {
+			isa = PBXGroup;
+			children = (
+				BA3DEADD1AC963CE006F60AA /* Kurskollen */,
+				BA3DEAF51AC963CF006F60AA /* KurskollenTests */,
+				BA3DEADC1AC963CE006F60AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA3DEADC1AC963CE006F60AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA3DEADB1AC963CE006F60AA /* Kurskollen.app */,
+				BA3DEAF21AC963CF006F60AA /* KurskollenTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA3DEADD1AC963CE006F60AA /* Kurskollen */ = {
+			isa = PBXGroup;
+			children = (
+				BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */,
+				BA3DEAE21AC963CE006F60AA /* FirstViewController.swift */,
+				BA3DEAE41AC963CE006F60AA /* SecondViewController.swift */,
+				BA3DEAE61AC963CF006F60AA /* Main.storyboard */,
+				BA3DEAE91AC963CF006F60AA /* Images.xcassets */,
+				BA3DEAEB1AC963CF006F60AA /* LaunchScreen.xib */,
+				BA3DEADE1AC963CE006F60AA /* Supporting Files */,
+			);
+			path = Kurskollen;
+			sourceTree = "<group>";
+		};
+		BA3DEADE1AC963CE006F60AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA3DEADF1AC963CE006F60AA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA3DEAF51AC963CF006F60AA /* KurskollenTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */,
+				BA3DEAF61AC963CF006F60AA /* Supporting Files */,
+			);
+			path = KurskollenTests;
+			sourceTree = "<group>";
+		};
+		BA3DEAF61AC963CF006F60AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA3DEAF71AC963CF006F60AA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA3DEADA1AC963CE006F60AA /* Kurskollen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA3DEAFC1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "Kurskollen" */;
+			buildPhases = (
+				BA3DEAD71AC963CE006F60AA /* Sources */,
+				BA3DEAD81AC963CE006F60AA /* Frameworks */,
+				BA3DEAD91AC963CE006F60AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kurskollen;
+			productName = Kurskollen;
+			productReference = BA3DEADB1AC963CE006F60AA /* Kurskollen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA3DEAF11AC963CF006F60AA /* KurskollenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA3DEAFF1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "KurskollenTests" */;
+			buildPhases = (
+				BA3DEAEE1AC963CF006F60AA /* Sources */,
+				BA3DEAEF1AC963CF006F60AA /* Frameworks */,
+				BA3DEAF01AC963CF006F60AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA3DEAF41AC963CF006F60AA /* PBXTargetDependency */,
+			);
+			name = KurskollenTests;
+			productName = KurskollenTests;
+			productReference = BA3DEAF21AC963CF006F60AA /* KurskollenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA3DEAD31AC963CE006F60AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Fiona;
+				TargetAttributes = {
+					BA3DEADA1AC963CE006F60AA = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					BA3DEAF11AC963CF006F60AA = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = BA3DEADA1AC963CE006F60AA;
+					};
+				};
+			};
+			buildConfigurationList = BA3DEAD61AC963CE006F60AA /* Build configuration list for PBXProject "Kurskollen" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA3DEAD21AC963CE006F60AA;
+			productRefGroup = BA3DEADC1AC963CE006F60AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA3DEADA1AC963CE006F60AA /* Kurskollen */,
+				BA3DEAF11AC963CF006F60AA /* KurskollenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA3DEAD91AC963CE006F60AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA3DEAE81AC963CF006F60AA /* Main.storyboard in Resources */,
+				BA3DEAED1AC963CF006F60AA /* LaunchScreen.xib in Resources */,
+				BA3DEAEA1AC963CF006F60AA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA3DEAF01AC963CF006F60AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA3DEAD71AC963CE006F60AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA3DEAE51AC963CF006F60AA /* SecondViewController.swift in Sources */,
+				BA3DEAE11AC963CE006F60AA /* AppDelegate.swift in Sources */,
+				BA3DEAE31AC963CE006F60AA /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA3DEAEE1AC963CF006F60AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA3DEAF91AC963CF006F60AA /* KurskollenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA3DEAF41AC963CF006F60AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA3DEADA1AC963CE006F60AA /* Kurskollen */;
+			targetProxy = BA3DEAF31AC963CF006F60AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA3DEAE61AC963CF006F60AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA3DEAE71AC963CF006F60AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA3DEAEB1AC963CF006F60AA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA3DEAEC1AC963CF006F60AA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA3DEAFA1AC963CF006F60AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA3DEAFB1AC963CF006F60AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA3DEAFD1AC963CF006F60AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Kurskollen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BA3DEAFE1AC963CF006F60AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Kurskollen/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BA3DEB001AC963CF006F60AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KurskollenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kurskollen.app/Kurskollen";
+			};
+			name = Debug;
+		};
+		BA3DEB011AC963CF006F60AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KurskollenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kurskollen.app/Kurskollen";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA3DEAD61AC963CE006F60AA /* Build configuration list for PBXProject "Kurskollen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA3DEAFA1AC963CF006F60AA /* Debug */,
+				BA3DEAFB1AC963CF006F60AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA3DEAFC1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "Kurskollen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA3DEAFD1AC963CF006F60AA /* Debug */,
+				BA3DEAFE1AC963CF006F60AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BA3DEAFF1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "KurskollenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA3DEB001AC963CF006F60AA /* Debug */,
+				BA3DEB011AC963CF006F60AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA3DEAD31AC963CE006F60AA /* Project object */;
+}
