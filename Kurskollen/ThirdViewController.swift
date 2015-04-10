@@ -10,6 +10,15 @@ import UIKit
 
 class ThirdViewController: UIViewController {
 
+   
+    @IBOutlet weak var inputText: UITextField!
+    
+    @IBOutlet weak var outputLabel: UILabel!
+    
+    @IBAction func changeLabel(sender: AnyObject) {
+        outputLabel.text = inputText.text
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

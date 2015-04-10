@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BA3DEADA1AC963CE006F60AA"
-               BuildableName = "Kurskollen.app"
-               BlueprintName = "Kurskollen"
-               ReferencedContainer = "container:Kurskollen.xcodeproj">
+               BuildableName = "KurskolleniOS.app"
+               BlueprintName = "KurskolleniOS"
+               ReferencedContainer = "container:KurskolleniOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BA3DEAF11AC963CF006F60AA"
-               BuildableName = "KurskollenTests.xctest"
-               BlueprintName = "KurskollenTests"
-               ReferencedContainer = "container:Kurskollen.xcodeproj">
+               BuildableName = "KurskolleniOSTests.xctest"
+               BlueprintName = "KurskolleniOSTests"
+               ReferencedContainer = "container:KurskolleniOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BA3DEAF11AC963CF006F60AA"
-               BuildableName = "KurskollenTests.xctest"
-               BlueprintName = "KurskollenTests"
-               ReferencedContainer = "container:Kurskollen.xcodeproj">
+               BuildableName = "KurskolleniOSTests.xctest"
+               BlueprintName = "KurskolleniOSTests"
+               ReferencedContainer = "container:KurskolleniOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BA3DEADA1AC963CE006F60AA"
-            BuildableName = "Kurskollen.app"
-            BlueprintName = "Kurskollen"
-            ReferencedContainer = "container:Kurskollen.xcodeproj">
+            BuildableName = "KurskolleniOS.app"
+            BlueprintName = "KurskolleniOS"
+            ReferencedContainer = "container:KurskolleniOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BA3DEADA1AC963CE006F60AA"
-            BuildableName = "Kurskollen.app"
-            BlueprintName = "Kurskollen"
-            ReferencedContainer = "container:Kurskollen.xcodeproj">
+            BuildableName = "KurskolleniOS.app"
+            BlueprintName = "KurskolleniOS"
+            ReferencedContainer = "container:KurskolleniOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BA3DEADA1AC963CE006F60AA"
-            BuildableName = "Kurskollen.app"
-            BlueprintName = "Kurskollen"
-            ReferencedContainer = "container:Kurskollen.xcodeproj">
+            BuildableName = "KurskolleniOS.app"
+            BlueprintName = "KurskolleniOS"
+            ReferencedContainer = "container:KurskolleniOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

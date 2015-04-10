@@ -1,0 +1,6 @@
+framework module Pods_Kurskollen {
+  umbrella header "Pods-Kurskollen-umbrella.h"
+
+  export *
+  module * { export * }
+}

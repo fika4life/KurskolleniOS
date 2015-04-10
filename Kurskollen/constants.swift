@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct globalConstants {
+    static let URL = "http://kurskollenapp.appspot.com/"
+    
+    static let loginSessionMemoryKey = "loginsession"
+}
