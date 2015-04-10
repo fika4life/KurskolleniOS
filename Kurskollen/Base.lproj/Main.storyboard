@@ -237,7 +237,7 @@
         <!--Sök kurs-->
         <scene sceneID="IUx-By-lPN">
             <objects>
-                <viewController title="Sök kurs" id="diM-Bb-HnS" sceneMemberID="viewController">
+                <viewController title="Sök kurs" id="diM-Bb-HnS" customClass="SearchViewController" customModule="Kurskollen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w6f-tK-pxy"/>
                         <viewControllerLayoutGuide type="bottom" id="HNc-EJ-gsb"/>
@@ -316,6 +316,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="Fgk-gC-kNP"/>
+                    <connections>
+                        <outlet property="courseField" destination="isa-hn-TcR" id="TBO-yt-Ofj"/>
+                        <outlet property="distanceField" destination="8WS-XP-Uen" id="7Ue-Os-Nuh"/>
+                        <outlet property="teacherField" destination="Fr1-Fg-HQx" id="uIp-jC-D7f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8T-3p-Xzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
