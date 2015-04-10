@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EDStarRating
 
 class ThirdViewController: UIViewController, UITableViewDataSource {
     
@@ -29,10 +30,12 @@ class ThirdViewController: UIViewController, UITableViewDataSource {
         let (course, school, rating) = savedCourses[indexPath.row]
         cell.textLabel?.text  = course
         cell.detailTextLabel?.text = school
+        cell.detailTextLabel?.text = rating
         
         //retreive an image
         var myImage = UIImage(named: "CellIcon")
         cell.imageView?.image = myImage
+        
         return cell
     }
     override func viewDidLoad() {

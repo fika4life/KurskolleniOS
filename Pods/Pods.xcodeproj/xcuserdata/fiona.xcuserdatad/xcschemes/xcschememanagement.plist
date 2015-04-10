@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Kurskollen-EDStarRating.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Kurskollen-SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4D41B41A891B5CBEE0F333CB</key>
+		<key>4096EACCBAFA446396D7E727</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE7A1C49600B4A2DC7820345</key>
+		<key>5F54FEAC9502DBF1A3333194</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9913A4CB1E25CBD76D67DBF</key>
+		<key>8164E25A7FFBEE1074999615</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E09A32EACC82E6AC6EC77E47</key>
 		<dict>
 			<key>primary</key>
 			<true/>

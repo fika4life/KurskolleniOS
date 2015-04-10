@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E9913A4CB1E25CBD76D67DBF"
+               BlueprintIdentifier = "5F54FEAC9502DBF1A3333194"
                BuildableName = "Pods_Kurskollen.framework"
                BlueprintName = "Pods-Kurskollen"
                ReferencedContainer = "container:Pods.xcodeproj">
