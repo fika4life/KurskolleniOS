@@ -16,6 +16,9 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var distanceField: UISwitch!
     
+    @IBAction func Search(sender: AnyObject) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

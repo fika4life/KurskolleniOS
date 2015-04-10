@@ -249,7 +249,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lju-8h-JJn">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Sök kurs" id="qC5-7q-z64"/>
+                                    <navigationItem title="Sök kurs" id="qC5-7q-z64">
+                                        <barButtonItem key="rightBarButtonItem" title="Sök" id="2jL-eJ-8ML">
+                                            <connections>
+                                                <action selector="Search:" destination="diM-Bb-HnS" id="peW-qq-bcs"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kurs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E20-Kw-eoO">
