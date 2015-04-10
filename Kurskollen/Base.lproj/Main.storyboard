@@ -107,7 +107,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tiw-2l-ZjB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tiw-2l-ZjB">
                                 <rect key="frame" x="42" y="471" width="542" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -176,7 +176,6 @@
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SecondViewController" title="Second" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Kurskollen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
@@ -236,7 +235,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46i-RM-4Il">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46i-RM-4Il">
                                 <rect key="frame" x="41" y="296" width="291" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -272,13 +271,14 @@
                         <outlet property="alert" destination="46i-RM-4Il" id="IUx-kg-pzY"/>
                         <outlet property="emailField" destination="9cd-cl-wmW" id="P0p-kC-wTm"/>
                         <outlet property="passwordField" destination="GTK-R5-P6s" id="nah-uf-SMD"/>
-                        <segue destination="diM-Bb-HnS" kind="show" identifier="toSearch" id="x49-G9-Kjv"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="toSearch" id="yUD-Du-Kq5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="IUx-By-lPN">
             <objects>
                 <viewController id="diM-Bb-HnS" sceneMemberID="viewController">
@@ -289,9 +289,17 @@
                     <view key="view" contentMode="scaleToFill" id="u3b-zx-GiL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBj-6T-GC6">
+                                <rect key="frame" x="215" y="153" width="233" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Fgk-gC-kNP"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Fgk-gC-kNP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8T-3p-Xzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -309,13 +317,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="diM-Bb-HnS" kind="relationship" relationship="viewControllers" id="fRH-Cn-ey7"/>
+                        <segue destination="G9T-HL-4wm" kind="relationship" relationship="viewControllers" id="fPb-5F-I9C"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-28" y="28"/>
         </scene>
-        <!--Item-->
+        <!--Third View Controller-->
         <scene sceneID="56t-RO-v4m">
             <objects>
                 <viewController id="G9T-HL-4wm" customClass="ThirdViewController" customModule="Kurskollen" customModuleProvider="target" sceneMemberID="viewController">
@@ -364,7 +373,7 @@
                             <constraint firstItem="h4s-oh-gV7" firstAttribute="centerX" secondItem="0iu-l7-0Hs" secondAttribute="centerX" id="ywC-RA-Hqm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="yP2-gh-quK"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="yP2-gh-quK"/>
                     <connections>
                         <outlet property="inputText" destination="127-6i-L66" id="R8T-0x-bkn"/>
                         <outlet property="outputLabel" destination="0iu-l7-0Hs" id="4WK-LQ-d1J"/>
@@ -378,7 +387,4 @@
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="x49-G9-Kjv"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -35,7 +35,7 @@
 		79AF4F35D3F87F3FC66BEA7F /* Pods-Kurskollen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurskollen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kurskollen/Pods-Kurskollen.debug.xcconfig"; sourceTree = "<group>"; };
 		BA0C000B1AD57B2D00F59EFD /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BA3DEADB1AC963CE006F60AA /* KurskolleniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KurskolleniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3DEADB1AC963CE006F60AA /* Kurskollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kurskollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3DEADF1AC963CE006F60AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA3DEAE21AC963CE006F60AA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		BA3DEAE71AC963CF006F60AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA3DEAE91AC963CF006F60AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BA3DEAEC1AC963CF006F60AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		BA3DEAF21AC963CF006F60AA /* KurskolleniOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KurskolleniOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3DEAF21AC963CF006F60AA /* KurskollenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KurskollenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3DEAF71AC963CF006F60AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurskollenTests.swift; sourceTree = "<group>"; };
 		BA3DEB021AC98658006F60AA /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 		BA3DEADC1AC963CE006F60AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA3DEADB1AC963CE006F60AA /* KurskolleniOS.app */,
-				BA3DEAF21AC963CF006F60AA /* KurskolleniOSTests.xctest */,
+				BA3DEADB1AC963CE006F60AA /* Kurskollen.app */,
+				BA3DEAF21AC963CF006F60AA /* KurskollenTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,9 +151,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BA3DEADA1AC963CE006F60AA /* KurskolleniOS */ = {
+		BA3DEADA1AC963CE006F60AA /* Kurskollen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA3DEAFC1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "KurskolleniOS" */;
+			buildConfigurationList = BA3DEAFC1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "Kurskollen" */;
 			buildPhases = (
 				C7D71E385BBE69417B9E3656 /* Check Pods Manifest.lock */,
 				BA3DEAD71AC963CE006F60AA /* Sources */,
@@ -166,14 +166,14 @@
 			);
 			dependencies = (
 			);
-			name = KurskolleniOS;
+			name = Kurskollen;
 			productName = Kurskollen;
-			productReference = BA3DEADB1AC963CE006F60AA /* KurskolleniOS.app */;
+			productReference = BA3DEADB1AC963CE006F60AA /* Kurskollen.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BA3DEAF11AC963CF006F60AA /* KurskolleniOSTests */ = {
+		BA3DEAF11AC963CF006F60AA /* KurskollenTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BA3DEAFF1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "KurskolleniOSTests" */;
+			buildConfigurationList = BA3DEAFF1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "KurskollenTests" */;
 			buildPhases = (
 				BA3DEAEE1AC963CF006F60AA /* Sources */,
 				BA3DEAEF1AC963CF006F60AA /* Frameworks */,
@@ -184,9 +184,9 @@
 			dependencies = (
 				BA3DEAF41AC963CF006F60AA /* PBXTargetDependency */,
 			);
-			name = KurskolleniOSTests;
+			name = KurskollenTests;
 			productName = KurskollenTests;
-			productReference = BA3DEAF21AC963CF006F60AA /* KurskolleniOSTests.xctest */;
+			productReference = BA3DEAF21AC963CF006F60AA /* KurskollenTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BA3DEAD61AC963CE006F60AA /* Build configuration list for PBXProject "KurskolleniOS" */;
+			buildConfigurationList = BA3DEAD61AC963CE006F60AA /* Build configuration list for PBXProject "Kurskollen" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -220,8 +220,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA3DEADA1AC963CE006F60AA /* KurskolleniOS */,
-				BA3DEAF11AC963CF006F60AA /* KurskolleniOSTests */,
+				BA3DEADA1AC963CE006F60AA /* Kurskollen */,
+				BA3DEAF11AC963CF006F60AA /* KurskollenTests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,7 +321,7 @@
 /* Begin PBXTargetDependency section */
 		BA3DEAF41AC963CF006F60AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BA3DEADA1AC963CE006F60AA /* KurskolleniOS */;
+			target = BA3DEADA1AC963CE006F60AA /* Kurskollen */;
 			targetProxy = BA3DEAF31AC963CF006F60AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -430,7 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kurskollen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = KurskolleniOS;
+				PRODUCT_NAME = Kurskollen;
 			};
 			name = Debug;
 		};
@@ -441,7 +441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Kurskollen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = KurskolleniOS;
+				PRODUCT_NAME = Kurskollen;
 			};
 			name = Release;
 		};
@@ -459,7 +459,7 @@
 				);
 				INFOPLIST_FILE = KurskollenTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = KurskolleniOSTests;
+				PRODUCT_NAME = KurskollenTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kurskollen.app/Kurskollen";
 			};
 			name = Debug;
@@ -474,7 +474,7 @@
 				);
 				INFOPLIST_FILE = KurskollenTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = KurskolleniOSTests;
+				PRODUCT_NAME = KurskollenTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kurskollen.app/Kurskollen";
 			};
 			name = Release;
@@ -482,7 +482,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BA3DEAD61AC963CE006F60AA /* Build configuration list for PBXProject "KurskolleniOS" */ = {
+		BA3DEAD61AC963CE006F60AA /* Build configuration list for PBXProject "Kurskollen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA3DEAFA1AC963CF006F60AA /* Debug */,
@@ -491,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA3DEAFC1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "KurskolleniOS" */ = {
+		BA3DEAFC1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "Kurskollen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA3DEAFD1AC963CF006F60AA /* Debug */,
@@ -500,7 +500,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA3DEAFF1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "KurskolleniOSTests" */ = {
+		BA3DEAFF1AC963CF006F60AA /* Build configuration list for PBXNativeTarget "KurskollenTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BA3DEB001AC963CF006F60AA /* Debug */,
