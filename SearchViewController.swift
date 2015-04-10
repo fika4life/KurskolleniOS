@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class SearchViewController: UIViewController {
 
@@ -20,18 +22,29 @@ class SearchViewController: UIViewController {
         let course = courseField.text
         let teacher = teacherField.text
         let distance = distanceField.on
-        let distanceString : String = distance ? "1" : "0"
+        let distanceString = distance ? "1" : "0"
+        
+        var parameters = [String: String]()
+        if(course != ""){
+            parameters["name"] = course
+        }
+        if(teacher != ""){
+            parameters["teacher"] = teacher
+        }
+        parameters["teacher"] = distanceString
 
         Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: ["name" : course, "schoolid": "1", "teacher": teacher, "online": distanceString])
                     .validate()
                     .responseJSON{(request, response, data, error) in
                         self.view.endEditing(true)
-                        if(error != nill){
-                            //alert.text = ""
+                        if(error != nil){
+                            var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
+                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                            self.presentViewController(alert, animated: true, completion: nil)
                         }
                         else{
                             println(data)
-                            JSON(data)
+                            JSON(data!)
                         }
                         
                         
