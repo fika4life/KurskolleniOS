@@ -8,17 +8,24 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class ThirdViewController: UIViewController, UITableViewDataSource {
+    
+    let savedCourses = [
+    ("Test"),()]
 
-   
-    @IBOutlet weak var inputText: UITextField!
-    
-    @IBOutlet weak var outputLabel: UILabel!
-    
-    @IBAction func changeLabel(sender: AnyObject) {
-        outputLabel.text = inputText.text
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = UITableViewCell()
+        cell.textLabel.text = "Hello";
+        return cell
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
