@@ -25,12 +25,15 @@ class SearchViewController: UIViewController {
         Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: ["name" : course, "schoolid": "1", "teacher": teacher, "online": distanceString])
                     .validate()
                     .responseJSON{(request, response, data, error) in
+                        self.view.endEditing(true)
                         if(error != nill){
                             //alert.text = ""
                         }
-                        self.view.endEditing(true)
-                        println(data)
-                        JSON(data)
+                        else{
+                            println(data)
+                            JSON(data)
+                        }
+                        
                         
                     }
         
