@@ -17,8 +17,25 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var distanceField: UISwitch!
     
     @IBAction func Search(sender: AnyObject) {
+        let course = courseField.text
+        let teacher = teacherField.text
+        let distance = distanceField.on
+        let distanceString : String = distance ? "1" : "0"
+
+        Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: ["name" : course, "schoolid": "1", "teacher": teacher, "online": distanceString])
+                    .validate()
+                    .responseJSON{(request, response, data, error) in
+                        if(error != nill){
+                            //alert.text = ""
+                        }
+                        self.view.endEditing(true)
+                        println(data)
+                        JSON(data)
+                        
+                    }
         
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
