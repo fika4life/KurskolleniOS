@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0BD58433-DE89-4117-B766-B004376F2398</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Kurskollen</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CA89F15DF013C5963716AFC92413872F90F2EFDE</key>
+		<string>https://github.com/fika4life/KurskolleniOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Kurskollen.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CA89F15DF013C5963716AFC92413872F90F2EFDE</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/fika4life/KurskolleniOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CA89F15DF013C5963716AFC92413872F90F2EFDE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CA89F15DF013C5963716AFC92413872F90F2EFDE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KurskolleniOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
