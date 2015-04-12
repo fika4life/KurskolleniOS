@@ -51,6 +51,11 @@ class SearchViewController: UIViewController {
                     }
         
     }
+    //hides keyboard if user presses anywhere else on screen
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
