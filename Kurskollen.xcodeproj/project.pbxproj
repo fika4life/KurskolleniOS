@@ -50,7 +50,7 @@
 		BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurskollenTests.swift; sourceTree = "<group>"; };
 		BA3DEB021AC98658006F60AA /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
-		BADB81551AD7DE6200E77BDC /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
+		BADB81551AD7DE6200E77BDC /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E1ACABD93DD6BE9D33ABAF30 /* Pods-Kurskollen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurskollen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kurskollen/Pods-Kurskollen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

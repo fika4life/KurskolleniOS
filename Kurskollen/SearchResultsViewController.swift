@@ -7,13 +7,61 @@
 //
 
 import UIKit
+import Alamofire
 
 class SearchResultsViewController: UIViewController {
+    
+    var parameters: [String: String]
+    
+    let savedCourses = [
+        ("Databaser", "KTH", "***"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****")]
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return savedCourses.count
+        
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        
+        let (course, school, rating) = savedCourses[indexPath.row]
+        cell.textLabel?.text  = course
+        cell.detailTextLabel?.text = school
+        cell.detailTextLabel?.text = rating
+        
+        //retreive an image
+        var myImage = UIImage(named: "CellIcon")
+        cell.imageView?.image = myImage
+        
+        return cell
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: self.parameters)
+            .validate()
+            .responseJSON{(request, response, data, error) in
+                self.view.endEditing(true)
+                if(error != nil){
+                    var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+                else{
+                    println(data)
+                    self.jsonData = JSON(data!)
+                }
+                
+                
+        }
     }
 
     override func didReceiveMemoryWarning() {

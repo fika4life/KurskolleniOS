@@ -39,22 +39,7 @@ class SearchViewController: UIViewController {
         }
         parameters["teacher"] = distanceString
 
-        Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: ["name" : course, "schoolid": "1", "teacher": teacher, "online": dizstanceString])
-                    .validate()
-                    .responseJSON{(request, response, data, error) in
-                        self.view.endEditing(true)
-                        if(error != nil){
-                            var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
-                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-                            self.presentViewController(alert, animated: true, completion: nil)
-                        }
-                        else{
-                            println(data)
-                            self.jsonData = JSON(data!)
-                        }
-                        
-                        
-                    }
+       
         
     }
     
@@ -64,6 +49,7 @@ class SearchViewController: UIViewController {
             //svc.jsonData = self.jsonData
             
         }
+    }
     //hides keyboard if user presses anywhere else on screen
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
