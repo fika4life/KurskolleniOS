@@ -36,7 +36,7 @@
 		020ED6730B9820CF0E218E28 /* Pods_Kurskollen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kurskollen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AF4F35D3F87F3FC66BEA7F /* Pods-Kurskollen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurskollen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kurskollen/Pods-Kurskollen.debug.xcconfig"; sourceTree = "<group>"; };
 		BA0C000B1AD57B2D00F59EFD /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
-		BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA3DEADB1AC963CE006F60AA /* Kurskollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kurskollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3DEADF1AC963CE006F60AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
