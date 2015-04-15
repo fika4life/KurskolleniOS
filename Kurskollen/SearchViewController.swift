@@ -46,9 +46,15 @@ class SearchViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "showSearchResults") {
+        println("prepareForSegue has been prepared")
+        println(segue.identifier)
+        if (segue.identifier == "toSearchResults") {
             var svc = segue.destinationViewController as SearchResultsViewController;
             svc.parameters = self.parameters
+            println("IN the if statement")
+            
+            
+            
             
         }
     }

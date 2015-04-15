@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class SearchResultsViewController: UIViewController, UITableViewDataSource{
 
@@ -46,6 +47,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        println(self.parameters)
 
         // Do any additional setup after loading the view.
         Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: self.parameters)
@@ -59,7 +61,8 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
                 }
                 else{
                     println(data)
-                    self.jsonData = JSON(data!)
+                    var jsonData = JSON(data!)
+                    println(jsonData)
                 }
                 
                 
