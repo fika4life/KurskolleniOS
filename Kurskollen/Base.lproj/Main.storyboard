@@ -246,18 +246,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lju-8h-JJn">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Sök kurs" id="qC5-7q-z64">
-                                        <barButtonItem key="rightBarButtonItem" title="Sök" id="2jL-eJ-8ML">
-                                            <connections>
-                                                <action selector="Search:" destination="diM-Bb-HnS" id="peW-qq-bcs"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kurs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E20-Kw-eoO">
                                 <rect key="frame" x="282" y="111" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -298,6 +286,19 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8WS-XP-Uen">
                                 <rect key="frame" x="276" y="419" width="51" height="31"/>
                             </switch>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lju-8h-JJn">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Sök kurs" id="qC5-7q-z64">
+                                        <barButtonItem key="rightBarButtonItem" title="Sök" id="2jL-eJ-8ML">
+                                            <connections>
+                                                <action selector="Search:" destination="diM-Bb-HnS" id="peW-qq-bcs"/>
+                                                <segue destination="El0-DX-8TX" kind="show" identifier="SearchResults" id="UaU-VC-aI7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -331,6 +332,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8T-3p-Xzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="629" y="1150"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oLI-vw-96Z">
+            <objects>
+                <viewController id="El0-DX-8TX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AK4-Sq-chV"/>
+                        <viewControllerLayoutGuide type="bottom" id="UUH-b6-iB0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BXW-hZ-dai">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FtG-Ef-eIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1341" y="1150"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
