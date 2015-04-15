@@ -32,14 +32,14 @@ class SearchViewController: UIViewController {
         
         
         if(course != ""){
-            parameters["name"] = course
+            self.parameters["name"] = course
         }
         if(teacher != ""){
-            parameters["teacher"] = teacher
+            self.parameters["teacher"] = teacher
         }
-        parameters["schoolid"] = "1"
+        self.parameters["schoolid"] = "1"
         
-        parameters["teacher"] = distanceString
+        self.parameters["teacher"] = distanceString
 
        
         
