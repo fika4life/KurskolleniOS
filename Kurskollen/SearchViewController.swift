@@ -18,7 +18,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var distanceField: UISwitch!
     
-    var jsonData : JSON?
+    var parameters = [String: String]()
+    
     
     
     
@@ -30,40 +31,27 @@ class SearchViewController: UIViewController {
         
         
         
-        var parameters = [String: String]()
         if(course != ""){
             parameters["name"] = course
         }
         if(teacher != ""){
             parameters["teacher"] = teacher
         }
+        parameters["schoolid"] = "1"
+        
         parameters["teacher"] = distanceString
-
-        Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: ["name" : course, "schoolid": "1", "teacher": teacher, "online": dizstanceString])
-                    .validate()
-                    .responseJSON{(request, response, data, error) in
-                        self.view.endEditing(true)
-                        if(error != nil){
-                            var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
-                            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-                            self.presentViewController(alert, animated: true, completion: nil)
-                        }
-                        else{
-                            println(data)
-                            self.jsonData = JSON(data!)
-                        }
-                        
-                        
-                    }
         
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "segueTest") {
-            //var svc = segue.destinationViewController as ListViewControler;
-            //svc.jsonData = self.jsonData
+        if (segue.identifier == "showSearchResults") {
+            var svc = segue.destinationViewController as SeachResultsViewController;
+            svc.parameters = self.parameters
             
         }
+    }
+    
+    
     //hides keyboard if user presses anywhere else on screen
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
