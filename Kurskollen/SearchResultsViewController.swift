@@ -34,6 +34,12 @@ class SearchResultsViewController: UIViewController {
         cell.detailTextLabel?.text = school
         cell.detailTextLabel?.text = rating
         
+        let button   = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        button.frame = CGRectMake(100, 100, 100, 50)
+        button.backgroundColor = UIColor.greenColor()
+        button.setTitle("Test Button", forState: UIControlState.Normal)
+        cell.addSubview(button)
+        
         //retreive an image
         var myImage = UIImage(named: "CellIcon")
         cell.imageView?.image = myImage
