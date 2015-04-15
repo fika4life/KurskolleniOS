@@ -18,7 +18,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var distanceField: UISwitch!
     
-    var jsonData : JSON?
+    var parameters = [String: String]()
+    
     
     
     
@@ -30,13 +31,14 @@ class SearchViewController: UIViewController {
         
         
         
-        var parameters = [String: String]()
         if(course != ""){
             parameters["name"] = course
         }
         if(teacher != ""){
             parameters["teacher"] = teacher
         }
+        parameters["schoolid"] = "1"
+        
         parameters["teacher"] = distanceString
 
        
@@ -44,9 +46,9 @@ class SearchViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "segueTest") {
-            //var svc = segue.destinationViewController as ListViewControler;
-            //svc.jsonData = self.jsonData
+        if (segue.identifier == "showSearchResults") {
+            var svc = segue.destinationViewController as SeachResultsViewController;
+            svc.parameters = self.parameters
             
         }
     }
