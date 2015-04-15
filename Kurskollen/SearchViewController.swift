@@ -40,19 +40,17 @@ class SearchViewController: UIViewController {
         self.parameters["schoolid"] = "1"
         
         self.parameters["teacher"] = distanceString
-
-       
+        println("getting parameters")
+        self.performSegueWithIdentifier("toSearchResults", sender: self)
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        println("prepareForSegue has been prepared")
-        println(segue.identifier)
-        if (segue.identifier == "toSearchResults") {
-            var svc = segue.destinationViewController as SearchResultsViewController;
-            let svc = navigationController.topViewController as SearchViewController
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject!) {
+        
+        if (segue!.identifier == "toSearchResults") {
+            var svc = segue!.destinationViewController as SearchResultsViewController;
             svc.parameters = self.parameters
-            println("IN the if statement")
+            
             
             
             

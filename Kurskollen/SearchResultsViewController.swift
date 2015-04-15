@@ -10,9 +10,11 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchResultsViewController: UIViewController, UITableViewDataSource{
+class SearchResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
+    @IBOutlet var tableView: UITableView!
 
+    
     var parameters:[String: String]? = [:]
     
     let savedCourses = [
@@ -22,6 +24,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
         return 1
     }
     
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return savedCourses.count
         
@@ -29,24 +32,24 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell2", forIndexPath: indexPath) as UITableViewCell
         
         let (course, school, rating) = savedCourses[indexPath.row]
         cell.textLabel?.text  = course
         cell.detailTextLabel?.text = school
         cell.detailTextLabel?.text = rating
-        
-        //retreive an image
-        var myImage = UIImage(named: "CellIcon")
-        cell.imageView?.image = myImage
-        
-        return cell
+    cell.subviews
+    
+                return cell
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        
         println(self.parameters)
 
         // Do any additional setup after loading the view.
@@ -64,9 +67,11 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
                     var jsonData = JSON(data!)
                     println(jsonData)
                 }
-                
-                
+            
         }
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
