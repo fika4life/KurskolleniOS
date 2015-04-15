@@ -17,6 +17,7 @@
 		BA3DEAED1AC963CF006F60AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3DEAEB1AC963CF006F60AA /* LaunchScreen.xib */; };
 		BA3DEAF91AC963CF006F60AA /* KurskollenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */; };
 		BA3DEB031AC98658006F60AA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEB021AC98658006F60AA /* ThirdViewController.swift */; };
+		BA7BE2821ADE88F60001FC2B /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */; };
 		BADB81561AD7DE6200E77BDC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB81551AD7DE6200E77BDC /* SearchViewController.swift */; };
 		E9571240099C45136F33497A /* Pods_Kurskollen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020ED6730B9820CF0E218E28 /* Pods_Kurskollen.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		BA3DEAF71AC963CF006F60AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurskollenTests.swift; sourceTree = "<group>"; };
 		BA3DEB021AC98658006F60AA /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		BADB81551AD7DE6200E77BDC /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E1ACABD93DD6BE9D33ABAF30 /* Pods-Kurskollen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurskollen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kurskollen/Pods-Kurskollen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 		BA3DEADD1AC963CE006F60AA /* Kurskollen */ = {
 			isa = PBXGroup;
 			children = (
+				BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */,
 				BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */,
 				BADB81551AD7DE6200E77BDC /* SearchViewController.swift */,
 				BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */,
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA0C000E1AD5A87F00F59EFD /* LoginViewController.swift in Sources */,
+				BA7BE2821ADE88F60001FC2B /* SearchResultsViewController.swift in Sources */,
 				BADB81561AD7DE6200E77BDC /* SearchViewController.swift in Sources */,
 				BA3DEAE51AC963CF006F60AA /* SecondViewController.swift in Sources */,
 				BA3DEAE11AC963CE006F60AA /* AppDelegate.swift in Sources */,

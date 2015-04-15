@@ -40,6 +40,8 @@ class SearchViewController: UIViewController {
         parameters["schoolid"] = "1"
         
         parameters["teacher"] = distanceString
+
+       
         
     }
     
@@ -50,8 +52,6 @@ class SearchViewController: UIViewController {
             
         }
     }
-    
-    
     //hides keyboard if user presses anywhere else on screen
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
