@@ -10,9 +10,9 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class SearchResultsViewController: UIViewController, UITableViewDataSource{
 
-    @IBOutlet var tableView: UITableView!
+    
 
     
     var parameters:[String: String]? = [:]
@@ -39,9 +39,18 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         cell.textLabel?.text  = course
         cell.detailTextLabel?.text = school
         cell.detailTextLabel?.text = rating
-    cell.subviews
-    
-                return cell
+        
+        let button   = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        button.frame = CGRectMake(100, 100, 100, 50)
+        button.backgroundColor = UIColor.greenColor()
+        button.setTitle("Test Button", forState: UIControlState.Normal)
+        cell.addSubview(button)
+        
+        //retreive an image
+        var myImage = UIImage(named: "CellIcon")
+        cell.imageView?.image = myImage
+        
+        return cell
     }
     
 
@@ -70,8 +79,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
             
         }
         
-        tableView.delegate = self
-        tableView.dataSource = self
+       
     }
 
     override func didReceiveMemoryWarning() {
