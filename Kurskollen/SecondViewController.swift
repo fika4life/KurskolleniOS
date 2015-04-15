@@ -41,7 +41,17 @@ class SecondViewController: UIViewController {
                     self.performSegueWithIdentifier("toSearch", sender: self)
                 }
         }
+        //on button click keyboard disappears
+        self.passwordField.resignFirstResponder()
+        self.emailField.resignFirstResponder()
     }
+    
+    //hides keyboard if user presses anywhere else on screen
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

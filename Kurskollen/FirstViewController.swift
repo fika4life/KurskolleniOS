@@ -106,7 +106,11 @@ class FirstViewController: UIViewController {
             confirmPasswordField.layer.borderWidth = 1.5
             confirmPasswordField.layer.cornerRadius = 5
         }
-        
+        //on button click keyboard disappears
+        self.emailField.resignFirstResponder()
+        self.usernameField.resignFirstResponder()
+        self.passwordField.resignFirstResponder()
+        self.confirmPasswordField.resignFirstResponder()
      
        
     }
@@ -128,6 +132,13 @@ class FirstViewController: UIViewController {
         }
         return false
     }
+    
+    //hides keyboard if user presses anywhere else on screen
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

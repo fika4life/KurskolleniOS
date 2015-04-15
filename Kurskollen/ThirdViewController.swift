@@ -7,25 +7,40 @@
 //
 
 import UIKit
+import EDStarRating
 
 class ThirdViewController: UIViewController, UITableViewDataSource {
     
     let savedCourses = [
-    ("Test"),()]
+    ("Databaser", "KTH", "***"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****")]
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return savedCourses.count
+        
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        cell.textLabel.text = "Hello";
+        var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        
+        let (course, school, rating) = savedCourses[indexPath.row]
+        cell.textLabel?.text  = course
+        cell.detailTextLabel?.text = school
+        cell.detailTextLabel?.text = rating
+        
+        //retreive an image
+        var myImage = UIImage(named: "CellIcon")
+        cell.imageView?.image = myImage
+        
         return cell
     }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
