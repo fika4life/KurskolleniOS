@@ -50,6 +50,7 @@ class SearchViewController: UIViewController {
         println(segue.identifier)
         if (segue.identifier == "toSearchResults") {
             var svc = segue.destinationViewController as SearchResultsViewController;
+            let svc = navigationController.topViewController as SearchViewController
             svc.parameters = self.parameters
             println("IN the if statement")
             
