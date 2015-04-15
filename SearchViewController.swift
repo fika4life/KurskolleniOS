@@ -18,11 +18,17 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var distanceField: UISwitch!
     
+    var jsonData : JSON?
+    
+    
+    
     @IBAction func Search(sender: AnyObject) {
         let course = courseField.text
         let teacher = teacherField.text
         let distance = distanceField.on
         let distanceString = distance ? "1" : "0"
+        
+        
         
         var parameters = [String: String]()
         if(course != ""){
@@ -33,7 +39,7 @@ class SearchViewController: UIViewController {
         }
         parameters["teacher"] = distanceString
 
-        Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: ["name" : course, "schoolid": "1", "teacher": teacher, "online": distanceString])
+        Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: ["name" : course, "schoolid": "1", "teacher": teacher, "online": dizstanceString])
                     .validate()
                     .responseJSON{(request, response, data, error) in
                         self.view.endEditing(true)
@@ -44,12 +50,20 @@ class SearchViewController: UIViewController {
                         }
                         else{
                             println(data)
-                            JSON(data!)
+                            self.jsonData = JSON(data!)
                         }
                         
                         
                     }
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "segueTest") {
+            //var svc = segue.destinationViewController as ListViewControler;
+            //svc.jsonData = self.jsonData
+            
+        }
     }
 
     override func viewDidLoad() {
