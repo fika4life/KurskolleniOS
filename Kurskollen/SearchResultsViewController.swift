@@ -9,9 +9,10 @@
 import UIKit
 import Alamofire
 
-class SearchResultsViewController: UIViewController {
-    
-    var parameters: [String: String]
+class SearchResultsViewController: UIViewController, UITableViewDataSource{
+
+
+    var parameters:[String: String]? = [:]
     
     let savedCourses = [
         ("Databaser", "KTH", "***"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****")]
@@ -25,6 +26,7 @@ class SearchResultsViewController: UIViewController {
         
         
     }
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell

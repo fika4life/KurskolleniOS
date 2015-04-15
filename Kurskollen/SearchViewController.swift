@@ -47,7 +47,7 @@ class SearchViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "showSearchResults") {
-            var svc = segue.destinationViewController as SeachResultsViewController;
+            var svc = segue.destinationViewController as SearchResultsViewController;
             svc.parameters = self.parameters
             
         }
