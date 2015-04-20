@@ -10,66 +10,30 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchResultsViewController:UITableViewController{
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-       
-        @IBOutlet weak var tableView: UITableView!
-        
-        var parameters:[String: String]? = [:]
-        
-        let savedCourses = [
-            ("Databaser", "KTH", "***"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****")]
-        
-        //register custom cell
-        var nib = UINib(nibName: "searchResultsTableCell", bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: "cellTest")
-        
-        
-        println(self.parameters)
-        
-        // Do any additional setup after loading the view.
-        Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: self.parameters)
-            .validate()
-            .responseJSON{(request, response, data, error) in
-                self.view.endEditing(true)
-                if(error != nil){
-                    var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
-                }
-                else{
-                    println(data)
-                    var jsonData = JSON(data!)
-                    println(jsonData)
-                }
-                
-        }
-        
-        
-    }
-    
-
+class SearchResultsViewController: UIViewController, UITableViewDataSource{
 
     
-   
+    @IBOutlet weak var tableView: UITableView!
+
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    var parameters:[String: String]? = [:]
+    
+    let savedCourses = [
+        ("Databaser", "KTH", "***"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****")]
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return savedCourses.count
         
         
     }
     
     
-   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("cellTest", forIndexPath: indexPath) as SearchResultsTableViewCell
         
         let (course, school, rating) = savedCourses[indexPath.row]
@@ -85,7 +49,7 @@ class SearchResultsViewController:UITableViewController{
        let vc =  segue.destinationViewController as SearchCourseDetailViewController
         if let indexPath =  self.tableView.indexPathForSelectedRow(){
             let selectedCell = savedCourses[indexPath.row]
-            println(selectedCell)
+            println()
         
             
             
@@ -95,7 +59,38 @@ class SearchResultsViewController:UITableViewController{
     }
     
 
-       override func didReceiveMemoryWarning() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //register custom cell
+        var nib = UINib(nibName: "searchResultsTableCell", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "cellTest")
+        
+        
+        println(self.parameters)
+
+        // Do any additional setup after loading the view.
+        Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: self.parameters)
+            .validate()
+            .responseJSON{(request, response, data, error) in
+                self.view.endEditing(true)
+                if(error != nil){
+                    var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+                else{
+                    println(data)
+                    var jsonData = JSON(data!)
+                    println(jsonData)
+                }
+            
+        }
+        
+       
+    }
+
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
