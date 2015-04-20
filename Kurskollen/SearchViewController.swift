@@ -18,6 +18,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var distanceField: UISwitch!
     
+    
+    
     var parameters = [String: String]()
     
     
@@ -28,6 +30,7 @@ class SearchViewController: UIViewController {
         let teacher = teacherField.text
         let onlineString = distanceField.on ? "1" : "0"
         
+        println("serarch k;rs")
         
         
         if(course != ""){
@@ -44,10 +47,11 @@ class SearchViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject!) {
-        
+        println("segue:" + segue!.identifier!)
         if (segue!.identifier == "toSearchResults") {
             var svc = segue!.destinationViewController as SearchResultsViewController;
             svc.parameters = self.parameters
+            println(self.parameters)
             
             
             
@@ -63,6 +67,8 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.distanceField.on = false
 
         // Do any additional setup after loading the view.
     }
