@@ -7,20 +7,23 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class SearchCourseDetailViewController: UIViewController, UITableViewDataSource {
     
     
-   
+    
     @IBOutlet weak var course: UILabel!
     @IBOutlet weak var school: UILabel!
     @IBOutlet weak var credits: UILabel!
+   
     @IBOutlet weak var online: UILabel!
     @IBOutlet weak var teacher: UIButton!
-    
     @IBOutlet weak var reviewTable: UITableView!
     
-    self.courseData:JSON?
+    var courseData:JSON?
+    
+
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -36,8 +39,8 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
         
         
         
-        let review :JSON = self.coursesData!["reviews"][indexPath.row]
-        cell.timeText.text  = review["user"].string
+        let review :JSON = self.courseData!["reviews"][indexPath.row]
+        cell.timeField.text  = review["user"].string
         cell.reviewText.text = review["text"].string
         return cell
     }
@@ -48,10 +51,10 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        course.text = courseData["name"].string
-        school.text = courseData["school"].string;
-        credits.text = String(courseData["credits"].int)
-        online.text = courseData["online"].boolean ? "Distans" : "Ortsbunden"
+        self.course.text = self.courseData!["name"].string
+        self.school.text = self.courseData!["school"].string;
+        self.credits.text = String(self.courseData!["credits"].intValue)
+        self.online.text = self.courseData!["online"].boolValue ? "Distans" : "Ortsbunden"
         
         
         // Do any additional setup after loading the view.

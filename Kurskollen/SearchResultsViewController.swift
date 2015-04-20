@@ -72,6 +72,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
        let vc =  segue.destinationViewController as SearchCourseDetailViewController
         if let indexPath =  self.tableView.indexPathForSelectedRow(){
             let selectedCell = self.courses![self.indexRow!]
+            vc.courseData = selectedCell
             
             
        }

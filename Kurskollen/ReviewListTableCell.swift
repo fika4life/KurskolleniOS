@@ -19,8 +19,8 @@ class ReviewListTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.headerText.numberOfLines = 0
-        self.headerText.sizeToFit()
+        self.reviewText.numberOfLines = 0
+        self.reviewText.sizeToFit()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
