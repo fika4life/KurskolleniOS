@@ -16,7 +16,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
 
     
-    var parameters:[String: String]? = [:]
+    var parameters:[String: String]?  
     
     var courses: JSON? = nil;
     
@@ -31,10 +31,12 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(courses == nil){
+        if(self.courses == nil){
             return 0
         }
-        return courses.count
+        println(self.courses!.count)
+        return self.courses!.count
+        
         
         
     }
@@ -43,11 +45,14 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("cellTest", forIndexPath: indexPath) as SearchResultsTableViewCell
     
-        let course = courses[indexPath.row]
+    
+    
+        let course :JSON = self.courses![indexPath.row]
         cell.course.text  = course["name"].string
-        cell.school.text = courses["school"].string
-        if let meanRating = courses["meanRating"].double {
-            cell.rating.text = meanRating
+        cell.school.text = course["school"].string
+        if let meanRating = course["meanRating"].double {
+            cell.rating.text = String(format: "%f",meanRating)
+
         }
         else{
             cell.rating.text = ""
@@ -59,14 +64,11 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
        let vc =  segue.destinationViewController as SearchCourseDetailViewController
-        if let indexPath =  self.tableView.indexPathForSelectedRow(){
-            let selectedCell = savedCourses[indexPath.row]
-            println()
-        
+//        if let indexPath =  self.tableView.indexPathForSelectedRow(){
+//            let selectedCell = savedCourses[indexPath.row]
+//            println()
             
-            
-        }
-        
+//       }
         
     }
     
@@ -76,10 +78,10 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
         
         //register custom cell
         var nib = UINib(nibName: "searchResultsTableCell", bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: "cellTest")
-        
+       tableView.registerNib(nib, forCellReuseIdentifier: "cellTest")
         
         println(self.parameters)
+       
 
         // Do any additional setup after loading the view.
         Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: self.parameters)
@@ -93,7 +95,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
                 }
                 else{
                     self.courses = JSON(data!)
-                    tableView.reloadData()
+                    self.tableView.reloadData()
                     println(self.courses)
                 }
             
