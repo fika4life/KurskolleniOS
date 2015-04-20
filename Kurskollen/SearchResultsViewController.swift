@@ -18,8 +18,12 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
     
     var parameters:[String: String]? = [:]
     
+    var courses: JSON? = nil;
+    
     let savedCourses = [
         ("Databaser", "KTH", "***"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****")]
+    
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -27,7 +31,10 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return savedCourses.count
+        if(courses == nil){
+            return 0
+        }
+        return courses.count
         
         
     }
@@ -35,12 +42,17 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
     
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("cellTest", forIndexPath: indexPath) as SearchResultsTableViewCell
-        
-        let (course, school, rating) = savedCourses[indexPath.row]
-        cell.course.text  = course
-        cell.school.text = school
-        cell.rating.text = rating
-        
+    
+        let course = courses[indexPath.row]
+        cell.course.text  = course["name"].string
+        cell.school.text = courses["school"].string
+        if let meanRating = courses["meanRating"].double {
+            cell.rating.text = meanRating
+        }
+        else{
+            cell.rating.text = ""
+        }
+    
         return cell
     }
     
@@ -66,9 +78,9 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
                 else{
-                    println(data)
-                    var jsonData = JSON(data!)
-                    println(jsonData)
+                    self.courses = JSON(data!)
+                    tableView.reloadData()
+                    println(self.courses)
                 }
             
         }
