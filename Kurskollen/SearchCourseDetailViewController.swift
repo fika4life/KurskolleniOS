@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchCourseDetailViewController: UIViewController {
+class SearchCourseDetailViewController: UIViewController, UITableViewDataSource {
     
     
    
@@ -18,7 +18,29 @@ class SearchCourseDetailViewController: UIViewController {
     @IBOutlet weak var online: UILabel!
     @IBOutlet weak var teacher: UIButton!
     
+    @IBOutlet weak var reviewTable: UITableView!
+    
     self.courseData:JSON?
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.courseData!["reviews"].count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("reviewTableCell", forIndexPath: indexPath) as ReviewListTableCell
+        
+        
+        
+        let review :JSON = self.coursesData!["reviews"][indexPath.row]
+        cell.timeText.text  = review["user"].string
+        cell.reviewText.text = review["text"].string
+        return cell
+    }
 
     @IBAction func writeReview(sender: AnyObject) {
     }

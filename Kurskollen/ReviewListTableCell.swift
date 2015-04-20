@@ -10,7 +10,6 @@ import UIKit
 
 class ReviewListTableCell: UITableViewCell {
 
-    @IBOutlet weak var headerText: UILabel!
     
     @IBOutlet weak var reviewerNameText: UILabel!
     
