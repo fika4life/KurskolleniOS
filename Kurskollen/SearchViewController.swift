@@ -26,8 +26,7 @@ class SearchViewController: UIViewController {
     @IBAction func Search(sender: AnyObject) {
         let course = courseField.text
         let teacher = teacherField.text
-        let distance = distanceField.on
-        let distanceString = distance ? "1" : "0"
+        let onlineString = distanceField.on ? "1" : "0"
         
         
         
@@ -37,9 +36,8 @@ class SearchViewController: UIViewController {
         if(teacher != ""){
             self.parameters["teacher"] = teacher
         }
-        self.parameters["schoolid"] = "1"
         
-        self.parameters["teacher"] = distanceString
+        self.parameters["online"] = onlineString
         println("getting parameters")
         self.performSegueWithIdentifier("toSearchResults", sender: self)
         
