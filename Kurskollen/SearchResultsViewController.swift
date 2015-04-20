@@ -10,43 +10,19 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchResultsViewController: UIViewController, UITableViewDataSource{
-
-    
-    @IBOutlet weak var tableView: UITableView!
-
-    
-    var parameters:[String: String]? = [:]
-    
-    let savedCourses = [
-        ("Databaser", "KTH", "***"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****")]
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
+class SearchResultsViewController:UITableViewController{
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return savedCourses.count
-        
-        
-    }
-    
-    
-   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cellTest", forIndexPath: indexPath) as SearchResultsTableViewCell
-        
-        let (course, school, rating) = savedCourses[indexPath.row]
-        cell.course.text  = course
-        cell.school.text = school
-        cell.rating.text = rating
-        
-        return cell
-    }
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        @IBOutlet weak var tableView: UITableView!
+        
+        var parameters:[String: String]? = [:]
+        
+        let savedCourses = [
+            ("Databaser", "KTH", "***"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****")]
         
         //register custom cell
         var nib = UINib(nibName: "searchResultsTableCell", bundle: nil)
@@ -54,7 +30,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
         
         
         println(self.parameters)
-
+        
         // Do any additional setup after loading the view.
         Alamofire.request(.GET, globalConstants.URL + "search-course", parameters: self.parameters)
             .validate()
@@ -70,13 +46,56 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
                     var jsonData = JSON(data!)
                     println(jsonData)
                 }
+                
+        }
+        
+        
+    }
+    
+
+
+    
+   
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return savedCourses.count
+        
+        
+    }
+    
+    
+   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("cellTest", forIndexPath: indexPath) as SearchResultsTableViewCell
+        
+        let (course, school, rating) = savedCourses[indexPath.row]
+        cell.course.text  = course
+        cell.school.text = school
+        cell.rating.text = rating
+        
+        return cell
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       let vc =  segue.destinationViewController as SearchCourseDetailViewController
+        if let indexPath =  self.tableView.indexPathForSelectedRow(){
+            let selectedCell = savedCourses[indexPath.row]
+            println(selectedCell)
+        
+            
             
         }
         
-       
+        
     }
+    
 
-    override func didReceiveMemoryWarning() {
+       override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

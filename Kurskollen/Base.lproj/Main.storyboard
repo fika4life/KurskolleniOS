@@ -232,7 +232,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="410"/>
+            <point key="canvasLocation" x="657" y="296"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="AFn-cB-Ie2">
+            <objects>
+                <navigationController id="euM-xd-lGE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tZw-S5-uBS"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GV0-1T-h2X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="diM-Bb-HnS" kind="relationship" relationship="rootViewController" id="kxn-hR-QRE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfH-br-DGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="983"/>
         </scene>
         <!--Sök kurs-->
         <scene sceneID="IUx-By-lPN">
@@ -255,7 +272,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="isa-hn-TcR">
                                 <rect key="frame" x="178" y="140" width="245" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="245" id="CHK-o3-Rpz"/>
+                                    <constraint firstAttribute="width" constant="245" id="dHg-Mw-7S1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -286,56 +303,48 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8WS-XP-Uen">
                                 <rect key="frame" x="276" y="419" width="51" height="31"/>
                             </switch>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lju-8h-JJn">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Sök kurs" id="qC5-7q-z64">
-                                        <barButtonItem key="rightBarButtonItem" title="Sök" id="2jL-eJ-8ML">
-                                            <connections>
-                                                <action selector="Search:" destination="diM-Bb-HnS" id="peW-qq-bcs"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="isa-hn-TcR" firstAttribute="leading" secondItem="Fr1-Fg-HQx" secondAttribute="leading" id="4J0-Xx-2wY"/>
-                            <constraint firstItem="isa-hn-TcR" firstAttribute="centerX" secondItem="E20-Kw-eoO" secondAttribute="centerX" id="5G4-Z4-iYC"/>
-                            <constraint firstItem="dGa-eG-JRt" firstAttribute="leading" secondItem="iiY-C7-Med" secondAttribute="leading" id="73V-rz-XQY"/>
-                            <constraint firstItem="Lju-8h-JJn" firstAttribute="leading" secondItem="u3b-zx-GiL" secondAttribute="leading" id="G3d-EY-I6L"/>
-                            <constraint firstItem="Fr1-Fg-HQx" firstAttribute="top" secondItem="dGa-eG-JRt" secondAttribute="bottom" constant="24" id="IaV-qs-LyM"/>
-                            <constraint firstItem="E20-Kw-eoO" firstAttribute="top" secondItem="Lju-8h-JJn" secondAttribute="bottom" constant="39" id="KnG-eD-Lsy"/>
-                            <constraint firstItem="8WS-XP-Uen" firstAttribute="top" secondItem="aeO-2a-5zb" secondAttribute="bottom" constant="8" symbolic="YES" id="Oaw-7F-K5d"/>
-                            <constraint firstItem="8WS-XP-Uen" firstAttribute="centerX" secondItem="aeO-2a-5zb" secondAttribute="centerX" id="QS7-OU-1lU"/>
-                            <constraint firstItem="dGa-eG-JRt" firstAttribute="top" secondItem="iiY-C7-Med" secondAttribute="bottom" constant="47" id="Qrw-xK-Tuy"/>
-                            <constraint firstItem="isa-hn-TcR" firstAttribute="top" secondItem="E20-Kw-eoO" secondAttribute="bottom" constant="8" symbolic="YES" id="Uld-qc-9KM"/>
-                            <constraint firstItem="Fr1-Fg-HQx" firstAttribute="centerX" secondItem="aeO-2a-5zb" secondAttribute="centerX" id="Wz8-KX-NHb"/>
-                            <constraint firstItem="HNc-EJ-gsb" firstAttribute="top" secondItem="8WS-XP-Uen" secondAttribute="bottom" constant="101" id="a06-YZ-Hqx"/>
-                            <constraint firstItem="iiY-C7-Med" firstAttribute="centerX" secondItem="isa-hn-TcR" secondAttribute="centerX" id="bf8-at-ttC"/>
-                            <constraint firstItem="aeO-2a-5zb" firstAttribute="top" secondItem="Fr1-Fg-HQx" secondAttribute="bottom" constant="49" id="dDL-vE-NPq"/>
-                            <constraint firstItem="Fr1-Fg-HQx" firstAttribute="trailing" secondItem="isa-hn-TcR" secondAttribute="trailing" id="kP6-2J-MZP"/>
-                            <constraint firstAttribute="trailing" secondItem="Lju-8h-JJn" secondAttribute="trailing" id="vNT-n6-JHM"/>
-                            <constraint firstItem="iiY-C7-Med" firstAttribute="top" secondItem="isa-hn-TcR" secondAttribute="bottom" constant="28" id="wTF-fL-kY1"/>
-                            <constraint firstItem="E20-Kw-eoO" firstAttribute="centerX" secondItem="Lju-8h-JJn" secondAttribute="centerX" id="yyD-Cm-Y61"/>
+                            <constraint firstItem="isa-hn-TcR" firstAttribute="trailing" secondItem="Fr1-Fg-HQx" secondAttribute="trailing" id="3uD-Ca-bug"/>
+                            <constraint firstItem="aeO-2a-5zb" firstAttribute="centerX" secondItem="Fr1-Fg-HQx" secondAttribute="centerX" id="74y-Cs-gAn"/>
+                            <constraint firstItem="isa-hn-TcR" firstAttribute="centerX" secondItem="E20-Kw-eoO" secondAttribute="centerX" id="DW4-2S-Lej"/>
+                            <constraint firstItem="iiY-C7-Med" firstAttribute="centerX" secondItem="isa-hn-TcR" secondAttribute="centerX" id="I4c-6s-ZV8"/>
+                            <constraint firstItem="isa-hn-TcR" firstAttribute="top" secondItem="E20-Kw-eoO" secondAttribute="bottom" constant="8" symbolic="YES" id="RJt-Bk-uyb"/>
+                            <constraint firstItem="8WS-XP-Uen" firstAttribute="centerX" secondItem="u3b-zx-GiL" secondAttribute="centerX" id="RS8-4A-sib"/>
+                            <constraint firstItem="iiY-C7-Med" firstAttribute="top" secondItem="isa-hn-TcR" secondAttribute="bottom" constant="28" id="UEw-lG-TyQ"/>
+                            <constraint firstItem="Fr1-Fg-HQx" firstAttribute="top" secondItem="dGa-eG-JRt" secondAttribute="bottom" constant="24" id="bXt-vd-0aG"/>
+                            <constraint firstItem="8WS-XP-Uen" firstAttribute="top" secondItem="aeO-2a-5zb" secondAttribute="bottom" constant="8" symbolic="YES" id="dgr-BT-9ke"/>
+                            <constraint firstItem="E20-Kw-eoO" firstAttribute="top" secondItem="w6f-tK-pxy" secondAttribute="bottom" constant="47" id="jUj-zg-RW1"/>
+                            <constraint firstItem="aeO-2a-5zb" firstAttribute="centerX" secondItem="8WS-XP-Uen" secondAttribute="centerX" id="m8n-QB-l3g"/>
+                            <constraint firstItem="aeO-2a-5zb" firstAttribute="top" secondItem="Fr1-Fg-HQx" secondAttribute="bottom" constant="49" id="mAi-Yg-OXG"/>
+                            <constraint firstItem="Fr1-Fg-HQx" firstAttribute="leading" secondItem="isa-hn-TcR" secondAttribute="leading" id="s2j-3I-PZe"/>
+                            <constraint firstItem="iiY-C7-Med" firstAttribute="leading" secondItem="dGa-eG-JRt" secondAttribute="leading" id="t5R-xl-OIe"/>
+                            <constraint firstItem="dGa-eG-JRt" firstAttribute="top" secondItem="iiY-C7-Med" secondAttribute="bottom" constant="47" id="yOV-7B-jaR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="Fgk-gC-kNP"/>
+                    <navigationItem key="navigationItem" title="Sök kurs" id="vV7-LK-VTL">
+                        <barButtonItem key="rightBarButtonItem" title="Sök" id="3Ng-Rx-6Do">
+                            <connections>
+                                <segue destination="Ef9-Gz-Y5t" kind="show" id="fXg-ZZ-aMc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="courseField" destination="isa-hn-TcR" id="TBO-yt-Ofj"/>
                         <outlet property="distanceField" destination="8WS-XP-Uen" id="7Ue-Os-Nuh"/>
                         <outlet property="teacherField" destination="Fr1-Fg-HQx" id="uIp-jC-D7f"/>
-                        <segue destination="Ef9-Gz-Y5t" kind="show" identifier="toSearchResults" id="ehy-6y-LFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8T-3p-Xzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629" y="1150"/>
+            <point key="canvasLocation" x="1348" y="317"/>
         </scene>
         <!--Search Results View Controller-->
         <scene sceneID="jQe-P0-i6y">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5KI-1c-EOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Ef9-Gz-Y5t" customClass="SearchResultsViewController" customModule="Kurskollen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f73-F4-M06"/>
@@ -381,9 +390,81 @@
                         <outlet property="tableView" destination="VJG-L2-npX" id="MaQ-MQ-8EI"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5KI-1c-EOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1319" y="1163"/>
+            <point key="canvasLocation" x="1318" y="996"/>
+        </scene>
+        <!--Search Course Detail View Co-->
+        <scene sceneID="eXh-kH-fay">
+            <objects>
+                <viewController storyboardIdentifier="SearchCourseDetailVC" id="SqP-i9-LEe" customClass="SearchCourseDetailViewCo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TEC-sG-dR4"/>
+                        <viewControllerLayoutGuide type="bottom" id="COB-9U-2Ms"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zth-0J-Y2u" customClass="SearchCourseDetailViewController" customModule="Kurskollen" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34J-9h-Vfm">
+                                <rect key="frame" x="151" y="78" width="299" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npZ-qn-CJM">
+                                <rect key="frame" x="194" y="120" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oD9-md-3o0">
+                                <rect key="frame" x="194" y="154" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc5-P6-8Ek">
+                                <rect key="frame" x="190" y="188" width="220" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IT-lc-hjd">
+                                <rect key="frame" x="178" y="217" width="244" height="30"/>
+                                <state key="normal" title="Teacher">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recensioner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFs-F3-EPy">
+                                <rect key="frame" x="151" y="289" width="299" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsv-yr-NEU">
+                                <rect key="frame" x="240" y="320" width="121" height="30"/>
+                                <state key="normal" title="Skriv recension">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="writeReview:" destination="zth-0J-Y2u" eventType="touchUpInside" id="9kI-e5-7Ko"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="course" destination="34J-9h-Vfm" id="erO-u4-RGU"/>
+                            <outlet property="credits" destination="oD9-md-3o0" id="zvv-SG-l4R"/>
+                            <outlet property="online" destination="oc5-P6-8Ek" id="vhc-0r-cnQ"/>
+                            <outlet property="school" destination="npZ-qn-CJM" id="ZAZ-Sa-SfJ"/>
+                            <outlet property="teacher" destination="7IT-lc-hjd" id="fuQ-3M-uU9"/>
+                            <outlet property="writeReview" destination="Qsv-yr-NEU" id="6Kc-7j-Osz"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4OE-TL-Ow5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962" y="996"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -396,15 +477,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="diM-Bb-HnS" kind="relationship" relationship="viewControllers" id="fRH-Cn-ey7"/>
-                        <segue destination="G9T-HL-4wm" kind="relationship" relationship="viewControllers" id="fPb-5F-I9C"/>
+                        <segue destination="euM-xd-lGE" kind="relationship" relationship="viewControllers" id="wf5-Vd-drw"/>
+                        <segue destination="rhq-60-fFE" kind="relationship" relationship="viewControllers" id="UNn-gZ-fr8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-28" y="28"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="u05-TR-KEp">
+            <objects>
+                <navigationController id="rhq-60-fFE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="jFo-q6-l21"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1kX-SX-vgE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="G9T-HL-4wm" kind="relationship" relationship="rootViewController" id="lz0-8n-NL1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nue-jX-rWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-702" y="843"/>
+        </scene>
+        <!--Sparade kurser-->
         <scene sceneID="56t-RO-v4m">
             <objects>
                 <viewController id="G9T-HL-4wm" customClass="ThirdViewController" customModule="Kurskollen" customModuleProvider="target" sceneMemberID="viewController">
@@ -463,6 +561,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="yP2-gh-quK"/>
+                    <navigationItem key="navigationItem" title="Sparade kurser" id="DaL-kk-f3U"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogZ-Yw-s5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

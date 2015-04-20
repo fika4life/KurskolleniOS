@@ -20,6 +20,7 @@
 		BA67611C1ADEB1BF00A150B6 /* searchResultsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA67611B1ADEB1BF00A150B6 /* searchResultsTableCell.xib */; };
 		BA67611E1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA67611D1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift */; };
 		BA7BE2821ADE88F60001FC2B /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */; };
+		BAB679271AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB679261AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift */; };
 		BADB81561AD7DE6200E77BDC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB81551AD7DE6200E77BDC /* SearchViewController.swift */; };
 		E9571240099C45136F33497A /* Pods_Kurskollen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020ED6730B9820CF0E218E28 /* Pods_Kurskollen.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		BA67611B1ADEB1BF00A150B6 /* searchResultsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchResultsTableCell.xib; sourceTree = "<group>"; };
 		BA67611D1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
 		BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		BAB679261AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCourseDetailViewController.swift; sourceTree = "<group>"; };
 		BADB81551AD7DE6200E77BDC /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E1ACABD93DD6BE9D33ABAF30 /* Pods-Kurskollen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurskollen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kurskollen/Pods-Kurskollen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 				BA3DEADE1AC963CE006F60AA /* Supporting Files */,
 				BA67611B1ADEB1BF00A150B6 /* searchResultsTableCell.xib */,
 				BA67611D1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift */,
+				BAB679261AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift */,
 			);
 			path = Kurskollen;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				BADB81561AD7DE6200E77BDC /* SearchViewController.swift in Sources */,
 				BA3DEAE51AC963CF006F60AA /* SecondViewController.swift in Sources */,
 				BA3DEAE11AC963CE006F60AA /* AppDelegate.swift in Sources */,
+				BAB679271AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift in Sources */,
 				BA3DEB031AC98658006F60AA /* ThirdViewController.swift in Sources */,
 				BA0C000C1AD57B2D00F59EFD /* constants.swift in Sources */,
 				BA3DEAE31AC963CE006F60AA /* FirstViewController.swift in Sources */,
