@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Kurskollen/ReviewListTableCell.swift">
+   </FileRef>
+   <FileRef
       location = "group:Kurskollen.xcodeproj">
    </FileRef>
    <FileRef

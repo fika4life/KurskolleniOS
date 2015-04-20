@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9CD8C0C1AE542F700A45EC4 /* ReviewListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9CD8C0A1AE542F700A45EC4 /* ReviewListTableCell.xib */; };
+		B9F90AF61AE54E95004C4B2B /* ReviewListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F90AF51AE54E95004C4B2B /* ReviewListTableCell.swift */; };
 		BA0C000C1AD57B2D00F59EFD /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C000B1AD57B2D00F59EFD /* constants.swift */; };
 		BA0C000E1AD5A87F00F59EFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */; };
 		BA3DEAE11AC963CE006F60AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		020ED6730B9820CF0E218E28 /* Pods_Kurskollen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kurskollen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AF4F35D3F87F3FC66BEA7F /* Pods-Kurskollen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurskollen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kurskollen/Pods-Kurskollen.debug.xcconfig"; sourceTree = "<group>"; };
+		B9CD8C0A1AE542F700A45EC4 /* ReviewListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewListTableCell.xib; sourceTree = "<group>"; };
+		B9F90AF51AE54E95004C4B2B /* ReviewListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListTableCell.swift; sourceTree = "<group>"; };
 		BA0C000B1AD57B2D00F59EFD /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA3DEADB1AC963CE006F60AA /* Kurskollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kurskollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +128,8 @@
 				BA3DEAEB1AC963CF006F60AA /* LaunchScreen.xib */,
 				BA3DEADE1AC963CE006F60AA /* Supporting Files */,
 				BA67611B1ADEB1BF00A150B6 /* searchResultsTableCell.xib */,
+				B9CD8C0A1AE542F700A45EC4 /* ReviewListTableCell.xib */,
+				B9F90AF51AE54E95004C4B2B /* ReviewListTableCell.swift */,
 				BA67611D1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift */,
 				BAB679261AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift */,
 			);
@@ -248,6 +254,7 @@
 			files = (
 				BA3DEAE81AC963CF006F60AA /* Main.storyboard in Resources */,
 				BA3DEAED1AC963CF006F60AA /* LaunchScreen.xib in Resources */,
+				B9CD8C0C1AE542F700A45EC4 /* ReviewListTableCell.xib in Resources */,
 				BA3DEAEA1AC963CF006F60AA /* Images.xcassets in Resources */,
 				BA67611C1ADEB1BF00A150B6 /* searchResultsTableCell.xib in Resources */,
 			);
@@ -322,6 +329,7 @@
 				BA3DEAE51AC963CF006F60AA /* SecondViewController.swift in Sources */,
 				BA3DEAE11AC963CE006F60AA /* AppDelegate.swift in Sources */,
 				BAB679271AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift in Sources */,
+				B9F90AF61AE54E95004C4B2B /* ReviewListTableCell.swift in Sources */,
 				BA3DEB031AC98658006F60AA /* ThirdViewController.swift in Sources */,
 				BA0C000C1AD57B2D00F59EFD /* constants.swift in Sources */,
 				BA3DEAE31AC963CE006F60AA /* FirstViewController.swift in Sources */,
