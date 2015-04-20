@@ -11,6 +11,7 @@ import UIKit
 class SearchCourseDetailViewController: UIViewController {
     
     
+   
     @IBOutlet weak var course: UILabel!
     @IBOutlet weak var school: UILabel!
     @IBOutlet weak var credits: UILabel!

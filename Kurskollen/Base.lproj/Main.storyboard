@@ -327,7 +327,7 @@
                     <navigationItem key="navigationItem" title="Sök kurs" id="vV7-LK-VTL">
                         <barButtonItem key="rightBarButtonItem" title="Sök" id="3Ng-Rx-6Do">
                             <connections>
-                                <segue destination="Ef9-Gz-Y5t" kind="show" id="fXg-ZZ-aMc"/>
+                                <action selector="Search:" destination="diM-Bb-HnS" id="30t-OF-wKX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -335,6 +335,7 @@
                         <outlet property="courseField" destination="isa-hn-TcR" id="TBO-yt-Ofj"/>
                         <outlet property="distanceField" destination="8WS-XP-Uen" id="7Ue-Os-Nuh"/>
                         <outlet property="teacherField" destination="Fr1-Fg-HQx" id="uIp-jC-D7f"/>
+                        <segue destination="Ef9-Gz-Y5t" kind="show" identifier="toSearchResults" id="Wng-en-iby"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8T-3p-Xzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -344,7 +345,6 @@
         <!--Search Results View Controller-->
         <scene sceneID="jQe-P0-i6y">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5KI-1c-EOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Ef9-Gz-Y5t" customClass="SearchResultsViewController" customModule="Kurskollen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f73-F4-M06"/>
@@ -388,32 +388,28 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="VJG-L2-npX" id="MaQ-MQ-8EI"/>
+                        <segue destination="SqP-i9-LEe" kind="showDetail" identifier="toSearchCell" id="Yyq-ks-VT0"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5KI-1c-EOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="996"/>
+            <point key="canvasLocation" x="1390" y="1076"/>
         </scene>
-        <!--Search Course Detail View Co-->
+        <!--Search Course Detail View Controller-->
         <scene sceneID="eXh-kH-fay">
             <objects>
-                <viewController storyboardIdentifier="SearchCourseDetailVC" id="SqP-i9-LEe" customClass="SearchCourseDetailViewCo" sceneMemberID="viewController">
+                <viewController id="SqP-i9-LEe" customClass="SearchCourseDetailViewController" customModule="Kurskollen" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TEC-sG-dR4"/>
                         <viewControllerLayoutGuide type="bottom" id="COB-9U-2Ms"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zth-0J-Y2u" customClass="SearchCourseDetailViewController" customModule="Kurskollen" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="zth-0J-Y2u">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34J-9h-Vfm">
                                 <rect key="frame" x="151" y="78" width="299" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npZ-qn-CJM">
-                                <rect key="frame" x="194" y="120" width="212" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -450,21 +446,29 @@
                                     <action selector="writeReview:" destination="zth-0J-Y2u" eventType="touchUpInside" id="9kI-e5-7Ko"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npZ-qn-CJM">
+                                <rect key="frame" x="194" y="120" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="course" destination="34J-9h-Vfm" id="erO-u4-RGU"/>
-                            <outlet property="credits" destination="oD9-md-3o0" id="zvv-SG-l4R"/>
                             <outlet property="online" destination="oc5-P6-8Ek" id="vhc-0r-cnQ"/>
                             <outlet property="school" destination="npZ-qn-CJM" id="ZAZ-Sa-SfJ"/>
                             <outlet property="teacher" destination="7IT-lc-hjd" id="fuQ-3M-uU9"/>
                             <outlet property="writeReview" destination="Qsv-yr-NEU" id="6Kc-7j-Osz"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="course" destination="34J-9h-Vfm" id="U9b-U0-QnZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4OE-TL-Ow5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962" y="996"/>
+            <point key="canvasLocation" x="2306" y="983"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

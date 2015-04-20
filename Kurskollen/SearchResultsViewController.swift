@@ -14,15 +14,16 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
 
     
     @IBOutlet weak var tableView: UITableView!
+    
+    
 
     
-    var parameters:[String: String]?  
+    var parameters:[String: String]?
+    
+    var indexRow:Int?
     
     var courses: JSON? = nil;
     
-    /*let savedCourses = [
-        ("Databaser", "KTH", "***"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****")]
-    */
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -34,7 +35,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
         if(self.courses == nil){
             return 0
         }
-        println(self.courses!.count)
+        
         return self.courses!.count
         
         
@@ -61,14 +62,21 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        self.indexRow = indexPath.row
+        self.performSegueWithIdentifier("toSearchCell", sender: self)
+    }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
        let vc =  segue.destinationViewController as SearchCourseDetailViewController
-//        if let indexPath =  self.tableView.indexPathForSelectedRow(){
-//            let selectedCell = savedCourses[indexPath.row]
-//            println()
+        if let indexPath =  self.tableView.indexPathForSelectedRow(){
+            let selectedCell = self.courses![self.indexRow!]
             
-//       }
+            
+       }
+        
+        
         
     }
     
