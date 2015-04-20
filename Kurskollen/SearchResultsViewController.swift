@@ -20,9 +20,9 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
     
     var courses: JSON? = nil;
     
-    let savedCourses = [
+    /*let savedCourses = [
         ("Databaser", "KTH", "***"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****")]
-    
+    */
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
