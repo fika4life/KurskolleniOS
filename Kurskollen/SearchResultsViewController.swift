@@ -13,6 +13,7 @@ import SwiftyJSON
 class SearchResultsViewController: UIViewController, UITableViewDataSource{
 
     
+    @IBOutlet weak var tableView: UITableView!
 
     
     var parameters:[String: String]? = [:]
@@ -33,22 +34,12 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
     
     
    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell2", forIndexPath: indexPath) as UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("cellTest", forIndexPath: indexPath) as SearchResultsTableViewCell
         
         let (course, school, rating) = savedCourses[indexPath.row]
-        cell.textLabel?.text  = course
-        cell.detailTextLabel?.text = school
-        cell.detailTextLabel?.text = rating
-        
-        let button   = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        button.frame = CGRectMake(100, 100, 100, 50)
-        button.backgroundColor = UIColor.greenColor()
-        button.setTitle("Test Button", forState: UIControlState.Normal)
-        cell.addSubview(button)
-        
-        //retreive an image
-        var myImage = UIImage(named: "CellIcon")
-        cell.imageView?.image = myImage
+        cell.course.text  = course
+        cell.school.text = school
+        cell.rating.text = rating
         
         return cell
     }
@@ -57,7 +48,10 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        //register custom cell
+        var nib = UINib(nibName: "searchResultsTableCell", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "cellTest")
+        
         
         println(self.parameters)
 
