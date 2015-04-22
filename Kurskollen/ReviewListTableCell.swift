@@ -21,6 +21,7 @@ class ReviewListTableCell: UITableViewCell {
         super.awakeFromNib()
         self.reviewText.numberOfLines = 0
         self.reviewText.sizeToFit()
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

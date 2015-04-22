@@ -31,7 +31,9 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        println(self.courseData!["reviews"])
         return self.courseData!["reviews"].count
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -40,7 +42,9 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
         
         
         let review :JSON = self.courseData!["reviews"][indexPath.row]
-        cell.timeField.text  = review["user"].string
+        cell.timeField.text  = String(review["time"].intValue)
+        println(review["time"].intValue)
+        cell.reviewerNameText.text = review["user"].string
         cell.reviewText.text = review["text"].string
         return cell
     }
@@ -50,7 +54,8 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var nib = UINib(nibName: "ReviewListTableCell", bundle: nil)
+        reviewTable.registerNib(nib, forCellReuseIdentifier: "reviewTableCell")
         self.course.text = self.courseData!["name"].string
         self.school.text = self.courseData!["school"].string;
         self.credits.text = String(self.courseData!["credits"].intValue)
