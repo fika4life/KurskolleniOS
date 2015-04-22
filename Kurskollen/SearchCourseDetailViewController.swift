@@ -58,7 +58,7 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
         reviewTable.registerNib(nib, forCellReuseIdentifier: "reviewTableCell")
         self.course.text = self.courseData!["name"].string
         self.school.text = self.courseData!["school"].string;
-        self.credits.text = String(self.courseData!["credits"].intValue)
+        self.credits.text = String(format: "%.1f", self.courseData!["credits"].doubleValue)
         self.online.text = self.courseData!["online"].boolValue ? "Distans" : "Ortsbunden"
         
         

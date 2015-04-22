@@ -52,7 +52,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
         cell.course.text  = course["name"].string
         cell.school.text = course["school"].string
         if let meanRating = course["meanRating"].double {
-            cell.rating.text = String(format: "%f",meanRating)
+            cell.rating.text = String(format: "%.2f",meanRating)
 
         }
         else{
