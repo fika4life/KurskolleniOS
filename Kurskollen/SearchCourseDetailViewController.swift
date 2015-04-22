@@ -41,9 +41,17 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
         
         
         
+        
+        
         let review :JSON = self.courseData!["reviews"][indexPath.row]
-        cell.timeField.text  = String(review["time"].intValue)
-        println(review["time"].intValue)
+        let timeStamp = review["time"].doubleValue
+        
+        let date = NSDate(timeIntervalSince1970: timeStamp)
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "dd-MM-yyyy HH:mm"
+        let dateString = formatter.stringFromDate(date)
+        
+        cell.timeField.text = dateString
         cell.reviewerNameText.text = review["user"].string
         cell.reviewText.text = review["text"].string
         return cell
