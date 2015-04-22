@@ -85,6 +85,11 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //change name of title
+        self.title = "Sökresultat"
+        
+        
+        
         //register custom cell
         var nib = UINib(nibName: "searchResultsTableCell", bundle: nil)
        tableView.registerNib(nib, forCellReuseIdentifier: "cellTest")

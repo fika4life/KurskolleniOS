@@ -68,6 +68,10 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //add right button
+        var b = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action:nil)
+        self.navigationItem.leftBarButtonItem = b
+        
         self.distanceField.on = false
 
         // Do any additional setup after loading the view.
