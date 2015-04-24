@@ -61,7 +61,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource {
                         self.presentViewController(alert, animated: true, completion: nil)
                     }
                     else{
-                        //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+                        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
                     }
             }
             
