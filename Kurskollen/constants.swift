@@ -11,5 +11,6 @@ import Foundation
 struct globalConstants {
     static let URL = "http://kurskollenapp.appspot.com/"
     
+    static let emailMemoryKey = "email"
     static let loginSessionMemoryKey = "loginsession"
 }
