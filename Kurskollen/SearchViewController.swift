@@ -18,6 +18,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var distanceField: UISwitch!
     
+    @IBAction func addCourse(sender: AnyObject) {
+    }
     
     
     var parameters = [String: String]()
@@ -30,8 +32,7 @@ class SearchViewController: UIViewController {
         let teacher = teacherField.text
         let onlineString = distanceField.on ? "1" : "0"
         
-        println("serarch k;rs")
-        
+            
         
         if(course != ""){
             self.parameters["name"] = course
@@ -69,8 +70,8 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         //add right button
-        var b = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action:nil)
-        self.navigationItem.leftBarButtonItem = b
+//        var b = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action:nil)
+//        self.navigationItem.leftBarButtonItem = b
         
         self.distanceField.on = false
 
