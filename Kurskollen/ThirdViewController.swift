@@ -13,11 +13,11 @@ import SwiftyJSON
 
 class ThirdViewController: UIViewController, UITableViewDataSource {
     
-    /*let savedCourses = [
-    ("Databaser", "KTH", "***"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****"),("ProgramUtv", "KTH", "*****")]*/
     
     var savedCourses: JSON?
 
+    @IBOutlet weak var tableView: UITableView!
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -50,18 +50,23 @@ class ThirdViewController: UIViewController, UITableViewDataSource {
             let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
             let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
             
-            let parameters : [String: String] = ["email" : email!, "loginsession" : loginSession!]
+            let parameters : [String: String] = ["email" : email!, "loginsession" : loginSession!, "courseid" : String (indexPath.row)]
+            println(parameters)
+            
             
             Alamofire.request(.POST, globalConstants.URL + "remove-bookmark", parameters: parameters)
                 .validate()
                 .response{(_,_,_,error) in
                     if(error != nil){
+                        println(error)
                         var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
                         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
                         self.presentViewController(alert, animated: true, completion: nil)
                     }
                     else{
-                        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+                        
+                        savedCourses!. [indexPath!.row]
+                        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
                     }
             }
             
@@ -74,26 +79,28 @@ class ThirdViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         var nib = UINib(nibName: "BookmarkListTableCell", bundle: nil)
-        //tableView.registerNib(nib, forCellReuseIdentifier: "bookmarkListTableCell")
+        tableView.registerNib(nib, forCellReuseIdentifier: "bookmarkListTableCell")
         
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
         let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
         
         let parameters : [String: String] = ["email" : email!, "loginsession" : loginSession!]
+        
 
         Alamofire.request(.GET, globalConstants.URL + "get-my-bookmarks", parameters: parameters)
             .validate()
             .responseJSON{(request, response, data, error) in
                 self.view.endEditing(true)
                 if(error != nil){
+                    
                     var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
                 else{
                     self.savedCourses = JSON(data!)
-                    //self.tableView.reloadData()
+                    self.tableView.reloadData()
                     println(self.savedCourses)
                 }
                 

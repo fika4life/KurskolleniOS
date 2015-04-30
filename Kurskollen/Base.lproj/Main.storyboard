@@ -876,7 +876,20 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="yP2-gh-quK"/>
-                    <navigationItem key="navigationItem" title="Sparade kurser" id="DaL-kk-f3U"/>
+                    <navigationItem key="navigationItem" title="Sparade kurser" id="DaL-kk-f3U">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="WW5-se-KDV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iq1-Hc-E91">
+                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ta bort">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="QBN-hQ-jJx" id="cET-xU-vge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogZ-Yw-s5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
