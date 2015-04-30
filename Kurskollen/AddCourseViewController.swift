@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class AddCourseViewController: UIViewController {
     
@@ -24,6 +25,39 @@ class AddCourseViewController: UIViewController {
     @IBOutlet weak var teacher: UITextField!
     
     @IBAction func Done(sender: AnyObject) {
+        let courseNameText = courseName.text
+        let courseDescText = courseDesc.text
+        let creditsText = credits.text.toInt()!
+        let onlineValue = online.on
+        let onlineString = onlineValue ? "1" : "0"
+    
+        //Should be changed:
+        let courseCode = "DD1234"
+        let schoolId = 1
+        let teacherId = 1
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
+        let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
+        
+        let parameters : [String: String] = ["email": email!, "loginsession": loginSession!, "coursecode": courseCode, "name": courseNameText, "credits": String(creditsText),"online": onlineString, "schoolid": String(schoolId)]
+        
+        Alamofire.request(.GET, globalConstants.URL + "add-course", parameters: parameters)
+            .validate()
+            .response{(_, _, _, error) in
+                self.view.endEditing(true)
+                if(error != nil){
+                    var alert = UIAlertController(title: "Kommunikationsfel", message: "Kunde inte kommunicera med servern", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+                else{
+                    var alert = UIAlertController(title: "Kursen tillagd", message: "Kursen lades till", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+                
+        }
     }
     
     override func viewDidLoad() {
