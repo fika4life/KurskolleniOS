@@ -36,8 +36,10 @@ class SecondViewController: UIViewController {
                         self.alert.text = "Fel epost eller lösenord"
                     }
                 }else{
-                    NSUserDefaults.standardUserDefaults().setObject(data, forKey: globalConstants.loginSessionMemoryKey)
-                    NSUserDefaults.standardUserDefaults().synchronize()
+                    let userDefaults = NSUserDefaults.standardUserDefaults()
+                    userDefaults.setObject(email, forKey: globalConstants.emailMemoryKey)
+                    userDefaults.setObject(data, forKey: globalConstants.loginSessionMemoryKey)
+                    userDefaults.synchronize()
                     self.performSegueWithIdentifier("toSearch", sender: self)
                 }
         }

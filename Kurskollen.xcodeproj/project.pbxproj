@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B96211DF1AEA6B2B009C3E6F /* BookmarkListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96211DD1AEA6B2B009C3E6F /* BookmarkListTableCell.swift */; };
+		B96211E01AEA6B2B009C3E6F /* BookmarkListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96211DE1AEA6B2B009C3E6F /* BookmarkListTableCell.xib */; };
 		B9CD8C0C1AE542F700A45EC4 /* ReviewListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9CD8C0A1AE542F700A45EC4 /* ReviewListTableCell.xib */; };
 		B9F90AF61AE54E95004C4B2B /* ReviewListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F90AF51AE54E95004C4B2B /* ReviewListTableCell.swift */; };
 		BA0C000C1AD57B2D00F59EFD /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C000B1AD57B2D00F59EFD /* constants.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		020ED6730B9820CF0E218E28 /* Pods_Kurskollen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kurskollen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AF4F35D3F87F3FC66BEA7F /* Pods-Kurskollen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurskollen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kurskollen/Pods-Kurskollen.debug.xcconfig"; sourceTree = "<group>"; };
+		B96211DD1AEA6B2B009C3E6F /* BookmarkListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListTableCell.swift; sourceTree = "<group>"; };
+		B96211DE1AEA6B2B009C3E6F /* BookmarkListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkListTableCell.xib; sourceTree = "<group>"; };
 		B9CD8C0A1AE542F700A45EC4 /* ReviewListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewListTableCell.xib; sourceTree = "<group>"; };
 		B9F90AF51AE54E95004C4B2B /* ReviewListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListTableCell.swift; sourceTree = "<group>"; };
 		BA0C000B1AD57B2D00F59EFD /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
@@ -123,12 +127,14 @@
 			children = (
 				BA85B8BA1AEA693400F92471 /* AddReviewViewController.swift */,
 				BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */,
-				BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */,
 				BADB81551AD7DE6200E77BDC /* SearchViewController.swift */,
+				BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */,
 				BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */,
 				BA3DEAE21AC963CE006F60AA /* FirstViewController.swift */,
 				BA3DEAE41AC963CE006F60AA /* SecondViewController.swift */,
 				BA3DEB021AC98658006F60AA /* ThirdViewController.swift */,
+				B96211DD1AEA6B2B009C3E6F /* BookmarkListTableCell.swift */,
+				B96211DE1AEA6B2B009C3E6F /* BookmarkListTableCell.xib */,
 				BA3DEAE61AC963CF006F60AA /* Main.storyboard */,
 				BA0C000B1AD57B2D00F59EFD /* constants.swift */,
 				BA3DEAE91AC963CF006F60AA /* Images.xcassets */,
@@ -263,6 +269,7 @@
 			files = (
 				BA3DEAE81AC963CF006F60AA /* Main.storyboard in Resources */,
 				BA3DEAED1AC963CF006F60AA /* LaunchScreen.xib in Resources */,
+				B96211E01AEA6B2B009C3E6F /* BookmarkListTableCell.xib in Resources */,
 				B9CD8C0C1AE542F700A45EC4 /* ReviewListTableCell.xib in Resources */,
 				BA3DEAEA1AC963CF006F60AA /* Images.xcassets in Resources */,
 				BA67611C1ADEB1BF00A150B6 /* searchResultsTableCell.xib in Resources */,
@@ -342,6 +349,7 @@
 				BAB679271AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift in Sources */,
 				BA85B8BD1AEA73C900F92471 /* SettingsViewController.swift in Sources */,
 				B9F90AF61AE54E95004C4B2B /* ReviewListTableCell.swift in Sources */,
+				B96211DF1AEA6B2B009C3E6F /* BookmarkListTableCell.swift in Sources */,
 				BA3DEB031AC98658006F60AA /* ThirdViewController.swift in Sources */,
 				BA0C000C1AD57B2D00F59EFD /* constants.swift in Sources */,
 				BA3DEAE31AC963CE006F60AA /* FirstViewController.swift in Sources */,

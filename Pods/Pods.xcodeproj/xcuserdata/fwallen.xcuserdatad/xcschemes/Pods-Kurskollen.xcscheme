@@ -29,6 +29,15 @@
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "BA3DEADA1AC963CE006F60AA"
+            BuildableName = "Kurskollen.app"
+            BlueprintName = "Kurskollen"
+            ReferencedContainer = "container:../Kurskollen.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -39,15 +48,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5F54FEAC9502DBF1A3333194"
-            BuildableName = "Pods_Kurskollen.framework"
-            BlueprintName = "Pods-Kurskollen"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "BA3DEADA1AC963CE006F60AA"
+            BuildableName = "Kurskollen.app"
+            BlueprintName = "Kurskollen"
+            ReferencedContainer = "container:../Kurskollen.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
