@@ -49,8 +49,9 @@ class ThirdViewController: UIViewController, UITableViewDataSource {
             let userDefaults = NSUserDefaults.standardUserDefaults()
             let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
             let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
+            let courseid = savedCourses![indexPath.row]["courseId"].intValue
             
-            let parameters : [String: String] = ["email" : email!, "loginsession" : loginSession!, "courseid" : String (indexPath.row)]
+            let parameters : [String: String] = ["email" : email!, "loginsession" : loginSession!, "courseid" : String (courseid)]
             println(parameters)
             
             
@@ -65,29 +66,20 @@ class ThirdViewController: UIViewController, UITableViewDataSource {
                     }
                     else{
                         
-                        savedCourses!. [indexPath!.row]
-                        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+                        self.reloadCourses()
+                        //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
                     }
             }
             
         }
     }
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        var nib = UINib(nibName: "BookmarkListTableCell", bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: "bookmarkListTableCell")
-        
+    func reloadCourses(){
         let userDefaults = NSUserDefaults.standardUserDefaults()
         let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
         let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
         
         let parameters : [String: String] = ["email" : email!, "loginsession" : loginSession!]
-        
-
         Alamofire.request(.GET, globalConstants.URL + "get-my-bookmarks", parameters: parameters)
             .validate()
             .responseJSON{(request, response, data, error) in
@@ -105,7 +97,18 @@ class ThirdViewController: UIViewController, UITableViewDataSource {
                 }
                 
         }
-        // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        var nib = UINib(nibName: "BookmarkListTableCell", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "bookmarkListTableCell")
+        
+        self.reloadCourses()
     }
 
     override func didReceiveMemoryWarning() {

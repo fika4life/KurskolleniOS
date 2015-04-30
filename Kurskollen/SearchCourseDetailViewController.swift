@@ -19,6 +19,8 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
    
     @IBOutlet weak var online: UILabel!
     @IBOutlet weak var teacher: UIButton!
+    @IBOutlet weak var rating: UILabel!
+    
     @IBOutlet weak var reviewTable: UITableView!
     
     var courseData:JSON?
@@ -68,6 +70,13 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
         self.school.text = self.courseData!["school"].string;
         self.credits.text = String(format: "%.1f", self.courseData!["credits"].doubleValue)
         self.online.text = self.courseData!["online"].boolValue ? "Distans" : "Ortsbunden"
+        
+        if let meanrating = self.courseData!["meanRating"].double{
+            self.rating.text = "Betyg: " + String(format: "%.2f",meanrating)
+
+        }else{
+            self.rating.text =  nil
+        }
         
         
         // Do any additional setup after loading the view.
