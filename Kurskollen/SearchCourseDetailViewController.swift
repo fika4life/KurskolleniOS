@@ -17,6 +17,7 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     @IBOutlet weak var school: UILabel!
     @IBOutlet weak var credits: UILabel!
    
+    @IBOutlet weak var coursecode: UILabel!
     @IBOutlet weak var online: UILabel!
     @IBOutlet weak var teacher: UIButton!
     @IBOutlet weak var rating: UILabel!
@@ -76,6 +77,13 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
 
         }else{
             self.rating.text =  nil
+        }
+        
+        if let courseCode = self.courseData!["courseCode"].string{
+            self.coursecode.text = courseCode
+            
+        }else{
+            self.coursecode.text =  nil
         }
         
         
