@@ -794,12 +794,12 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Mina reviews" image="user" selectedImage="user" id="pGb-BE-TjY"/>
-                    <navigationItem key="navigationItem" title="Mina reviews" id="BAV-N2-zs8"/>
                     <connections>
                         <outlet property="tableView" destination="A5K-M2-uEL" id="U90-6V-Rrq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rf-oG-6ql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Mina reviews" id="BAV-N2-zs8"/>
             </objects>
             <point key="canvasLocation" x="-691" y="128"/>
         </scene>

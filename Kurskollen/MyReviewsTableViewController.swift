@@ -116,8 +116,8 @@ class MyReviewsTableViewController: UITableViewController {
             println(review["rating"])
         }
     
-        if let aTime = review["time"].int{
-            cell.theTime.text = String (aTime)
+        if let aTime = review["time"].double{
+            cell.theTime.text = Util.formatTimeSwedishStyle(aTime)
         }else {
             //Print the error
             println(review["time"])
