@@ -9,6 +9,62 @@
 import UIKit
 
 class MyReviewsTableViewController: UITableViewController {
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(self.courses == nil){
+            return 0
+        }
+        
+        return self.courses!.count
+        
+        
+        
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("cellTest", forIndexPath: indexPath) as SearchResultsTableViewCell
+        
+        
+        
+        let course :JSON = self.courses![indexPath.row]
+        cell.course.text  = course["name"].string
+        cell.school.text = course["school"].string
+        if let meanRating = course["meanRating"].double {
+            cell.rating.text = String(format: "%.2f",meanRating)
+            
+        }
+        else{
+            cell.rating.text = ""
+        }
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        self.indexRow = indexPath.row
+        self.performSegueWithIdentifier("toSearchCell", sender: self)
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let vc =  segue.destinationViewController as SearchCourseDetailViewController
+        if let indexPath =  self.tableView.indexPathForSelectedRow(){
+            let selectedCell = self.courses![self.indexRow!]
+            vc.courseData = selectedCell
+            
+            
+        }
+        
+        
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

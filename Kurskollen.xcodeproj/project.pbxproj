@@ -22,6 +22,8 @@
 		BA3DEAF91AC963CF006F60AA /* KurskollenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */; };
 		BA3DEB031AC98658006F60AA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEB021AC98658006F60AA /* ThirdViewController.swift */; };
 		BA533A261AF8E11D00F343DF /* MyReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA533A251AF8E11D00F343DF /* MyReviewsTableViewController.swift */; };
+		BA533A281AF8E98300F343DF /* MyReviews.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA533A271AF8E98300F343DF /* MyReviews.xib */; };
+		BA533A2A1AF8EB6900F343DF /* MyReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA533A291AF8EB6900F343DF /* MyReviewTableViewCell.swift */; };
 		BA67611C1ADEB1BF00A150B6 /* searchResultsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA67611B1ADEB1BF00A150B6 /* searchResultsTableCell.xib */; };
 		BA67611E1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA67611D1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift */; };
 		BA7BE2821ADE88F60001FC2B /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */; };
@@ -65,6 +67,8 @@
 		BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurskollenTests.swift; sourceTree = "<group>"; };
 		BA3DEB021AC98658006F60AA /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		BA533A251AF8E11D00F343DF /* MyReviewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewsTableViewController.swift; sourceTree = "<group>"; };
+		BA533A271AF8E98300F343DF /* MyReviews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyReviews.xib; sourceTree = "<group>"; };
+		BA533A291AF8EB6900F343DF /* MyReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewTableViewCell.swift; sourceTree = "<group>"; };
 		BA67611B1ADEB1BF00A150B6 /* searchResultsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchResultsTableCell.xib; sourceTree = "<group>"; };
 		BA67611D1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
 		BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				BA85B8B81AEA637C00F92471 /* AddCourseViewController.swift */,
 				BA85B8BC1AEA73C900F92471 /* SettingsViewController.swift */,
 				BA533A251AF8E11D00F343DF /* MyReviewsTableViewController.swift */,
+				BA533A271AF8E98300F343DF /* MyReviews.xib */,
+				BA533A291AF8EB6900F343DF /* MyReviewTableViewCell.swift */,
 			);
 			path = Kurskollen;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 				BA3DEAE81AC963CF006F60AA /* Main.storyboard in Resources */,
 				BA3DEAED1AC963CF006F60AA /* LaunchScreen.xib in Resources */,
 				B96211E01AEA6B2B009C3E6F /* BookmarkListTableCell.xib in Resources */,
+				BA533A281AF8E98300F343DF /* MyReviews.xib in Resources */,
 				B9CD8C0C1AE542F700A45EC4 /* ReviewListTableCell.xib in Resources */,
 				BA3DEAEA1AC963CF006F60AA /* Images.xcassets in Resources */,
 				BA67611C1ADEB1BF00A150B6 /* searchResultsTableCell.xib in Resources */,
@@ -345,6 +352,7 @@
 				BA85B8B91AEA637C00F92471 /* AddCourseViewController.swift in Sources */,
 				BA7BE2821ADE88F60001FC2B /* SearchResultsViewController.swift in Sources */,
 				BA67611E1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift in Sources */,
+				BA533A2A1AF8EB6900F343DF /* MyReviewTableViewCell.swift in Sources */,
 				BADB81561AD7DE6200E77BDC /* SearchViewController.swift in Sources */,
 				BA3DEAE51AC963CF006F60AA /* SecondViewController.swift in Sources */,
 				BA3DEAE11AC963CE006F60AA /* AppDelegate.swift in Sources */,
