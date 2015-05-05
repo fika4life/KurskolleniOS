@@ -8,8 +8,15 @@
 
 import UIKit
 import SwiftyJSON
+import Alamofire
 
 class MyReviewsTableViewController: UITableViewController {
+    
+    var courses: JSON? = nil
+    
+    
+    
+    
 
 
     //@IBOutlet var tableView: UITableView!
@@ -26,8 +33,28 @@ class MyReviewsTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let parameters = ["email" : email, "loginsession" : loginSession]
+        
+        Alamofire.request(.GET, globalConstants.URL + "get-my-reviews", parameters: parameters)
+            .validate()
+            .responseJSON{(request,response, data, error) in self.view.endEditing(true)
+                
+                    
+                    if(error != nil){
+                        var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
+                    else{
+                        self.courses = JSON(data!)
+                        self.tableView.reloadData()
+                        println(self.courses)
+                    }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,27 +73,31 @@ class MyReviewsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        if (self.courses == nil){
+            return 0
+        }
+        return self.courses!.count
     }
     
     
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("myReviews", forIndexPath: indexPath) as MyReviewTableViewCell
 
         // Configure the cell...
+        let course :JSON = self.courses!
 
         return cell
     }
-    */
 
-    /*
+
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return NO if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
     /*
     // Override to support editing the table view.
