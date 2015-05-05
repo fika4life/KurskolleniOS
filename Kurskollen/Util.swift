@@ -10,6 +10,9 @@ import UIKit
 
 
 class Util{
+    
+    class private let dateFormat = "dd-MM-yyyy HH:mm"
+    
 
     class func showPopup(popupTitle : String, popupText : String, viewController : UIViewController){
         var alert = UIAlertController(title: popupTitle, message: popupText, preferredStyle: UIAlertControllerStyle.Alert)
@@ -22,5 +25,12 @@ class Util{
         let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
         let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
         return (email, loginSession)
+    }
+    
+    class func formatTimeSwedishStyle(timestamp : Double) ->String{
+        let date = NSDate(timeIntervalSince1970: timestamp)
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = dateFormat
+        return formatter.stringFromDate(date)
     }
 }
