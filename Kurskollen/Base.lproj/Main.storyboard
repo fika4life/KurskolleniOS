@@ -772,6 +772,34 @@
             </objects>
             <point key="canvasLocation" x="2306" y="983"/>
         </scene>
+        <!--Mina reviews-->
+        <scene sceneID="WpW-pq-tgq">
+            <objects>
+                <tableViewController id="WDB-g7-qCL" customClass="MyReviewsTableViewController" customModule="Kurskollen" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" sectionHeaderHeight="22" sectionFooterHeight="22" id="A5K-M2-uEL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="k66-3O-gqM">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k66-3O-gqM" id="sKL-Hd-GRp">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WDB-g7-qCL" id="FZa-JD-CZ4"/>
+                            <outlet property="delegate" destination="WDB-g7-qCL" id="b47-aO-hQD"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Mina reviews" image="user" id="pGb-BE-TjY"/>
+                    <navigationItem key="navigationItem" title="Mina reviews" id="Xdv-hV-o1T"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4rf-oG-6ql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-691" y="128"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -783,9 +811,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="euM-xd-lGE" kind="relationship" relationship="viewControllers" id="wf5-Vd-drw"/>
                         <segue destination="rhq-60-fFE" kind="relationship" relationship="viewControllers" id="UNn-gZ-fr8"/>
+                        <segue destination="euM-xd-lGE" kind="relationship" relationship="viewControllers" id="wf5-Vd-drw"/>
                         <segue destination="JV3-0D-bDC" kind="relationship" relationship="viewControllers" id="A1w-Q5-xIh"/>
+                        <segue destination="WDB-g7-qCL" kind="relationship" relationship="viewControllers" id="bTM-hl-6TS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -989,5 +1018,6 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="settings" width="22" height="22"/>
+        <image name="user" width="22" height="22"/>
     </resources>
 </document>

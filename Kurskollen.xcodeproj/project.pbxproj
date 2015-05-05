@@ -21,6 +21,7 @@
 		BA3DEAED1AC963CF006F60AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3DEAEB1AC963CF006F60AA /* LaunchScreen.xib */; };
 		BA3DEAF91AC963CF006F60AA /* KurskollenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */; };
 		BA3DEB031AC98658006F60AA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEB021AC98658006F60AA /* ThirdViewController.swift */; };
+		BA533A261AF8E11D00F343DF /* MyReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA533A251AF8E11D00F343DF /* MyReviewsTableViewController.swift */; };
 		BA67611C1ADEB1BF00A150B6 /* searchResultsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA67611B1ADEB1BF00A150B6 /* searchResultsTableCell.xib */; };
 		BA67611E1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA67611D1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift */; };
 		BA7BE2821ADE88F60001FC2B /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */; };
@@ -63,6 +64,7 @@
 		BA3DEAF71AC963CF006F60AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurskollenTests.swift; sourceTree = "<group>"; };
 		BA3DEB021AC98658006F60AA /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		BA533A251AF8E11D00F343DF /* MyReviewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewsTableViewController.swift; sourceTree = "<group>"; };
 		BA67611B1ADEB1BF00A150B6 /* searchResultsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchResultsTableCell.xib; sourceTree = "<group>"; };
 		BA67611D1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
 		BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				BAB679261AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift */,
 				BA85B8B81AEA637C00F92471 /* AddCourseViewController.swift */,
 				BA85B8BC1AEA73C900F92471 /* SettingsViewController.swift */,
+				BA533A251AF8E11D00F343DF /* MyReviewsTableViewController.swift */,
 			);
 			path = Kurskollen;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				BAB679271AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift in Sources */,
 				BA85B8BD1AEA73C900F92471 /* SettingsViewController.swift in Sources */,
 				B9F90AF61AE54E95004C4B2B /* ReviewListTableCell.swift in Sources */,
+				BA533A261AF8E11D00F343DF /* MyReviewsTableViewController.swift in Sources */,
 				B96211DF1AEA6B2B009C3E6F /* BookmarkListTableCell.swift in Sources */,
 				BA3DEB031AC98658006F60AA /* ThirdViewController.swift in Sources */,
 				BA0C000C1AD57B2D00F59EFD /* constants.swift in Sources */,
