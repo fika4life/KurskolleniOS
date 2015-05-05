@@ -12,7 +12,7 @@ import Alamofire
 
 class MyReviewsTableViewController: UITableViewController {
     
-    var courses: JSON? = nil
+    var reviews: JSON? = nil
     
     
     
@@ -51,9 +51,9 @@ class MyReviewsTableViewController: UITableViewController {
                         self.presentViewController(alert, animated: true, completion: nil)
                     }
                     else{
-                        self.courses = JSON(data!)
+                        self.reviews = JSON(data!)
                         self.tableView.reloadData()
-                        println(self.courses)
+                        println(self.reviews)
                     }
         }
         
@@ -75,31 +75,66 @@ class MyReviewsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        if (self.courses == nil){
+        if (self.reviews == nil){
             return 0
         }
-        return self.courses!.count
+        return self.reviews!.count
     }
     
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("myReviews", forIndexPath: indexPath) as MyReviewTableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("myReviews", forIndexPath: indexPath) as MyReviewTableViewCell
 
         // Configure the cell...
-        let course :JSON = self.courses![indexPath.row]
-        cell.course.text = course["name"].string
-        cell.school.text = course["school"].string
-        if let meanRating = course["meanRating"].double {
-            cell.rating.text = String(format: "%.2f",meanRating)
-            
+        
+        let review :JSON = self.reviews![indexPath.row]
+ 
+        
+        
+        
+        if let acourse = review["courseName"].string{
+            cell.course.text   = acourse
+
+        }else {
+            //Print the error
+            println(review["courseName"])
         }
-        else{
-            cell.rating.text = ""
+        
+        if let aSchool  = review["schoolName"].string{
+            cell.school.text = aSchool
+        }else {
+            //Print the error
+            println(review["schoolName"])
         }
+        
+        
+        if let arating = review["rating"].string{
+            cell.rating.text = arating
+        }else {
+            //Print the error
+            println(review["rating"])
+        }
+    
+        if let aTime = review["time"].string{
+            cell.time.text = aTime
+        }else {
+            //Print the error
+            println(review["time"])
+        }
+        
+        if let aText = review["text"].string{
+             cell.myReviews.text = aText
+        }else {
+            //Print the error
+            println(review["text"])
+        }
+
+    
 
 
         return cell
+    
     }
 
 

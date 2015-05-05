@@ -11,12 +11,14 @@ import UIKit
 class MyReviewTableViewCell: UITableViewCell {
     
     @IBOutlet weak var course: UILabel!
+   
     @IBOutlet weak var school: UILabel!
-   
-    @IBOutlet weak var rating: UILabel!
-    @IBOutlet weak var reviewText: UITextView!
     
+    @IBOutlet weak var rating: UILabel!
+    
+    @IBOutlet weak var myReviews: UITextView!
    
+    @IBOutlet weak var time: UILabel!
     
     
     override func awakeFromNib() {
@@ -29,5 +31,5 @@ class MyReviewTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
