@@ -234,11 +234,11 @@
             </objects>
             <point key="canvasLocation" x="-695" y="-520"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="AFn-cB-Ie2">
             <objects>
                 <navigationController id="euM-xd-lGE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="tZw-S5-uBS"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="tZw-S5-uBS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GV0-1T-h2X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -811,8 +811,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rhq-60-fFE" kind="relationship" relationship="viewControllers" id="UNn-gZ-fr8"/>
                         <segue destination="euM-xd-lGE" kind="relationship" relationship="viewControllers" id="wf5-Vd-drw"/>
+                        <segue destination="rhq-60-fFE" kind="relationship" relationship="viewControllers" id="UNn-gZ-fr8"/>
                         <segue destination="JV3-0D-bDC" kind="relationship" relationship="viewControllers" id="A1w-Q5-xIh"/>
                         <segue destination="WDB-g7-qCL" kind="relationship" relationship="viewControllers" id="bTM-hl-6TS"/>
                     </connections>

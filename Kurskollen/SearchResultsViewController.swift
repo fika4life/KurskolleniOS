@@ -94,7 +94,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
         var nib = UINib(nibName: "searchResultsTableCell", bundle: nil)
        tableView.registerNib(nib, forCellReuseIdentifier: "cellTest")
         
-        println(self.parameters)
+      
        
 
         // Do any additional setup after loading the view.

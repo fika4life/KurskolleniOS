@@ -7,69 +7,16 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class MyReviewsTableViewController: UITableViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(self.courses == nil){
-            return 0
-        }
-        
-        return self.courses!.count
-        
-        
-        
-    }
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cellTest", forIndexPath: indexPath) as SearchResultsTableViewCell
-        
-        
-        
-        let course :JSON = self.courses![indexPath.row]
-        cell.course.text  = course["name"].string
-        cell.school.text = course["school"].string
-        if let meanRating = course["meanRating"].double {
-            cell.rating.text = String(format: "%.2f",meanRating)
-            
-        }
-        else{
-            cell.rating.text = ""
-        }
-        
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-        self.indexRow = indexPath.row
-        self.performSegueWithIdentifier("toSearchCell", sender: self)
-    }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let vc =  segue.destinationViewController as SearchCourseDetailViewController
-        if let indexPath =  self.tableView.indexPathForSelectedRow(){
-            let selectedCell = self.courses![self.indexRow!]
-            vc.courseData = selectedCell
-            
-            
-        }
-        
-        
-        
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -88,7 +35,7 @@ class MyReviewsTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,6 +43,10 @@ class MyReviewsTableViewController: UITableViewController {
         // Return the number of rows in the section.
         return 0
     }
+    
+    //register the nib
+    var nib = UINib(nibName: "MyReviewTableViewCell", bundle: nil)
+    tableView.registerNib(nib, forCellReuseIdentifier: "myReviews")
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

@@ -356,6 +356,7 @@
 				BA7BE2821ADE88F60001FC2B /* SearchResultsViewController.swift in Sources */,
 				BA67611E1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift in Sources */,
 				BA533A2A1AF8EB6900F343DF /* MyReviewTableViewCell.swift in Sources */,
+				B9C30FDE1AF8E87D00280E7B /* Util.swift in Sources */,
 				BADB81561AD7DE6200E77BDC /* SearchViewController.swift in Sources */,
 				BA3DEAE51AC963CF006F60AA /* SecondViewController.swift in Sources */,
 				BA3DEAE11AC963CE006F60AA /* AppDelegate.swift in Sources */,

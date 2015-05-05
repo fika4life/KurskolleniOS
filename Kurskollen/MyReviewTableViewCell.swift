@@ -9,7 +9,13 @@
 import UIKit
 
 class MyReviewTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var course: UILabel!
+    @IBOutlet weak var school: UILabel!
+    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var rating: UITextView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
