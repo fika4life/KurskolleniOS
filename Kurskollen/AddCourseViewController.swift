@@ -36,11 +36,9 @@ class AddCourseViewController: UIViewController {
         let schoolId = 1
         let teacherId = 1
         
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
-        let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
+        let (email, loginSession) = Util.getLoginCredentials()
         
-        let parameters : [String: String] = ["email": email!, "loginsession": loginSession!, "coursecode": courseCode, "name": courseNameText, "credits": creditsText,"online": onlineString, "schoolid": String(schoolId)]
+        let parameters : [String: String] = ["email": email, "loginsession": loginSession, "coursecode": courseCode, "name": courseNameText, "credits": creditsText,"online": onlineString, "schoolid": String(schoolId)]
         
         Alamofire.request(.POST, globalConstants.URL + "add-course", parameters: parameters)
             .validate()
