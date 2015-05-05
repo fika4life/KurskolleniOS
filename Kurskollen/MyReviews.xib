@@ -60,7 +60,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="course" destination="3Zg-1H-76Q" id="Daf-X6-cNb"/>
-                <outlet property="rating" destination="CM1-L3-077" id="E3E-Mf-6iE"/>
+                <outlet property="reviewText" destination="CM1-L3-077" id="sKk-JR-Xw8"/>
                 <outlet property="school" destination="Cy0-uf-yqp" id="xTd-Jh-MiV"/>
             </connections>
             <point key="canvasLocation" x="450" y="399.5"/>

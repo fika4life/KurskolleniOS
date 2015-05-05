@@ -10,12 +10,17 @@ import UIKit
 import SwiftyJSON
 
 class MyReviewsTableViewController: UITableViewController {
-    
-    @IBOutlet weak var tableView: UITableView!
-    
 
+
+    //@IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //register the nib
+        var nib = UINib(nibName: "MyReviewTableViewCell", bundle: nil)
+        self.tableView.registerNib(nib, forCellReuseIdentifier: "myReviews")
+
 
 
         // Uncomment the following line to preserve selection between presentations
@@ -44,10 +49,7 @@ class MyReviewsTableViewController: UITableViewController {
         return 0
     }
     
-    //register the nib
-    var nib = UINib(nibName: "MyReviewTableViewCell", bundle: nil)
-    tableView.registerNib(nib, forCellReuseIdentifier: "myReviews")
-
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell

@@ -795,6 +795,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Mina reviews" image="user" id="pGb-BE-TjY"/>
                     <navigationItem key="navigationItem" title="Mina reviews" id="Xdv-hV-o1T"/>
+                    <connections>
+                        <outlet property="tableView" destination="A5K-M2-uEL" id="U90-6V-Rrq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rf-oG-6ql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
