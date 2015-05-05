@@ -27,7 +27,7 @@ class AddCourseViewController: UIViewController {
     @IBAction func Done(sender: AnyObject) {
         let courseNameText = courseName.text
         let courseDescText = courseDesc.text
-        let creditsText = credits.text.toInt()!
+        let creditsText = credits.text
         let onlineValue = online.on
         let onlineString = onlineValue ? "1" : "0"
     
@@ -40,13 +40,14 @@ class AddCourseViewController: UIViewController {
         let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
         let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
         
-        let parameters : [String: String] = ["email": email!, "loginsession": loginSession!, "coursecode": courseCode, "name": courseNameText, "credits": String(creditsText),"online": onlineString, "schoolid": String(schoolId)]
+        let parameters : [String: String] = ["email": email!, "loginsession": loginSession!, "coursecode": courseCode, "name": courseNameText, "credits": creditsText,"online": onlineString, "schoolid": String(schoolId)]
         
-        Alamofire.request(.GET, globalConstants.URL + "add-course", parameters: parameters)
+        Alamofire.request(.POST, globalConstants.URL + "add-course", parameters: parameters)
             .validate()
             .response{(_, _, _, error) in
                 self.view.endEditing(true)
                 if(error != nil){
+                    println(parameters)
                     var alert = UIAlertController(title: "Kommunikationsfel", message: "Kunde inte kommunicera med servern", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
