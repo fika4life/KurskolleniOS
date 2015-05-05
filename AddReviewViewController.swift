@@ -45,6 +45,7 @@ class AddReviewViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        println("AddReview: courseId="+String(courseId!))
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

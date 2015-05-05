@@ -65,14 +65,9 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject!) {
         println("segue:" + segue!.identifier!)
-        if (segue!.identifier == "toSearchResults") {
-            var svc = segue!.destinationViewController as SearchResultsViewController;
-            
-            
-            
-            
-            
-            
+        if (segue!.identifier == "toAddReview") {
+            var svc = segue!.destinationViewController as AddReviewViewController
+            svc.courseId = self.courseData!["id"].int
         }
     }
    
