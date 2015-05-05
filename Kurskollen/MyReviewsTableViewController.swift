@@ -36,6 +36,8 @@ class MyReviewsTableViewController: UITableViewController {
         
          self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        let (email, loginSession) = Util.getLoginCredentials()
+        
         let parameters = ["email" : email, "loginsession" : loginSession]
         
         Alamofire.request(.GET, globalConstants.URL + "get-my-reviews", parameters: parameters)
@@ -85,7 +87,17 @@ class MyReviewsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("myReviews", forIndexPath: indexPath) as MyReviewTableViewCell
 
         // Configure the cell...
-        let course :JSON = self.courses!
+        let course :JSON = self.courses![indexPath.row]
+        cell.course.text = course["name"].string
+        cell.school.text = course["school"].string
+        if let meanRating = course["meanRating"].double {
+            cell.rating.text = String(format: "%.2f",meanRating)
+            
+        }
+        else{
+            cell.rating.text = ""
+        }
+
 
         return cell
     }
