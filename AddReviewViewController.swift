@@ -29,23 +29,19 @@ class AddReviewViewController: UIViewController {
         let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
         let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
         
-        let parameters = ["email" : email, "loginsession" : loginSession, "rating" : theRating, "courseid" : self.courseId!, "teacherid" : teacher, "text" : text]
+        let parameters = ["email" : email, "loginsession" : loginSession,"rating" : theRating,"courseid" : String(self.courseId!), "teacherid" : teacher, "text" : text]
         
         Alamofire.request(.POST, globalConstants.URL + "create-review", parameters: parameters)
             .validate()
-            .responseJSON{(request, response, data, error) in
+            .response{(_, _, _, error) in
                 self.view.endEditing(true)
                 if(error != nil){
-                    var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
+                    Util.showPopup("Communication error", popupText: "Could not communicate with server", viewController: self)
                 }
                 else{
-                    
+                    Util.showPopup("Added", popupText: "The review was successfully added", viewController: self)
                 }
-                
         }
-        
     }
     
     override func viewDidLoad() {

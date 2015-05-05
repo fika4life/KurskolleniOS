@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B96211DF1AEA6B2B009C3E6F /* BookmarkListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96211DD1AEA6B2B009C3E6F /* BookmarkListTableCell.swift */; };
 		B96211E01AEA6B2B009C3E6F /* BookmarkListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96211DE1AEA6B2B009C3E6F /* BookmarkListTableCell.xib */; };
+		B9C30FDE1AF8E87D00280E7B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C30FDD1AF8E87D00280E7B /* Util.swift */; };
 		B9CD8C0C1AE542F700A45EC4 /* ReviewListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9CD8C0A1AE542F700A45EC4 /* ReviewListTableCell.xib */; };
 		B9F90AF61AE54E95004C4B2B /* ReviewListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F90AF51AE54E95004C4B2B /* ReviewListTableCell.swift */; };
 		BA0C000C1AD57B2D00F59EFD /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C000B1AD57B2D00F59EFD /* constants.swift */; };
@@ -50,6 +51,7 @@
 		79AF4F35D3F87F3FC66BEA7F /* Pods-Kurskollen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurskollen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kurskollen/Pods-Kurskollen.debug.xcconfig"; sourceTree = "<group>"; };
 		B96211DD1AEA6B2B009C3E6F /* BookmarkListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkListTableCell.swift; sourceTree = "<group>"; };
 		B96211DE1AEA6B2B009C3E6F /* BookmarkListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookmarkListTableCell.xib; sourceTree = "<group>"; };
+		B9C30FDD1AF8E87D00280E7B /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		B9CD8C0A1AE542F700A45EC4 /* ReviewListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewListTableCell.xib; sourceTree = "<group>"; };
 		B9F90AF51AE54E95004C4B2B /* ReviewListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListTableCell.swift; sourceTree = "<group>"; };
 		BA0C000B1AD57B2D00F59EFD /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				BA85B8BA1AEA693400F92471 /* AddReviewViewController.swift */,
+				B9C30FDD1AF8E87D00280E7B /* Util.swift */,
 				BA7BE2811ADE88F60001FC2B /* SearchResultsViewController.swift */,
 				BADB81551AD7DE6200E77BDC /* SearchViewController.swift */,
 				BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */,
