@@ -62,6 +62,19 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
 
     @IBAction func writeReview(sender: AnyObject) {
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject!) {
+        println("segue:" + segue!.identifier!)
+        if (segue!.identifier == "toSearchResults") {
+            var svc = segue!.destinationViewController as SearchResultsViewController;
+            
+            
+            
+            
+            
+            
+        }
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
