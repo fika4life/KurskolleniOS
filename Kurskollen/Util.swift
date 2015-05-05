@@ -11,7 +11,7 @@ import UIKit
 
 class Util{
     
-    class private let dateFormat = "dd-MM-yyyy HH:mm"
+    
     
 
     class func showPopup(popupTitle : String, popupText : String, viewController : UIViewController){
@@ -28,6 +28,8 @@ class Util{
     }
     
     class func formatTimeSwedishStyle(timestamp : Double) ->String{
+        let dateFormat = "dd-MM-yyyy HH:mm"
+        
         let date = NSDate(timeIntervalSince1970: timestamp)
         let formatter = NSDateFormatter()
         formatter.dateFormat = dateFormat
