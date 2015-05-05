@@ -14,11 +14,14 @@ class MyReviewTableViewCell: UITableViewCell {
    
     @IBOutlet weak var school: UILabel!
     
-    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var myRating: UILabel!
+    
+    @IBOutlet weak var theTime: UILabel!
+    
     
     @IBOutlet weak var myReviews: UITextView!
    
-    @IBOutlet weak var time: UILabel!
+  
     
     
     override func awakeFromNib() {

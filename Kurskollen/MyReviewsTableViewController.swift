@@ -109,15 +109,15 @@ class MyReviewsTableViewController: UITableViewController {
         }
         
         
-        if let arating = review["rating"].string{
-            cell.rating.text = arating
+        if let arating = review["rating"].int{
+            cell.myRating.text = String (arating)
         }else {
             //Print the error
             println(review["rating"])
         }
     
-        if let aTime = review["time"].string{
-            cell.time.text = aTime
+        if let aTime = review["time"].int{
+            cell.theTime.text = String (aTime)
         }else {
             //Print the error
             println(review["time"])
