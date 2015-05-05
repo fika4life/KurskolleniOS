@@ -25,9 +25,7 @@ class AddReviewViewController: UIViewController {
         let theRating = rating.text
         let teacher = reviewTeacher.text
         
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
-        let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
+        let (email, loginSession) = Util.getLoginCredentials()
         
         let parameters = ["email" : email, "loginsession" : loginSession,"rating" : theRating,"courseid" : String(self.courseId!), "teacherid" : teacher, "text" : text]
         

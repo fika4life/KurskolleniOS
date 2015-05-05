@@ -16,4 +16,11 @@ class Util{
         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
         viewController.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    class func getLoginCredentials() -> (email: String!, loginSession: String!){
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
+        let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
+        return (email, loginSession)
+    }
 }
