@@ -13,6 +13,7 @@
 		B9CD8C0C1AE542F700A45EC4 /* ReviewListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9CD8C0A1AE542F700A45EC4 /* ReviewListTableCell.xib */; };
 		BA0C000C1AD57B2D00F59EFD /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C000B1AD57B2D00F59EFD /* constants.swift */; };
 		BA0C000E1AD5A87F00F59EFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */; };
+		BA1C34D91B009EC100ED435A /* MinaReviewsNavbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1C34D81B009EC100ED435A /* MinaReviewsNavbarViewController.swift */; };
 		BA3DEAE11AC963CE006F60AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */; };
 		BA3DEAE31AC963CE006F60AA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAE21AC963CE006F60AA /* FirstViewController.swift */; };
 		BA3DEAE51AC963CF006F60AA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAE41AC963CE006F60AA /* SecondViewController.swift */; };
@@ -55,6 +56,7 @@
 		B9CD8C0A1AE542F700A45EC4 /* ReviewListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewListTableCell.xib; sourceTree = "<group>"; };
 		BA0C000B1AD57B2D00F59EFD /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BA1C34D81B009EC100ED435A /* MinaReviewsNavbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinaReviewsNavbarViewController.swift; sourceTree = "<group>"; };
 		BA3DEADB1AC963CE006F60AA /* Kurskollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kurskollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3DEADF1AC963CE006F60AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				BA533A251AF8E11D00F343DF /* MyReviewsTableViewController.swift */,
 				BA533A321AF9004C00F343DF /* MyReviewTableViewCell.swift */,
 				BA533A331AF9004C00F343DF /* MyReviewTableViewCell.xib */,
+				BA1C34D81B009EC100ED435A /* MinaReviewsNavbarViewController.swift */,
 			);
 			path = Kurskollen;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				BA85B8B91AEA637C00F92471 /* AddCourseViewController.swift in Sources */,
 				BA7BE2821ADE88F60001FC2B /* SearchResultsViewController.swift in Sources */,
 				BA67611E1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift in Sources */,
+				BA1C34D91B009EC100ED435A /* MinaReviewsNavbarViewController.swift in Sources */,
 				B9C30FDE1AF8E87D00280E7B /* Util.swift in Sources */,
 				BADB81561AD7DE6200E77BDC /* SearchViewController.swift in Sources */,
 				BA3DEAE51AC963CF006F60AA /* SecondViewController.swift in Sources */,

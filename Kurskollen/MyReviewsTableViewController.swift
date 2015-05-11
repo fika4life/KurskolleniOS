@@ -46,7 +46,7 @@ class MyReviewsTableViewController: UITableViewController {
                 
                     
                     if(error != nil){
-                        var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
+                        var alert = UIAlertController(title: "Communication error1", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
                         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
                         self.presentViewController(alert, animated: true, completion: nil)
                     }
@@ -146,17 +146,63 @@ class MyReviewsTableViewController: UITableViewController {
     }
     
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            let userDefaults = NSUserDefaults.standardUserDefaults()
+            let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
+            let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
+            let reviewid = reviews![indexPath.row]["reviewId"].intValue
+            
+            let parameters : [String: String] = ["email" : email!, "loginsession" : loginSession!, "reviewid" : String (reviewid)]
+            println(parameters)
+            
+            Alamofire.request(.POST, globalConstants.URL + "remove-review", parameters: parameters)
+                .validate()
+                .response{(_,_,_,error) in
+                    if(error != nil){
+                        println(error)
+                        var alert = UIAlertController(title: "Communication error2", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                    }
+                    else{
+                        
+                        self.reloadReviews()
+                        //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+                    }}
+            
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
+    func reloadReviews(){
+        let (email, loginSession) = Util.getLoginCredentials()
+        
+        let parameters = ["email" : email, "loginsession" : loginSession]
+        
+        Alamofire.request(.GET, globalConstants.URL + "get-my-reviews", parameters: parameters)
+            .validate()
+            .responseJSON{(request,response, data, error) in self.view.endEditing(true)
+                
+                
+                if(error != nil){
+                    var alert = UIAlertController(title: "Communication error3", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+                else{
+                    self.reviews = JSON(data!)
+                    self.tableView.reloadData()
+                    println(self.reviews)
+                }
+        }
+    }
 
     /*
     // Override to support rearranging the table view.

@@ -20,13 +20,15 @@ class MyReviewTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var myReviews: UITextView!
-   
+    
   
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.myReviews.userInteractionEnabled = true
+        self.myReviews.editable = false
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

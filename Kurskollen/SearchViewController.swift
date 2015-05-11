@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var courseField: UITextField!
     
+    @IBOutlet weak var courseCodeField: UITextField!
     @IBOutlet weak var teacherField: UITextField!
     
     @IBOutlet weak var distanceField: UISwitch!
@@ -32,6 +33,8 @@ class SearchViewController: UIViewController {
         let teacher = teacherField.text
         let onlineString = distanceField.on ? "1" : "0"
         
+        let courseCode = courseCodeField.text
+        
             
         
         if(course != ""){
@@ -39,6 +42,9 @@ class SearchViewController: UIViewController {
         }
         if(teacher != ""){
             self.parameters["teacher"] = teacher
+        }
+        if(courseCode != ""){
+            self.parameters["coursecode"] = courseCode
         }
         
         self.parameters["online"] = onlineString

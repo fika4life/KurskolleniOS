@@ -20,6 +20,9 @@ class AddReviewViewController: UIViewController {
     
     @IBOutlet weak var rating: UITextField!
    
+    @IBAction func onType(sender: AnyObject) {
+        
+    }
     @IBAction func Done(sender: AnyObject) {
         let text = reviewText.text
         let theRating = rating.text
