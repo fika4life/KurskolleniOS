@@ -776,12 +776,12 @@
         <scene sceneID="WpW-pq-tgq">
             <objects>
                 <tableViewController id="WDB-g7-qCL" customClass="MyReviewsTableViewController" customModule="Kurskollen" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" sectionHeaderHeight="22" sectionFooterHeight="22" id="A5K-M2-uEL">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="166" sectionHeaderHeight="22" sectionFooterHeight="22" id="A5K-M2-uEL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="k66-3O-gqM">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="166" id="k66-3O-gqM">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k66-3O-gqM" id="sKL-Hd-GRp">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -793,13 +793,13 @@
                             <outlet property="delegate" destination="WDB-g7-qCL" id="b47-aO-hQD"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Mina reviews" image="user" id="pGb-BE-TjY"/>
-                    <navigationItem key="navigationItem" title="Mina reviews" id="Xdv-hV-o1T"/>
+                    <tabBarItem key="tabBarItem" title="Mina reviews" image="user" selectedImage="user" id="pGb-BE-TjY"/>
                     <connections>
                         <outlet property="tableView" destination="A5K-M2-uEL" id="U90-6V-Rrq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rf-oG-6ql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Mina reviews" id="BAV-N2-zs8"/>
             </objects>
             <point key="canvasLocation" x="-691" y="128"/>
         </scene>
