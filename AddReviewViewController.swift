@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class AddReviewViewController: UIViewController {
+class AddReviewViewController: UIViewController, UITableViewDataSource {
     
     var courseId : Int?
     
@@ -19,6 +19,10 @@ class AddReviewViewController: UIViewController {
     @IBOutlet weak var reviewText: UITextField!
     
     @IBOutlet weak var rating: UITextField!
+    
+    var suggestions : JSON?
+    
+    var autoCompleteTableView : UITableView?
    
     @IBAction func Done(sender: AnyObject) {
         let text = reviewText.text
@@ -45,6 +49,11 @@ class AddReviewViewController: UIViewController {
     override func viewDidLoad() {
         println("AddReview: courseId="+String(courseId!))
         super.viewDidLoad()
+        
+        self.autoCompleteTableView = UITableView(frame: CGRectMake(0, 80, 320, 120),style:UITableViewStyle.Plain)
+        autoCompleteTableView!.dataSource = self
+        autoCompleteTableView!.scrollEnabled = true
+        autoCompleteTableView!.hidden = true
 
         // Do any additional setup after loading the view.
     }
@@ -53,6 +62,46 @@ class AddReviewViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(self.suggestions == nil){
+            return 0
+        }
+        return self.suggestions!.count
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        
+        let teacherJsonObject = suggestions![indexPath.row]
+        
+        cell.textLabel?.text = teacherJsonObject["name"].string
+        
+        return cell
+    }
+    
+    func getsuggestionJSON(teacherStarting : String){
+        let parameters : [String: String] = ["teacherStarting" : teacherStarting]
+        Alamofire.request(.GET, globalConstants.URL+"get-teacher-by-starting-string", parameters: parameters)
+            .validate()
+            .responseJSON{(request, response, data, error) in
+                self.view.endEditing(true)
+                if(error == nil){
+                    self.suggestions = JSON(data!)
+                    self.autoCompleteTableView!.reloadData()
+                    self.autoCompleteTableView!.hidden = false
+                    println(self.suggestions)
+                }
+        }
+        
+    }
+    
+    
     
 
     /*
