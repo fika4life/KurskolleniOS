@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class AddReviewViewController: UIViewController, UITableViewDataSource {
+class AddReviewViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var reviewData:JSON?
     
@@ -35,6 +35,7 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
         else{
             self.autoCompleteTableView!.hidden = true
         }
+        reviewTeacher.becomeFirstResponder()
     }
 
     @IBAction func Done(sender: AnyObject) {
@@ -99,6 +100,14 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = teacherJsonObject["name"].string
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let row = indexPath.row
+        
+        let teacherName = suggestions![row]["name"].string
+        reviewTeacher.text = teacherName
     }
     
     func getsuggestionJSON(teacherStarting : String){
