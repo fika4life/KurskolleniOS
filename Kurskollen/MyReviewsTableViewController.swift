@@ -14,6 +14,8 @@ class MyReviewsTableViewController: UITableViewController {
     
     var reviews: JSON? = nil
     
+    var indexRow:Int?
+    
     
     
     
@@ -57,7 +59,11 @@ class MyReviewsTableViewController: UITableViewController {
                     }
         }
         
+        
+        
     }
+
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -80,6 +86,20 @@ class MyReviewsTableViewController: UITableViewController {
         }
         return self.reviews!.count
     }
+    
+    ///NOTWORKING!!!!!!!
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        println("Did selectRowatIndexpath working")
+        if (self.tableView.editing == true){
+             self.performSegueWithIdentifier("editReview", sender: self);
+        }else{
+            println("Error with segue performer")
+        }
+       
+    }
+
+    
+    
     
     
     
@@ -219,14 +239,24 @@ class MyReviewsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        if segue.identifier == "editReview"
+        {
+            if let vc = segue.destinationViewController as? AddReviewViewController{
+                if let indexPath =  self.tableView.indexPathForSelectedRow(){
+                    let selectedCell = self.reviews![self.indexRow!]
+                    vc.reviewData = selectedCell
+
+            }
+        }
+        }
     }
-    */
+
 
 }
