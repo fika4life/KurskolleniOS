@@ -97,15 +97,12 @@ class MyReviewsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "editReview"
         {
-            println("prepare for segue fires")
             if let vc = segue.destinationViewController as? AddReviewViewController{
-                println("if let vc seque destinationVC")
-                println(self.tableView.indexPathForSelectedRow())
-                if let indexPath =  self.tableView?.indexPathForSelectedRow(){
-                    println("iif let indexPath")
-                    let selectedCell = self.reviews![self.indexRow!]
+                if let indexPath =  self.tableView.indexPathForSelectedRow(){
+                    println(self.reviews)
+                    let selectedCell = self.reviews![indexPath.row]
                     vc.reviewData = selectedCell
-                    println(vc.reviewData)
+                    
                     
                 }
             }
@@ -113,7 +110,7 @@ class MyReviewsTableViewController: UITableViewController {
     }
     
     
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("Did selectRowatIndexpath working")
         if (self.tableView.editing == true){
              self.performSegueWithIdentifier("editReview", sender: self);

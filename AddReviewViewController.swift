@@ -60,8 +60,13 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
     }
     
     override func viewDidLoad() {
-        
         println(reviewData)
+        reviewText.text = self.reviewData["text"].string
+        rating.text = self.reviewData["rating"].integer
+//        reviewTeacher.text = self.reviewData["teacher"]
+        
+        
+        
         super.viewDidLoad()
         
         self.autoCompleteTableView = UITableView(frame: CGRectMake(0, 80, 320, 120),style:UITableViewStyle.Plain)
