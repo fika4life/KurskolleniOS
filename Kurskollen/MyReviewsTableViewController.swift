@@ -26,6 +26,8 @@ class MyReviewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+          self.tableView.allowsSelectionDuringEditing = true;
+        
         //register the nib
         var nib = UINib(nibName: "MyReviewTableViewCell", bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: "myReviews")
@@ -55,7 +57,7 @@ class MyReviewsTableViewController: UITableViewController {
                     else{
                         self.reviews = JSON(data!)
                         self.tableView.reloadData()
-                        println(self.reviews)
+                       
                     }
         }
         
@@ -87,7 +89,30 @@ class MyReviewsTableViewController: UITableViewController {
         return self.reviews!.count
     }
     
-    ///NOTWORKING!!!!!!!
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "editReview"
+        {
+            println("prepare for segue fires")
+            if let vc = segue.destinationViewController as? AddReviewViewController{
+                println("if let vc seque destinationVC")
+                println(self.tableView.indexPathForSelectedRow())
+                if let indexPath =  self.tableView?.indexPathForSelectedRow(){
+                    println("iif let indexPath")
+                    let selectedCell = self.reviews![self.indexRow!]
+                    vc.reviewData = selectedCell
+                    println(vc.reviewData)
+                    
+                }
+            }
+        }
+    }
+    
+    
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         println("Did selectRowatIndexpath working")
         if (self.tableView.editing == true){
@@ -172,6 +197,9 @@ class MyReviewsTableViewController: UITableViewController {
         if editingStyle == .Delete {
             // Delete the row from the data source
 //            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            self.editing = true
+            
             let userDefaults = NSUserDefaults.standardUserDefaults()
             let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
             let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
@@ -219,7 +247,7 @@ class MyReviewsTableViewController: UITableViewController {
                 else{
                     self.reviews = JSON(data!)
                     self.tableView.reloadData()
-                    println(self.reviews)
+                 
                 }
         }
     }
@@ -240,23 +268,7 @@ class MyReviewsTableViewController: UITableViewController {
     */
 
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "editReview"
-        {
-            if let vc = segue.destinationViewController as? AddReviewViewController{
-                if let indexPath =  self.tableView.indexPathForSelectedRow(){
-                    let selectedCell = self.reviews![self.indexRow!]
-                    vc.reviewData = selectedCell
-
-            }
-        }
-        }
-    }
+    
 
 
 }

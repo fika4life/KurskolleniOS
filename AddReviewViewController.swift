@@ -59,7 +59,8 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
     }
     
     override func viewDidLoad() {
-        println("AddReview: courseId="+String(courseId!))
+        
+        println(reviewData)
         super.viewDidLoad()
         
         self.autoCompleteTableView = UITableView(frame: CGRectMake(0, 80, 320, 120),style:UITableViewStyle.Plain)
