@@ -27,6 +27,8 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
     var autoCompleteTableView : UITableView?
    
     @IBAction func onType(sender: AnyObject) {
+        let teacherStarting = self.reviewTeacher.text
+        self.getsuggestionJSON(teacherStarting)
         
     }
     @IBAction func Done(sender: AnyObject) {
@@ -59,6 +61,8 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
         autoCompleteTableView!.dataSource = self
         autoCompleteTableView!.scrollEnabled = true
         autoCompleteTableView!.hidden = true
+        
+        self.view.insertSubview(autoCompleteTableView!, belowSubview: reviewTeacher)
 
         // Do any additional setup after loading the view.
     }
