@@ -27,19 +27,16 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
     var autoCompleteTableView : UITableView?
     
     
-    
     @IBAction func onType(sender: AnyObject) {
         let teacherStarting = self.reviewTeacher.text
         if(teacherStarting != ""){
             self.getsuggestionJSON(teacherStarting)
         }
         else{
-            autoCompleteTableView!.hidden = true
+            self.autoCompleteTableView!.hidden = true
         }
     }
 
-    
-  
     @IBAction func Done(sender: AnyObject) {
         let text = reviewText.text
         let theRating = rating.text
@@ -68,7 +65,6 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
         
         self.autoCompleteTableView = UITableView(frame: CGRectMake(0, 80, 320, 120),style:UITableViewStyle.Plain)
         autoCompleteTableView!.dataSource = self
-        auto
         autoCompleteTableView!.scrollEnabled = true
         autoCompleteTableView!.hidden = true
         
@@ -113,16 +109,22 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
                 self.view.endEditing(true)
                 if(error == nil){
                     self.suggestions = JSON(data!)
-                    self.autoCompleteTableView!.reloadData()
-                    self.autoCompleteTableView!.hidden = false
                     println(self.suggestions)
+                    if(self.suggestions!.count>0){
+                        self.autoCompleteTableView!.reloadData()
+                        self.autoCompleteTableView!.hidden = false
+                    }
+                    else{
+                        self.autoCompleteTableView!.hidden = true
+                    }
                 }
-        }
+                else{
+                    self.autoCompleteTableView!.hidden = false
+                }
+            }
         
     }
-    
-    
-    
+
 
     /*
     // MARK: - Navigation
