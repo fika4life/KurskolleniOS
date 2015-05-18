@@ -27,7 +27,7 @@ class MyReviewTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.myReviews.userInteractionEnabled = true
+        self.myReviews.userInteractionEnabled = false
         self.myReviews.editable = false
     }
 

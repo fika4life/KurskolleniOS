@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class AddReviewViewController: UIViewController, UITableViewDataSource {
     
+    var reviewData:JSON?
+    
     var courseId : Int?
     
     @IBOutlet weak var reviewTeacher: UITextField!
