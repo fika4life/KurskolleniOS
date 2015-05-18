@@ -29,9 +29,13 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
     
     
     @IBAction func onType(sender: AnyObject) {
-        
         let teacherStarting = self.reviewTeacher.text
-        self.getsuggestionJSON(teacherStarting)
+        if(teacherStarting != ""){
+            self.getsuggestionJSON(teacherStarting)
+        }
+        else{
+            autoCompleteTableView!.hidden = true
+        }
     }
 
     
@@ -64,6 +68,7 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
         
         self.autoCompleteTableView = UITableView(frame: CGRectMake(0, 80, 320, 120),style:UITableViewStyle.Plain)
         autoCompleteTableView!.dataSource = self
+        auto
         autoCompleteTableView!.scrollEnabled = true
         autoCompleteTableView!.hidden = true
         
