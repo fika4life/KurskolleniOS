@@ -66,6 +66,7 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
         
         self.autoCompleteTableView = UITableView(frame: CGRectMake(0, 80, 320, 120),style:UITableViewStyle.Plain)
         autoCompleteTableView!.dataSource = self
+        autoCompleteTableView!.delegate = self
         autoCompleteTableView!.scrollEnabled = true
         autoCompleteTableView!.hidden = true
         
