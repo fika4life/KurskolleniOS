@@ -25,12 +25,17 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
     var suggestions : JSON?
     
     var autoCompleteTableView : UITableView?
-   
+    
+    
+    
     @IBAction func onType(sender: AnyObject) {
+        
         let teacherStarting = self.reviewTeacher.text
         self.getsuggestionJSON(teacherStarting)
-        
     }
+
+    
+  
     @IBAction func Done(sender: AnyObject) {
         let text = reviewText.text
         let theRating = rating.text
@@ -65,6 +70,7 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
         self.view.insertSubview(autoCompleteTableView!, belowSubview: reviewTeacher)
 
         // Do any additional setup after loading the view.
+        self.autoCompleteTableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,7 +91,7 @@ class AddReviewViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        var cell:UITableViewCell = self.autoCompleteTableView!.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
         
         let teacherJsonObject = suggestions![indexPath.row]
         
