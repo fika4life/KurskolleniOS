@@ -33,6 +33,7 @@
 		BA85B8BB1AEA693400F92471 /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85B8BA1AEA693400F92471 /* AddReviewViewController.swift */; };
 		BA85B8BD1AEA73C900F92471 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85B8BC1AEA73C900F92471 /* SettingsViewController.swift */; };
 		BAB679271AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB679261AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift */; };
+		BAD2631A1B13777200D9F386 /* TeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD263191B13777200D9F386 /* TeacherViewController.swift */; };
 		BADB81561AD7DE6200E77BDC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADB81551AD7DE6200E77BDC /* SearchViewController.swift */; };
 		E9571240099C45136F33497A /* Pods_Kurskollen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020ED6730B9820CF0E218E28 /* Pods_Kurskollen.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		BA85B8BA1AEA693400F92471 /* AddReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddReviewViewController.swift; path = ../AddReviewViewController.swift; sourceTree = "<group>"; };
 		BA85B8BC1AEA73C900F92471 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BAB679261AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCourseDetailViewController.swift; sourceTree = "<group>"; };
+		BAD263191B13777200D9F386 /* TeacherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherViewController.swift; sourceTree = "<group>"; };
 		BADB81551AD7DE6200E77BDC /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E1ACABD93DD6BE9D33ABAF30 /* Pods-Kurskollen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kurskollen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kurskollen/Pods-Kurskollen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +164,7 @@
 				BA533A321AF9004C00F343DF /* MyReviewTableViewCell.swift */,
 				BA533A331AF9004C00F343DF /* MyReviewTableViewCell.xib */,
 				BA1C34D81B009EC100ED435A /* MinaReviewsNavbarViewController.swift */,
+				BAD263191B13777200D9F386 /* TeacherViewController.swift */,
 			);
 			path = Kurskollen;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				BA533A261AF8E11D00F343DF /* MyReviewsTableViewController.swift in Sources */,
 				B96211DF1AEA6B2B009C3E6F /* BookmarkListTableCell.swift in Sources */,
 				BA3DEB031AC98658006F60AA /* ThirdViewController.swift in Sources */,
+				BAD2631A1B13777200D9F386 /* TeacherViewController.swift in Sources */,
 				BA0C000C1AD57B2D00F59EFD /* constants.swift in Sources */,
 				BA3DEAE31AC963CE006F60AA /* FirstViewController.swift in Sources */,
 			);

@@ -103,9 +103,10 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
             .responseJSON{(request, response, data, error) in
                 self.view.endEditing(true)
                 if(error != nil){
-                    var alert = UIAlertController(title: "Communication error", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
+                    var alert = UIAlertController(title: "Communication error", message: "There is an error", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
+                    println(error)
                 }
                 else{
                     self.courses = JSON(data!)

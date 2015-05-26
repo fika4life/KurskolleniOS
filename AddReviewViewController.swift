@@ -26,6 +26,8 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
     
     var autoCompleteTableView : UITableView?
     
+    var newPost : Bool?
+    
     
     @IBAction func onType(sender: AnyObject) {
         let teacherStarting = self.reviewTeacher.text
@@ -42,29 +44,64 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
         let text = reviewText.text
         let theRating = rating.text
         let teacher = reviewTeacher.text
+        self.courseId = reviewData?["courseid"].intValue
+        let reviewId = reviewData?["reviewId"].intValue
+        
+       
         
         let (email, loginSession) = Util.getLoginCredentials()
         
-        let parameters = ["email" : email, "loginsession" : loginSession,"rating" : theRating,"courseid" : String(self.courseId!), "teacherid" : teacher, "text" : text]
         
-        Alamofire.request(.POST, globalConstants.URL + "create-review", parameters: parameters)
-            .validate()
-            .response{(_, _, _, error) in
-                self.view.endEditing(true)
-                if(error != nil){
-                    Util.showPopup("Communication error", popupText: "Could not communicate with server", viewController: self)
-                }
-                else{
-                    Util.showPopup("Added", popupText: "The review was successfully added", viewController: self)
-                }
+        var parameters = [String : String]()
+        
+        
+        if (newPost!){
+            
+            parameters = ["email" : email, "loginsession" : loginSession,"rating" : theRating,"courseid" : String(self.courseId!), "teacher" : teacher, "text" : text]
+            
+            Alamofire.request(.POST, globalConstants.URL + "create-review", parameters: parameters)
+                .validate()
+                .response{(_, _, _, error) in
+                    self.view.endEditing(true)
+                    if(error != nil){
+                        Util.showPopup("Communication error", popupText: "Could not communicate with server1", viewController: self)
+                    }
+                    else{
+                        Util.showPopup("Added", popupText: "The review was successfully added", viewController: self)
+                    }
+                    
+                    println(parameters)
+            }
+
+        }else{
+            
+            parameters = ["email" : email, "loginsession" : loginSession,"rating" : theRating, "reviewId": String(reviewId!), "courseid" : String(self.courseId!), "teacher" : teacher, "text" : text]
+            
+            Alamofire.request(.POST, globalConstants.URL + "edit-review", parameters: parameters)
+                .validate()
+                .response{(_, response, _, error) in
+                    self.view.endEditing(true)
+                    if(error != nil){
+                        Util.showPopup("Communication error", popupText: "Could not communicate with server2", viewController: self)
+                        println(response?.statusCode)
+                    }
+                    else{
+                        Util.showPopup("Uppdaterat", popupText: "Recensionen har uppdaterats", viewController: self)
+                    }
+                    println(parameters)
+            }
+
         }
-    }
+        
+            }
     
     override func viewDidLoad() {
-        println(reviewData)
-        reviewText.text = self.reviewData["text"].string
-        rating.text = self.reviewData["rating"].integer
-//        reviewTeacher.text = self.reviewData["teacher"]
+        //println("reviewDat")
+        //println(reviewData)
+      
+        reviewText.text = reviewData!["text"].string
+        rating.text =  String (reviewData!["rating"].intValue)
+        reviewTeacher.text = self.reviewData?["teacherName"].string
         
         
         
@@ -124,7 +161,7 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
                 self.view.endEditing(true)
                 if(error == nil){
                     self.suggestions = JSON(data!)
-                    println(self.suggestions)
+                    //println(self.suggestions)
                     if(self.suggestions!.count>0){
                         self.autoCompleteTableView!.reloadData()
                         self.autoCompleteTableView!.hidden = false

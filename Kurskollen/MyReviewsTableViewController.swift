@@ -38,7 +38,7 @@ class MyReviewsTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         
-         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         let (email, loginSession) = Util.getLoginCredentials()
         
@@ -53,6 +53,7 @@ class MyReviewsTableViewController: UITableViewController {
                         var alert = UIAlertController(title: "Communication error1", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
                         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
                         self.presentViewController(alert, animated: true, completion: nil)
+                        println(error)
                     }
                     else{
                         self.reviews = JSON(data!)
@@ -99,9 +100,10 @@ class MyReviewsTableViewController: UITableViewController {
         {
             if let vc = segue.destinationViewController as? AddReviewViewController{
                 if let indexPath =  self.tableView.indexPathForSelectedRow(){
-                    println(self.reviews)
+//                    println(self.reviews)
                     let selectedCell = self.reviews![indexPath.row]
                     vc.reviewData = selectedCell
+                    vc.newPost = false
                     
                     
                 }
