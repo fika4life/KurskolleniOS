@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import CoreActionSheetPicker
+import ActionSheetPicker
 
 class SearchViewController: UIViewController {
 
@@ -33,7 +33,7 @@ class SearchViewController: UIViewController {
             println("picker = \(picker)")
             return
             }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
-    }
+    
         
     }
     @IBAction func addCourse(sender: AnyObject) {
