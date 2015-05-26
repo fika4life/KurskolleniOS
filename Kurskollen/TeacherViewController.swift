@@ -25,9 +25,10 @@ class TeacherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("TeacherViewController did load")
         courses.userInteractionEnabled = true
         courses.editable = false
-        teacherId = 1
+        
         
         let parameters = ["teacherid" : teacherId!]
       

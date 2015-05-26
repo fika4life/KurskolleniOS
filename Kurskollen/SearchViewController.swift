@@ -48,7 +48,7 @@ class SearchViewController: UIViewController {
         }
         
         self.parameters["online"] = onlineString
-        println("getting parameters")
+//        println("getting parameters")
         self.performSegueWithIdentifier("toSearchResults", sender: self)
         
     }
@@ -58,7 +58,7 @@ class SearchViewController: UIViewController {
         if (segue!.identifier == "toSearchResults") {
             var svc = segue!.destinationViewController as SearchResultsViewController;
             svc.parameters = self.parameters
-            println(self.parameters)
+//            println(self.parameters)
             
             
             
