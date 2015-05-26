@@ -13,7 +13,7 @@ struct globalConstants {
     static let emailMemoryKey = "email"
     static let loginSessionMemoryKey = "loginsession"
     
-    static let schools = [
+    static let SCHOOLS = [
         1: "Blekinge tekniska högskola",
         2: "Chalmers tekniska högskola",
         3: "Dans och cirkushögskolan",
