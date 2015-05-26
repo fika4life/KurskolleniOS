@@ -35,4 +35,10 @@ class Util{
         formatter.dateFormat = dateFormat
         return formatter.stringFromDate(date)
     }
+
+    class func allKeysForValue<K, V : Equatable>(dict: [K : V], val: V) -> [K] {
+        return map(filter(dict) { $1 == val }) { $0.0 }
+    }
+
+
 }
