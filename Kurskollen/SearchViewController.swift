@@ -19,8 +19,12 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var distanceField: UISwitch!
     
+    @IBAction func SchoolPicker(sender: AnyObject) {
+    }
     @IBAction func addCourse(sender: AnyObject) {
     }
+    
+    
     
     
     var parameters = [String: String]()
