@@ -47,7 +47,7 @@ class MyReviewsTableViewController: UITableViewController {
         Alamofire.request(.GET, globalConstants.URL + "get-my-reviews", parameters: parameters)
             .validate()
             .responseJSON{(request,response, data, error) in self.view.endEditing(true)
-                
+                    
                     
                     if(error != nil){
                         var alert = UIAlertController(title: "Communication error1", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
