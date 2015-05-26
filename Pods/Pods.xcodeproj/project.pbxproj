@@ -7,331 +7,458 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E75C10BCA7CEDA95E042EE2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECFAB7AE11BDE146B5C0E98 /* QuartzCore.framework */; };
-		12AE6A7DC8EB5E36F57C46FC /* Pods-Kurskollen-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0116CE91E7C3D2F596794CB6 /* Pods-Kurskollen-SwiftyJSON-dummy.m */; };
-		2354A70154D51CA9AE2223AD /* Pods-Kurskollen-EDStarRating-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC73FABBA515C8BE1D90E1EF /* Pods-Kurskollen-EDStarRating-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2716AF3D44F5AB8DA9422520 /* Pods-Kurskollen-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5AEB2233898EF744534857 /* Pods-Kurskollen-Alamofire-dummy.m */; };
-		3F49A254CFAC907A9FD19CE8 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF4C68DB3BF5E92D136B849 /* Alamofire.swift */; };
-		4585AC87A98C5612D6A9D592 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DE9A3590BFEF6791B3DFC7 /* CoreGraphics.framework */; };
-		6240CCCF5EBA83A18B1B5ABA /* Pods-Kurskollen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C35CFD3452BBE09229258D2D /* Pods-Kurskollen-dummy.m */; };
-		76006BB02AAB58D66624554D /* Pods-Kurskollen-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFE6EDD70465FF668D980500 /* Pods-Kurskollen-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83D1D34129674B74661C4B35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83770B0367125863BF583F1 /* Foundation.framework */; };
-		8AF127EDA21DC8AADC26158C /* Pods-Kurskollen-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73EAF3632C33C2771FACE346 /* Pods-Kurskollen-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		90CCD8EF2E177E9EE267676C /* EDStarRating.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B2CA03F4691B14D56A1F7 /* EDStarRating.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7284554D784EE84EC4466AF /* EDStarRating.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E98DAEDC9E294B5E7C7C8E3 /* EDStarRating.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		BAEAA372B3710276657F41E4 /* Pods-Kurskollen-EDStarRating-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B24D1929C9971696EF92685C /* Pods-Kurskollen-EDStarRating-dummy.m */; };
-		C4B502D881A193F238E688DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83770B0367125863BF583F1 /* Foundation.framework */; };
-		C4E14C6D95A8044E24D0565E /* Pods-Kurskollen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F79D811648752083DA5299BB /* Pods-Kurskollen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB837182350E4A18C3F5EAC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83770B0367125863BF583F1 /* Foundation.framework */; };
-		DFBEAF5EF56BB82C55E8FED0 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F39225A6DFBA4A93A664AF /* SwiftyJSON.swift */; };
-		F78085224A66FC16D6396740 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83770B0367125863BF583F1 /* Foundation.framework */; };
+		0DB38D007D709525D1B2E80D /* ActionSheetLocalePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFEBF178033262D75BE8C27 /* ActionSheetLocalePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EC45F365DEA8203F5DB736C /* SWActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = B639DB8A707D33FB44068EBF /* SWActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13669FF4AB5C24D5E9CE6E79 /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D28A618E3DE5FDBB412424 /* ActionSheetDistancePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16A42472460B3235FBF5AC81 /* Pods-Kurskollen-ActionSheetPicker-3.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87EC830A73619527B624E2 /* Pods-Kurskollen-ActionSheetPicker-3.0-dummy.m */; };
+		257B7158835EE62292F47B13 /* Pods-Kurskollen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C19706FBF315269E3CE08C7 /* Pods-Kurskollen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C6E540D0E2A1994F161F0F6 /* SWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C244FD0C187BA7CFB69295A /* SWActionSheet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		37B61EB59975EC46FA350FFE /* Pods-Kurskollen-EDStarRating-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D444A8083D3BBE5D96734BE /* Pods-Kurskollen-EDStarRating-dummy.m */; };
+		39DEA186C3AA4B2BA0A77892 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = B51160C1F7F9A794856ED79A /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45390255DF1FF2C6127B480C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8446C7CF5BE40EDB8AE28E7C /* Foundation.framework */; };
+		460B535CAD454E9659499D8C /* Pods-Kurskollen-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8A96AFE917BB7C0E80EBA2 /* Pods-Kurskollen-SwiftyJSON-dummy.m */; };
+		48B49979F9E29C2ACAB5C52C /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DA269B75493B408A8A392BD /* ActionSheetStringPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4ECCFDA792D3FB5BD6B794D7 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6268E27B43A0D0C1EE682B /* ActionSheetCustomPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		573C7512FBA56EA75174C3BF /* ActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EA0B249499D31BB4C78386F /* ActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		592C350AF33BEA58DC20E595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8446C7CF5BE40EDB8AE28E7C /* Foundation.framework */; };
+		5DFD7517777E5970856F6182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8446C7CF5BE40EDB8AE28E7C /* Foundation.framework */; };
+		5F188B667E01ABE02741B925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8446C7CF5BE40EDB8AE28E7C /* Foundation.framework */; };
+		6680370E115C31ECE89DDFE3 /* Pods-Kurskollen-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4998219088261757ED4B62C /* Pods-Kurskollen-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BDC8D58A2E91BD2BA5E4BC8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CC87F2447BAC1775F756DB /* SwiftyJSON.swift */; };
+		6FA1EEABA870BAC2BD985648 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192200BF6FF6468E1D6CDC5 /* Alamofire.swift */; };
+		6FD001EBED24D5CDBEB567B0 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D1731065223623D3C67C0 /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		70E43CF9C946133A62DDD181 /* EDStarRating.h in Headers */ = {isa = PBXBuildFile; fileRef = 5376ADCD7DE533E0F816918A /* EDStarRating.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72EEFA8BE0D37D77A30D25E3 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2D3C46BDA68D778E9FDDA7 /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7B0310209B9CAAA092FB6D9A /* ActionSheetLocalePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AC620084296DD4E0F28E7E28 /* ActionSheetLocalePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7B457030B0689538A1BE5BA6 /* Pods-Kurskollen-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9EE4009E21905DDFD986482 /* Pods-Kurskollen-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		861C42C945041246D7D54A90 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3088535799CBD17148EAC /* QuartzCore.framework */; };
+		923C58CFD421077DF9665678 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5926F32C86889693A9CA9E86 /* UIKit.framework */; };
+		A2945BF987E2CB36C6FB8067 /* EDStarRating.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C05486175581BA38DA7DA8 /* EDStarRating.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A8F5B43B4526E124C716C893 /* Pods-Kurskollen-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0934A99ADEB138CEDD41E6D5 /* Pods-Kurskollen-Alamofire-dummy.m */; };
+		B04F3F12EBB66ABBDA4C96E5 /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = CB9B2CC03B6834BF19A32DC9 /* DistancePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC984DC46863A1EE24ED9C63 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5309E040D3EEAD24DFA0D1DB /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BD5858F75419DFB4E0A3B5AE /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D4351E7126C9578CC9DC87BF /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BFE4D662814660145FFC54FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8446C7CF5BE40EDB8AE28E7C /* Foundation.framework */; };
+		C6C38CC466DEE269D4F8DBAA /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B2019810D5A960CBA08448 /* ActionSheetCustomPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA4329FCC4EAB891371CC730 /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 660FDFF559DF64D1B6EE4313 /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF3D5D8F75500FE1DB22EF77 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CB6900411044701EB776F5 /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EAA2D923DA2C3C943D92DFD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D854C7C0107B8520B4A67B0 /* CoreGraphics.framework */; };
+		ED532C8CFA734356566926A3 /* Pods-Kurskollen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C8D523E7F028244D7983E9 /* Pods-Kurskollen-dummy.m */; };
+		F2C090942F9144A1F58CCB6F /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDA6604B76307EBA405F4EE /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBE3BAA2A21EBDB1A90C7A5A /* Pods-Kurskollen-ActionSheetPicker-3.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F82576868170FE4C0060EC /* Pods-Kurskollen-ActionSheetPicker-3.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC6EB34C5AEEEC8D1B9199FC /* Pods-Kurskollen-EDStarRating-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 491721434E1732E59C30B43E /* Pods-Kurskollen-EDStarRating-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3F266FA8F54BCA7478210D39 /* PBXContainerItemProxy */ = {
+		096A8F9C5DCC8266A3DF48DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 41A1B28A8BDCF46B737C6FF1 /* Project object */;
+			containerPortal = 340F8A633F340B6E22D2ECCA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8164E25A7FFBEE1074999615;
-			remoteInfo = "Pods-Kurskollen-EDStarRating";
+			remoteGlobalIDString = EBA89D8DED9F14DA8B3D9C6B;
+			remoteInfo = "Pods-Kurskollen-ActionSheetPicker-3.0";
 		};
-		8E85AF2DB0F91ECA7EF79867 /* PBXContainerItemProxy */ = {
+		2622CC188FA28F6AFBFB97E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 41A1B28A8BDCF46B737C6FF1 /* Project object */;
+			containerPortal = 340F8A633F340B6E22D2ECCA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4096EACCBAFA446396D7E727;
+			remoteGlobalIDString = A279F22E7E98DE9404CA6F87;
 			remoteInfo = "Pods-Kurskollen-SwiftyJSON";
 		};
-		F630692FD63A23A1F34E0BA0 /* PBXContainerItemProxy */ = {
+		3D53978135EBE43B0B19ED31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 41A1B28A8BDCF46B737C6FF1 /* Project object */;
+			containerPortal = 340F8A633F340B6E22D2ECCA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E09A32EACC82E6AC6EC77E47;
+			remoteGlobalIDString = D12B03436EFBEFC9C61E28AE;
+			remoteInfo = "Pods-Kurskollen-EDStarRating";
+		};
+		5DAF04F35444D64FC55BC65F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 340F8A633F340B6E22D2ECCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA0ED49E8C45F5632BA1DD62;
 			remoteInfo = "Pods-Kurskollen-Alamofire";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00C12922B39FDB3A3D52D871 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0116CE91E7C3D2F596794CB6 /* Pods-Kurskollen-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kurskollen-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		03D67FD1904FB80036CEC390 /* Pods-Kurskollen-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kurskollen-resources.sh"; sourceTree = "<group>"; };
-		07DE9A3590BFEF6791B3DFC7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		0E98DAEDC9E294B5E7C7C8E3 /* EDStarRating.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EDStarRating.m; path = EDStarRating/EDStarRating.m; sourceTree = "<group>"; };
-		16E28B7A73B9873768459BC7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1D8B5B57CE93ED5315B2EFA3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F84A80648810E9409C4F632 /* Pods_Kurskollen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kurskollen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2807374FBB0B421395AEDB3E /* Pods-Kurskollen-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
-		2C156272485D639E35C278E7 /* EDStarRating.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EDStarRating.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		32F39225A6DFBA4A93A664AF /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		3B5AEB2233898EF744534857 /* Pods-Kurskollen-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kurskollen-Alamofire-dummy.m"; sourceTree = "<group>"; };
-		44D2CC376F713B3E6290A216 /* Pods-Kurskollen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen.release.xcconfig"; sourceTree = "<group>"; };
-		450B8250E42A18789F5B4D47 /* Pods-Kurskollen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen.debug.xcconfig"; sourceTree = "<group>"; };
-		4BF652F02B9094FFAAAFBBF4 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		53028AF5432642740FC039E5 /* Pods-Kurskollen-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		5B06600C21644A4300AE5BD5 /* Pods-Kurskollen-EDStarRating-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-EDStarRating-prefix.pch"; sourceTree = "<group>"; };
-		61EE98DA67FC71605728BB6D /* Pods-Kurskollen-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-environment.h"; sourceTree = "<group>"; };
-		6EF4C68DB3BF5E92D136B849 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		73EAF3632C33C2771FACE346 /* Pods-Kurskollen-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		7574F239B98EE1EC3CA10BDF /* Pods-Kurskollen-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		7E03AD5EC5FC31C2525545F6 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		821095F409B9FB979EFA43D1 /* Pods-Kurskollen-EDStarRating.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Kurskollen-EDStarRating.modulemap"; sourceTree = "<group>"; };
-		8540D7D122D548BE639D6A0B /* Pods-Kurskollen-EDStarRating-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-EDStarRating-Private.xcconfig"; sourceTree = "<group>"; };
-		8AC79DD1BAB7AA0E0342B6A7 /* Pods-Kurskollen-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Kurskollen-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
-		940AE43DF7EBC21283F06924 /* Pods-Kurskollen-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kurskollen-frameworks.sh"; sourceTree = "<group>"; };
-		A83770B0367125863BF583F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A9BC2C412987BF2FB329C324 /* Pods-Kurskollen-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kurskollen-acknowledgements.plist"; sourceTree = "<group>"; };
-		AECFAB7AE11BDE146B5C0E98 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		AF6FA0AD7951AFFF2146FAFF /* Pods-Kurskollen-EDStarRating.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-EDStarRating.xcconfig"; sourceTree = "<group>"; };
-		B24D1929C9971696EF92685C /* Pods-Kurskollen-EDStarRating-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kurskollen-EDStarRating-dummy.m"; sourceTree = "<group>"; };
-		B5BBD23399D547ABFF1A7DF5 /* Pods-Kurskollen-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
-		BA3B2CA03F4691B14D56A1F7 /* EDStarRating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EDStarRating.h; path = EDStarRating/EDStarRating.h; sourceTree = "<group>"; };
-		BFE6EDD70465FF668D980500 /* Pods-Kurskollen-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		C35CFD3452BBE09229258D2D /* Pods-Kurskollen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kurskollen-dummy.m"; sourceTree = "<group>"; };
-		C533EF5BDAF782C85BA9E79A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C57B7DEC4AC6516E03328CBA /* Pods-Kurskollen-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kurskollen-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D6290F35FE17213831922A69 /* Pods-Kurskollen-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Kurskollen-Alamofire.modulemap"; sourceTree = "<group>"; };
-		E1CD932485CAE30B0947510D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC73FABBA515C8BE1D90E1EF /* Pods-Kurskollen-EDStarRating-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-EDStarRating-umbrella.h"; sourceTree = "<group>"; };
-		EC989B7C2A196B216274D7C0 /* Pods-Kurskollen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Kurskollen.modulemap"; sourceTree = "<group>"; };
-		EEC28C53CAE47404783EA926 /* Pods-Kurskollen-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
-		F79D811648752083DA5299BB /* Pods-Kurskollen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-umbrella.h"; sourceTree = "<group>"; };
-		FDCF073C22C3C1E0DF6B01EE /* Pods-Kurskollen-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-Alamofire.xcconfig"; sourceTree = "<group>"; };
+		031C9BB7A770C8A4A60C5563 /* Pods-Kurskollen-ActionSheetPicker-3.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-ActionSheetPicker-3.0.xcconfig"; sourceTree = "<group>"; };
+		0480068421B2FC7DF46E5FFC /* Pods-Kurskollen-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-Alamofire.xcconfig"; sourceTree = "<group>"; };
+		04B2019810D5A960CBA08448 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPicker.h; path = Pickers/ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		0934A99ADEB138CEDD41E6D5 /* Pods-Kurskollen-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kurskollen-Alamofire-dummy.m"; sourceTree = "<group>"; };
+		0D854C7C0107B8520B4A67B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		0DA269B75493B408A8A392BD /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		0DDAA7E823FA383B2FD8F4FE /* Pods-Kurskollen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen.release.xcconfig"; sourceTree = "<group>"; };
+		12972ADDE4C53496FF206A97 /* Pods-Kurskollen-ActionSheetPicker-3.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Kurskollen-ActionSheetPicker-3.0.modulemap"; sourceTree = "<group>"; };
+		1454ED2E0A1C8DAB34EE8197 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17F82576868170FE4C0060EC /* Pods-Kurskollen-ActionSheetPicker-3.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-ActionSheetPicker-3.0-umbrella.h"; sourceTree = "<group>"; };
+		1C19706FBF315269E3CE08C7 /* Pods-Kurskollen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-umbrella.h"; sourceTree = "<group>"; };
+		1C244FD0C187BA7CFB69295A /* SWActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWActionSheet.m; path = Pickers/SWActionSheet.m; sourceTree = "<group>"; };
+		1E7BBC6764606107E4294A9B /* Pods-Kurskollen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Kurskollen.modulemap"; sourceTree = "<group>"; };
+		2D444A8083D3BBE5D96734BE /* Pods-Kurskollen-EDStarRating-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kurskollen-EDStarRating-dummy.m"; sourceTree = "<group>"; };
+		2F26F40054EC53A212BD14D7 /* Pods-Kurskollen-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
+		388FF0AD37EEDCBB04B25C7E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		491721434E1732E59C30B43E /* Pods-Kurskollen-EDStarRating-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-EDStarRating-umbrella.h"; sourceTree = "<group>"; };
+		5309E040D3EEAD24DFA0D1DB /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		5376ADCD7DE533E0F816918A /* EDStarRating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EDStarRating.h; path = EDStarRating/EDStarRating.h; sourceTree = "<group>"; };
+		57E9D2BF726CA50A163A2AD9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5926F32C86889693A9CA9E86 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5D2D3C46BDA68D778E9FDDA7 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		660FDFF559DF64D1B6EE4313 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDatePicker.h; path = Pickers/ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		66D28A618E3DE5FDBB412424 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetDistancePicker.h; path = Pickers/ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		68F812C0B9343F4D7F5C9A57 /* Pods-Kurskollen-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Kurskollen-Alamofire.modulemap"; sourceTree = "<group>"; };
+		746FA36CC21DB0DB7EC02F23 /* Pods-Kurskollen-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
+		76CACE2AD77244FE992D282B /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7730114531E4FBBE7BED77FE /* Pods-Kurskollen-EDStarRating-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-EDStarRating-prefix.pch"; sourceTree = "<group>"; };
+		7A70752AD0CE9A46BCCC2BC6 /* Pods-Kurskollen-EDStarRating.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Kurskollen-EDStarRating.modulemap"; sourceTree = "<group>"; };
+		7AC94D6A7BB510D67C4A42CB /* Pods-Kurskollen-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-environment.h"; sourceTree = "<group>"; };
+		83714A817060CFB04B227E2A /* Pods-Kurskollen-ActionSheetPicker-3.0-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-ActionSheetPicker-3.0-Private.xcconfig"; sourceTree = "<group>"; };
+		8446C7CF5BE40EDB8AE28E7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		85CC87F2447BAC1775F756DB /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		8B4100536308B3C2CF18CF30 /* Pods-Kurskollen-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kurskollen-frameworks.sh"; sourceTree = "<group>"; };
+		8B54DA1B36C679DEEB2780F6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9657A4293FFB942F018C2458 /* ActionSheetPicker_3_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionSheetPicker_3_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F10885270D04C8CD6F82D8 /* Pods-Kurskollen-EDStarRating.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-EDStarRating.xcconfig"; sourceTree = "<group>"; };
+		9EA0B249499D31BB4C78386F /* ActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetPicker.h; path = Pickers/ActionSheetPicker.h; sourceTree = "<group>"; };
+		A03E1336C609EBD6325A02D3 /* Pods-Kurskollen-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Kurskollen-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
+		A3C5D6711BEE90CC4BD7B0C1 /* Pods-Kurskollen-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
+		A5DD75B66A826B31389E98F8 /* Pods-Kurskollen-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kurskollen-acknowledgements.plist"; sourceTree = "<group>"; };
+		AA40D699BE95F04DF1679BD2 /* Pods-Kurskollen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen.debug.xcconfig"; sourceTree = "<group>"; };
+		ABB3088535799CBD17148EAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		AC620084296DD4E0F28E7E28 /* ActionSheetLocalePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetLocalePicker.m; path = Pickers/ActionSheetLocalePicker.m; sourceTree = "<group>"; };
+		AD16027760ED374DDD90A90E /* Pods-Kurskollen-ActionSheetPicker-3.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-ActionSheetPicker-3.0-prefix.pch"; sourceTree = "<group>"; };
+		B51160C1F7F9A794856ED79A /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractActionSheetPicker.h; path = Pickers/AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		B5FB840B5305B73EAB5D4A15 /* Pods-Kurskollen-EDStarRating-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kurskollen-EDStarRating-Private.xcconfig"; sourceTree = "<group>"; };
+		B639DB8A707D33FB44068EBF /* SWActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWActionSheet.h; path = Pickers/SWActionSheet.h; sourceTree = "<group>"; };
+		B67D74F9D0E258B99460B1BF /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9EE4009E21905DDFD986482 /* Pods-Kurskollen-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		BEBB63C3243AFA16BADD6260 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8C05486175581BA38DA7DA8 /* EDStarRating.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EDStarRating.m; path = EDStarRating/EDStarRating.m; sourceTree = "<group>"; };
+		CB0D1731065223623D3C67C0 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractActionSheetPicker.m; path = Pickers/AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		CB8A96AFE917BB7C0E80EBA2 /* Pods-Kurskollen-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kurskollen-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		CB9B2CC03B6834BF19A32DC9 /* DistancePickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DistancePickerView.h; path = Pickers/DistancePickerView.h; sourceTree = "<group>"; };
+		CBAE3E8A4E7DE902A9F688D1 /* Pods-Kurskollen-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		CCF69306744AE3345FEB4A66 /* Pods_Kurskollen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kurskollen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDDA6604B76307EBA405F4EE /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		CE87EC830A73619527B624E2 /* Pods-Kurskollen-ActionSheetPicker-3.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kurskollen-ActionSheetPicker-3.0-dummy.m"; sourceTree = "<group>"; };
+		CF6268E27B43A0D0C1EE682B /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		D08FC313353E87AC2B619C86 /* Pods-Kurskollen-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		D192200BF6FF6468E1D6CDC5 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		D4351E7126C9578CC9DC87BF /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		D4CB6900411044701EB776F5 /* DistancePickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DistancePickerView.m; path = Pickers/DistancePickerView.m; sourceTree = "<group>"; };
+		D6C8D523E7F028244D7983E9 /* Pods-Kurskollen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kurskollen-dummy.m"; sourceTree = "<group>"; };
+		E4998219088261757ED4B62C /* Pods-Kurskollen-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kurskollen-Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		E976DCDC5383386203F204D2 /* EDStarRating.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EDStarRating.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBFEBF178033262D75BE8C27 /* ActionSheetLocalePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetLocalePicker.h; path = Pickers/ActionSheetLocalePicker.h; sourceTree = "<group>"; };
+		F38D8065AC9B3AC8868433E0 /* Pods-Kurskollen-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kurskollen-resources.sh"; sourceTree = "<group>"; };
+		F6424D47EAA902EEB8456113 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA49F941A74E7ED5DC40A179 /* Pods-Kurskollen-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kurskollen-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		181E62EFE1E77635EB83DC8F /* Frameworks */ = {
+		04D7141739B9C27D305D8F14 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4585AC87A98C5612D6A9D592 /* CoreGraphics.framework in Frameworks */,
-				F78085224A66FC16D6396740 /* Foundation.framework in Frameworks */,
-				0E75C10BCA7CEDA95E042EE2 /* QuartzCore.framework in Frameworks */,
+				BFE4D662814660145FFC54FA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B8269DD1B5FE6647AA13671 /* Frameworks */ = {
+		0A69B37E7FC10AB120760CBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83D1D34129674B74661C4B35 /* Foundation.framework in Frameworks */,
+				5F188B667E01ABE02741B925 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8B639925DA1CC65BB2D9187 /* Frameworks */ = {
+		7B497353E58A236175B691B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB837182350E4A18C3F5EAC3 /* Foundation.framework in Frameworks */,
+				592C350AF33BEA58DC20E595 /* Foundation.framework in Frameworks */,
+				923C58CFD421077DF9665678 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF73B36BE9D502121EA60560 /* Frameworks */ = {
+		9D53A462795AA71BBEC02D5E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4B502D881A193F238E688DB /* Foundation.framework in Frameworks */,
+				EAA2D923DA2C3C943D92DFD1 /* CoreGraphics.framework in Frameworks */,
+				5DFD7517777E5970856F6182 /* Foundation.framework in Frameworks */,
+				861C42C945041246D7D54A90 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3E0F1C96FBA971DBA793A8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45390255DF1FF2C6127B480C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02869F23A89EE45E9B3D30F2 /* Alamofire */ = {
+		062908BAD86772432250DF35 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6EF4C68DB3BF5E92D136B849 /* Alamofire.swift */,
-				33E6581568FF310AAB447A3D /* Support Files */,
+				F6424D47EAA902EEB8456113 /* Info.plist */,
+				12972ADDE4C53496FF206A97 /* Pods-Kurskollen-ActionSheetPicker-3.0.modulemap */,
+				031C9BB7A770C8A4A60C5563 /* Pods-Kurskollen-ActionSheetPicker-3.0.xcconfig */,
+				83714A817060CFB04B227E2A /* Pods-Kurskollen-ActionSheetPicker-3.0-Private.xcconfig */,
+				CE87EC830A73619527B624E2 /* Pods-Kurskollen-ActionSheetPicker-3.0-dummy.m */,
+				AD16027760ED374DDD90A90E /* Pods-Kurskollen-ActionSheetPicker-3.0-prefix.pch */,
+				17F82576868170FE4C0060EC /* Pods-Kurskollen-ActionSheetPicker-3.0-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Kurskollen-ActionSheetPicker-3.0";
+			sourceTree = "<group>";
+		};
+		1751A4561FB313BC3E912C6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1773A074E570EBFB126C71DA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1773A074E570EBFB126C71DA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0D854C7C0107B8520B4A67B0 /* CoreGraphics.framework */,
+				8446C7CF5BE40EDB8AE28E7C /* Foundation.framework */,
+				ABB3088535799CBD17148EAC /* QuartzCore.framework */,
+				5926F32C86889693A9CA9E86 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1BC4E05798F9FBCB9562E50F /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				D192200BF6FF6468E1D6CDC5 /* Alamofire.swift */,
+				5364FD893D61E4AB589D4092 /* Support Files */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		094B13E7F85DDD3A95FE2755 /* EDStarRating */ = {
+		2EB11D883E38528CCB58EC47 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BA3B2CA03F4691B14D56A1F7 /* EDStarRating.h */,
-				0E98DAEDC9E294B5E7C7C8E3 /* EDStarRating.m */,
-				6D8ADFB32DA4D416342B1AD3 /* Support Files */,
+				2F7EAFA4A66DC3A449A3A73D /* Pods-Kurskollen */,
 			);
-			path = EDStarRating;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		1A719348BA8577A72416009C /* Pods-Kurskollen */ = {
+		2F7EAFA4A66DC3A449A3A73D /* Pods-Kurskollen */ = {
 			isa = PBXGroup;
 			children = (
-				1D8B5B57CE93ED5315B2EFA3 /* Info.plist */,
-				EC989B7C2A196B216274D7C0 /* Pods-Kurskollen.modulemap */,
-				C57B7DEC4AC6516E03328CBA /* Pods-Kurskollen-acknowledgements.markdown */,
-				A9BC2C412987BF2FB329C324 /* Pods-Kurskollen-acknowledgements.plist */,
-				C35CFD3452BBE09229258D2D /* Pods-Kurskollen-dummy.m */,
-				61EE98DA67FC71605728BB6D /* Pods-Kurskollen-environment.h */,
-				940AE43DF7EBC21283F06924 /* Pods-Kurskollen-frameworks.sh */,
-				03D67FD1904FB80036CEC390 /* Pods-Kurskollen-resources.sh */,
-				F79D811648752083DA5299BB /* Pods-Kurskollen-umbrella.h */,
-				450B8250E42A18789F5B4D47 /* Pods-Kurskollen.debug.xcconfig */,
-				44D2CC376F713B3E6290A216 /* Pods-Kurskollen.release.xcconfig */,
+				57E9D2BF726CA50A163A2AD9 /* Info.plist */,
+				1E7BBC6764606107E4294A9B /* Pods-Kurskollen.modulemap */,
+				FA49F941A74E7ED5DC40A179 /* Pods-Kurskollen-acknowledgements.markdown */,
+				A5DD75B66A826B31389E98F8 /* Pods-Kurskollen-acknowledgements.plist */,
+				D6C8D523E7F028244D7983E9 /* Pods-Kurskollen-dummy.m */,
+				7AC94D6A7BB510D67C4A42CB /* Pods-Kurskollen-environment.h */,
+				8B4100536308B3C2CF18CF30 /* Pods-Kurskollen-frameworks.sh */,
+				F38D8065AC9B3AC8868433E0 /* Pods-Kurskollen-resources.sh */,
+				1C19706FBF315269E3CE08C7 /* Pods-Kurskollen-umbrella.h */,
+				AA40D699BE95F04DF1679BD2 /* Pods-Kurskollen.debug.xcconfig */,
+				0DDAA7E823FA383B2FD8F4FE /* Pods-Kurskollen.release.xcconfig */,
 			);
 			name = "Pods-Kurskollen";
 			path = "Target Support Files/Pods-Kurskollen";
 			sourceTree = "<group>";
 		};
-		33E6581568FF310AAB447A3D /* Support Files */ = {
+		5364FD893D61E4AB589D4092 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E1CD932485CAE30B0947510D /* Info.plist */,
-				D6290F35FE17213831922A69 /* Pods-Kurskollen-Alamofire.modulemap */,
-				FDCF073C22C3C1E0DF6B01EE /* Pods-Kurskollen-Alamofire.xcconfig */,
-				2807374FBB0B421395AEDB3E /* Pods-Kurskollen-Alamofire-Private.xcconfig */,
-				3B5AEB2233898EF744534857 /* Pods-Kurskollen-Alamofire-dummy.m */,
-				53028AF5432642740FC039E5 /* Pods-Kurskollen-Alamofire-prefix.pch */,
-				BFE6EDD70465FF668D980500 /* Pods-Kurskollen-Alamofire-umbrella.h */,
+				BEBB63C3243AFA16BADD6260 /* Info.plist */,
+				68F812C0B9343F4D7F5C9A57 /* Pods-Kurskollen-Alamofire.modulemap */,
+				0480068421B2FC7DF46E5FFC /* Pods-Kurskollen-Alamofire.xcconfig */,
+				746FA36CC21DB0DB7EC02F23 /* Pods-Kurskollen-Alamofire-Private.xcconfig */,
+				0934A99ADEB138CEDD41E6D5 /* Pods-Kurskollen-Alamofire-dummy.m */,
+				D08FC313353E87AC2B619C86 /* Pods-Kurskollen-Alamofire-prefix.pch */,
+				E4998219088261757ED4B62C /* Pods-Kurskollen-Alamofire-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-Kurskollen-Alamofire";
 			sourceTree = "<group>";
 		};
-		3FD0E75785C392CF40E58B92 /* iOS */ = {
+		7D9414342C6A645703AA19F0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				07DE9A3590BFEF6791B3DFC7 /* CoreGraphics.framework */,
-				A83770B0367125863BF583F1 /* Foundation.framework */,
-				AECFAB7AE11BDE146B5C0E98 /* QuartzCore.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		5037DEF78F9C992AF9CFB9AD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				02869F23A89EE45E9B3D30F2 /* Alamofire */,
-				094B13E7F85DDD3A95FE2755 /* EDStarRating */,
-				9FBC47E239E2226A89511B06 /* SwiftyJSON */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		6D8ADFB32DA4D416342B1AD3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				16E28B7A73B9873768459BC7 /* Info.plist */,
-				821095F409B9FB979EFA43D1 /* Pods-Kurskollen-EDStarRating.modulemap */,
-				AF6FA0AD7951AFFF2146FAFF /* Pods-Kurskollen-EDStarRating.xcconfig */,
-				8540D7D122D548BE639D6A0B /* Pods-Kurskollen-EDStarRating-Private.xcconfig */,
-				B24D1929C9971696EF92685C /* Pods-Kurskollen-EDStarRating-dummy.m */,
-				5B06600C21644A4300AE5BD5 /* Pods-Kurskollen-EDStarRating-prefix.pch */,
-				EC73FABBA515C8BE1D90E1EF /* Pods-Kurskollen-EDStarRating-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-Kurskollen-EDStarRating";
-			sourceTree = "<group>";
-		};
-		96AFC672FD0613C4F79E07D6 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1A719348BA8577A72416009C /* Pods-Kurskollen */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		9DE3CEF031EA0F69CE599FE1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C533EF5BDAF782C85BA9E79A /* Info.plist */,
-				8AC79DD1BAB7AA0E0342B6A7 /* Pods-Kurskollen-SwiftyJSON.modulemap */,
-				B5BBD23399D547ABFF1A7DF5 /* Pods-Kurskollen-SwiftyJSON.xcconfig */,
-				EEC28C53CAE47404783EA926 /* Pods-Kurskollen-SwiftyJSON-Private.xcconfig */,
-				0116CE91E7C3D2F596794CB6 /* Pods-Kurskollen-SwiftyJSON-dummy.m */,
-				7574F239B98EE1EC3CA10BDF /* Pods-Kurskollen-SwiftyJSON-prefix.pch */,
-				73EAF3632C33C2771FACE346 /* Pods-Kurskollen-SwiftyJSON-umbrella.h */,
+				8B54DA1B36C679DEEB2780F6 /* Info.plist */,
+				A03E1336C609EBD6325A02D3 /* Pods-Kurskollen-SwiftyJSON.modulemap */,
+				2F26F40054EC53A212BD14D7 /* Pods-Kurskollen-SwiftyJSON.xcconfig */,
+				A3C5D6711BEE90CC4BD7B0C1 /* Pods-Kurskollen-SwiftyJSON-Private.xcconfig */,
+				CB8A96AFE917BB7C0E80EBA2 /* Pods-Kurskollen-SwiftyJSON-dummy.m */,
+				CBAE3E8A4E7DE902A9F688D1 /* Pods-Kurskollen-SwiftyJSON-prefix.pch */,
+				B9EE4009E21905DDFD986482 /* Pods-Kurskollen-SwiftyJSON-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-Kurskollen-SwiftyJSON";
 			sourceTree = "<group>";
 		};
-		9FBC47E239E2226A89511B06 /* SwiftyJSON */ = {
+		887F55B3B280C8554694FC44 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				32F39225A6DFBA4A93A664AF /* SwiftyJSON.swift */,
-				9DE3CEF031EA0F69CE599FE1 /* Support Files */,
+				F85FB77D860DBB64166E6358 /* ActionSheetPicker-3.0 */,
+				1BC4E05798F9FBCB9562E50F /* Alamofire */,
+				E745334960C63C083DC30335 /* EDStarRating */,
+				DB75AA97EBF2203F7360AA92 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4F2F35FAA48F1D17435AA11 = {
+			isa = PBXGroup;
+			children = (
+				76CACE2AD77244FE992D282B /* Podfile */,
+				1751A4561FB313BC3E912C6F /* Frameworks */,
+				887F55B3B280C8554694FC44 /* Pods */,
+				E475328A365AB4BF12C0F2A0 /* Products */,
+				2EB11D883E38528CCB58EC47 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CD85F4BA0C884F37A7CA1EBB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1454ED2E0A1C8DAB34EE8197 /* Info.plist */,
+				7A70752AD0CE9A46BCCC2BC6 /* Pods-Kurskollen-EDStarRating.modulemap */,
+				99F10885270D04C8CD6F82D8 /* Pods-Kurskollen-EDStarRating.xcconfig */,
+				B5FB840B5305B73EAB5D4A15 /* Pods-Kurskollen-EDStarRating-Private.xcconfig */,
+				2D444A8083D3BBE5D96734BE /* Pods-Kurskollen-EDStarRating-dummy.m */,
+				7730114531E4FBBE7BED77FE /* Pods-Kurskollen-EDStarRating-prefix.pch */,
+				491721434E1732E59C30B43E /* Pods-Kurskollen-EDStarRating-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Kurskollen-EDStarRating";
+			sourceTree = "<group>";
+		};
+		DB75AA97EBF2203F7360AA92 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				85CC87F2447BAC1775F756DB /* SwiftyJSON.swift */,
+				7D9414342C6A645703AA19F0 /* Support Files */,
 			);
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
-		A94B21EB2604017EB9BE525D /* Products */ = {
+		E475328A365AB4BF12C0F2A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4BF652F02B9094FFAAAFBBF4 /* Alamofire.framework */,
-				2C156272485D639E35C278E7 /* EDStarRating.framework */,
-				1F84A80648810E9409C4F632 /* Pods_Kurskollen.framework */,
-				00C12922B39FDB3A3D52D871 /* SwiftyJSON.framework */,
+				9657A4293FFB942F018C2458 /* ActionSheetPicker_3_0.framework */,
+				388FF0AD37EEDCBB04B25C7E /* Alamofire.framework */,
+				E976DCDC5383386203F204D2 /* EDStarRating.framework */,
+				CCF69306744AE3345FEB4A66 /* Pods_Kurskollen.framework */,
+				B67D74F9D0E258B99460B1BF /* SwiftyJSON.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC1F57CC19FD059C405A87F7 /* Frameworks */ = {
+		E745334960C63C083DC30335 /* EDStarRating */ = {
 			isa = PBXGroup;
 			children = (
-				3FD0E75785C392CF40E58B92 /* iOS */,
+				5376ADCD7DE533E0F816918A /* EDStarRating.h */,
+				C8C05486175581BA38DA7DA8 /* EDStarRating.m */,
+				CD85F4BA0C884F37A7CA1EBB /* Support Files */,
 			);
-			name = Frameworks;
+			path = EDStarRating;
 			sourceTree = "<group>";
 		};
-		FACE27293BD0CE908B467918 = {
+		F85FB77D860DBB64166E6358 /* ActionSheetPicker-3.0 */ = {
 			isa = PBXGroup;
 			children = (
-				7E03AD5EC5FC31C2525545F6 /* Podfile */,
-				CC1F57CC19FD059C405A87F7 /* Frameworks */,
-				5037DEF78F9C992AF9CFB9AD /* Pods */,
-				A94B21EB2604017EB9BE525D /* Products */,
-				96AFC672FD0613C4F79E07D6 /* Targets Support Files */,
+				B51160C1F7F9A794856ED79A /* AbstractActionSheetPicker.h */,
+				CB0D1731065223623D3C67C0 /* AbstractActionSheetPicker.m */,
+				04B2019810D5A960CBA08448 /* ActionSheetCustomPicker.h */,
+				CF6268E27B43A0D0C1EE682B /* ActionSheetCustomPicker.m */,
+				CDDA6604B76307EBA405F4EE /* ActionSheetCustomPickerDelegate.h */,
+				660FDFF559DF64D1B6EE4313 /* ActionSheetDatePicker.h */,
+				D4351E7126C9578CC9DC87BF /* ActionSheetDatePicker.m */,
+				66D28A618E3DE5FDBB412424 /* ActionSheetDistancePicker.h */,
+				5D2D3C46BDA68D778E9FDDA7 /* ActionSheetDistancePicker.m */,
+				EBFEBF178033262D75BE8C27 /* ActionSheetLocalePicker.h */,
+				AC620084296DD4E0F28E7E28 /* ActionSheetLocalePicker.m */,
+				9EA0B249499D31BB4C78386F /* ActionSheetPicker.h */,
+				0DA269B75493B408A8A392BD /* ActionSheetStringPicker.h */,
+				5309E040D3EEAD24DFA0D1DB /* ActionSheetStringPicker.m */,
+				CB9B2CC03B6834BF19A32DC9 /* DistancePickerView.h */,
+				D4CB6900411044701EB776F5 /* DistancePickerView.m */,
+				B639DB8A707D33FB44068EBF /* SWActionSheet.h */,
+				1C244FD0C187BA7CFB69295A /* SWActionSheet.m */,
+				062908BAD86772432250DF35 /* Support Files */,
 			);
+			path = "ActionSheetPicker-3.0";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2B8B9ABF4CA7CD8D6018856F /* Headers */ = {
+		10DE9E30FF2D7A3158C97673 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AF127EDA21DC8AADC26158C /* Pods-Kurskollen-SwiftyJSON-umbrella.h in Headers */,
+				257B7158835EE62292F47B13 /* Pods-Kurskollen-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C7B09837FA7EB805EA32C22 /* Headers */ = {
+		230A8264109DC152B076CFED /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76006BB02AAB58D66624554D /* Pods-Kurskollen-Alamofire-umbrella.h in Headers */,
+				70E43CF9C946133A62DDD181 /* EDStarRating.h in Headers */,
+				FC6EB34C5AEEEC8D1B9199FC /* Pods-Kurskollen-EDStarRating-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E9A1CBBC0FD0410DA2DB1262 /* Headers */ = {
+		BD2D8F04D9C9DE8A49C52165 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90CCD8EF2E177E9EE267676C /* EDStarRating.h in Headers */,
-				2354A70154D51CA9AE2223AD /* Pods-Kurskollen-EDStarRating-umbrella.h in Headers */,
+				6680370E115C31ECE89DDFE3 /* Pods-Kurskollen-Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE2C64F2C1B85956A09529E7 /* Headers */ = {
+		D40BC4B010B9F0ABA28DEC6D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E14C6D95A8044E24D0565E /* Pods-Kurskollen-umbrella.h in Headers */,
+				7B457030B0689538A1BE5BA6 /* Pods-Kurskollen-SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA8FDC63531B5D6EAC018436 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39DEA186C3AA4B2BA0A77892 /* AbstractActionSheetPicker.h in Headers */,
+				C6C38CC466DEE269D4F8DBAA /* ActionSheetCustomPicker.h in Headers */,
+				F2C090942F9144A1F58CCB6F /* ActionSheetCustomPickerDelegate.h in Headers */,
+				DA4329FCC4EAB891371CC730 /* ActionSheetDatePicker.h in Headers */,
+				13669FF4AB5C24D5E9CE6E79 /* ActionSheetDistancePicker.h in Headers */,
+				0DB38D007D709525D1B2E80D /* ActionSheetLocalePicker.h in Headers */,
+				573C7512FBA56EA75174C3BF /* ActionSheetPicker.h in Headers */,
+				48B49979F9E29C2ACAB5C52C /* ActionSheetStringPicker.h in Headers */,
+				B04F3F12EBB66ABBDA4C96E5 /* DistancePickerView.h in Headers */,
+				FBE3BAA2A21EBDB1A90C7A5A /* Pods-Kurskollen-ActionSheetPicker-3.0-umbrella.h in Headers */,
+				0EC45F365DEA8203F5DB736C /* SWActionSheet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4096EACCBAFA446396D7E727 /* Pods-Kurskollen-SwiftyJSON */ = {
+		A279F22E7E98DE9404CA6F87 /* Pods-Kurskollen-SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 89E847F0C412D7AED090B4FF /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-SwiftyJSON" */;
+			buildConfigurationList = 668746A62129CD19E0DCB232 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-SwiftyJSON" */;
 			buildPhases = (
-				EAB56585555B069EEBC5A166 /* Sources */,
-				B8B639925DA1CC65BB2D9187 /* Frameworks */,
-				2B8B9ABF4CA7CD8D6018856F /* Headers */,
+				F0712959853ADED8E33E0682 /* Sources */,
+				04D7141739B9C27D305D8F14 /* Frameworks */,
+				D40BC4B010B9F0ABA28DEC6D /* Headers */,
 			);
 			buildRules = (
 			);
@@ -339,36 +466,37 @@
 			);
 			name = "Pods-Kurskollen-SwiftyJSON";
 			productName = "Pods-Kurskollen-SwiftyJSON";
-			productReference = 00C12922B39FDB3A3D52D871 /* SwiftyJSON.framework */;
+			productReference = B67D74F9D0E258B99460B1BF /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5F54FEAC9502DBF1A3333194 /* Pods-Kurskollen */ = {
+		C5228C58CF3DC8114C899215 /* Pods-Kurskollen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0824425761344CFCE9141E22 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen" */;
+			buildConfigurationList = EF69A27B03871071EC0F7584 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen" */;
 			buildPhases = (
-				D056417D2CF3084D9AAAA17B /* Sources */,
-				7B8269DD1B5FE6647AA13671 /* Frameworks */,
-				FE2C64F2C1B85956A09529E7 /* Headers */,
+				F6FEBAF6CB4F65BE89FD8E4D /* Sources */,
+				0A69B37E7FC10AB120760CBA /* Frameworks */,
+				10DE9E30FF2D7A3158C97673 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B76094103EE7221207629162 /* PBXTargetDependency */,
-				D6114F772492E9F02BD61CE8 /* PBXTargetDependency */,
-				CC254FBAA85DF35E502DB5EB /* PBXTargetDependency */,
+				FDBA06CB57CA9D49701EEEC6 /* PBXTargetDependency */,
+				9648DDF7F5D6872188FFA170 /* PBXTargetDependency */,
+				34456A0ADB123EA1C59FF15A /* PBXTargetDependency */,
+				5B7E5F564F6A6394E4E58E91 /* PBXTargetDependency */,
 			);
 			name = "Pods-Kurskollen";
 			productName = "Pods-Kurskollen";
-			productReference = 1F84A80648810E9409C4F632 /* Pods_Kurskollen.framework */;
+			productReference = CCF69306744AE3345FEB4A66 /* Pods_Kurskollen.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8164E25A7FFBEE1074999615 /* Pods-Kurskollen-EDStarRating */ = {
+		D12B03436EFBEFC9C61E28AE /* Pods-Kurskollen-EDStarRating */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DCBD0F08A324EDAEEC8769C6 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-EDStarRating" */;
+			buildConfigurationList = 9920C3462F5FFEBCEF7ACE5A /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-EDStarRating" */;
 			buildPhases = (
-				5DB74C8A3353F1F579AAAC0C /* Sources */,
-				181E62EFE1E77635EB83DC8F /* Frameworks */,
-				E9A1CBBC0FD0410DA2DB1262 /* Headers */,
+				476757D12235D3791CFAF054 /* Sources */,
+				9D53A462795AA71BBEC02D5E /* Frameworks */,
+				230A8264109DC152B076CFED /* Headers */,
 			);
 			buildRules = (
 			);
@@ -376,16 +504,33 @@
 			);
 			name = "Pods-Kurskollen-EDStarRating";
 			productName = "Pods-Kurskollen-EDStarRating";
-			productReference = 2C156272485D639E35C278E7 /* EDStarRating.framework */;
+			productReference = E976DCDC5383386203F204D2 /* EDStarRating.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E09A32EACC82E6AC6EC77E47 /* Pods-Kurskollen-Alamofire */ = {
+		EBA89D8DED9F14DA8B3D9C6B /* Pods-Kurskollen-ActionSheetPicker-3.0 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA012270957915A19AD7AE3B /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-Alamofire" */;
+			buildConfigurationList = B774F68C325BEF97C9DB7BB1 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-ActionSheetPicker-3.0" */;
 			buildPhases = (
-				6C2439CA0C90CF1333AE4E5A /* Sources */,
-				DF73B36BE9D502121EA60560 /* Frameworks */,
-				9C7B09837FA7EB805EA32C22 /* Headers */,
+				E8B796EF3D212A119128C3B8 /* Sources */,
+				7B497353E58A236175B691B5 /* Frameworks */,
+				FA8FDC63531B5D6EAC018436 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Kurskollen-ActionSheetPicker-3.0";
+			productName = "Pods-Kurskollen-ActionSheetPicker-3.0";
+			productReference = 9657A4293FFB942F018C2458 /* ActionSheetPicker_3_0.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FA0ED49E8C45F5632BA1DD62 /* Pods-Kurskollen-Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC4C1DCA63C3BF7A4BD9DB0 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-Alamofire" */;
+			buildPhases = (
+				2927BE4FED4D2FD86C53CAC4 /* Sources */,
+				F3E0F1C96FBA971DBA793A8A /* Frameworks */,
+				BD2D8F04D9C9DE8A49C52165 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -393,100 +538,150 @@
 			);
 			name = "Pods-Kurskollen-Alamofire";
 			productName = "Pods-Kurskollen-Alamofire";
-			productReference = 4BF652F02B9094FFAAAFBBF4 /* Alamofire.framework */;
+			productReference = 388FF0AD37EEDCBB04B25C7E /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		41A1B28A8BDCF46B737C6FF1 /* Project object */ = {
+		340F8A633F340B6E22D2ECCA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 6F3A5F5EEDC1C83E528CA007 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 8F172611F709490B734F3A0E /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = FACE27293BD0CE908B467918;
-			productRefGroup = A94B21EB2604017EB9BE525D /* Products */;
+			mainGroup = A4F2F35FAA48F1D17435AA11;
+			productRefGroup = E475328A365AB4BF12C0F2A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5F54FEAC9502DBF1A3333194 /* Pods-Kurskollen */,
-				E09A32EACC82E6AC6EC77E47 /* Pods-Kurskollen-Alamofire */,
-				8164E25A7FFBEE1074999615 /* Pods-Kurskollen-EDStarRating */,
-				4096EACCBAFA446396D7E727 /* Pods-Kurskollen-SwiftyJSON */,
+				C5228C58CF3DC8114C899215 /* Pods-Kurskollen */,
+				EBA89D8DED9F14DA8B3D9C6B /* Pods-Kurskollen-ActionSheetPicker-3.0 */,
+				FA0ED49E8C45F5632BA1DD62 /* Pods-Kurskollen-Alamofire */,
+				D12B03436EFBEFC9C61E28AE /* Pods-Kurskollen-EDStarRating */,
+				A279F22E7E98DE9404CA6F87 /* Pods-Kurskollen-SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5DB74C8A3353F1F579AAAC0C /* Sources */ = {
+		2927BE4FED4D2FD86C53CAC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7284554D784EE84EC4466AF /* EDStarRating.m in Sources */,
-				BAEAA372B3710276657F41E4 /* Pods-Kurskollen-EDStarRating-dummy.m in Sources */,
+				6FA1EEABA870BAC2BD985648 /* Alamofire.swift in Sources */,
+				A8F5B43B4526E124C716C893 /* Pods-Kurskollen-Alamofire-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C2439CA0C90CF1333AE4E5A /* Sources */ = {
+		476757D12235D3791CFAF054 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F49A254CFAC907A9FD19CE8 /* Alamofire.swift in Sources */,
-				2716AF3D44F5AB8DA9422520 /* Pods-Kurskollen-Alamofire-dummy.m in Sources */,
+				A2945BF987E2CB36C6FB8067 /* EDStarRating.m in Sources */,
+				37B61EB59975EC46FA350FFE /* Pods-Kurskollen-EDStarRating-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D056417D2CF3084D9AAAA17B /* Sources */ = {
+		E8B796EF3D212A119128C3B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6240CCCF5EBA83A18B1B5ABA /* Pods-Kurskollen-dummy.m in Sources */,
+				6FD001EBED24D5CDBEB567B0 /* AbstractActionSheetPicker.m in Sources */,
+				4ECCFDA792D3FB5BD6B794D7 /* ActionSheetCustomPicker.m in Sources */,
+				BD5858F75419DFB4E0A3B5AE /* ActionSheetDatePicker.m in Sources */,
+				72EEFA8BE0D37D77A30D25E3 /* ActionSheetDistancePicker.m in Sources */,
+				7B0310209B9CAAA092FB6D9A /* ActionSheetLocalePicker.m in Sources */,
+				BC984DC46863A1EE24ED9C63 /* ActionSheetStringPicker.m in Sources */,
+				DF3D5D8F75500FE1DB22EF77 /* DistancePickerView.m in Sources */,
+				16A42472460B3235FBF5AC81 /* Pods-Kurskollen-ActionSheetPicker-3.0-dummy.m in Sources */,
+				2C6E540D0E2A1994F161F0F6 /* SWActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EAB56585555B069EEBC5A166 /* Sources */ = {
+		F0712959853ADED8E33E0682 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12AE6A7DC8EB5E36F57C46FC /* Pods-Kurskollen-SwiftyJSON-dummy.m in Sources */,
-				DFBEAF5EF56BB82C55E8FED0 /* SwiftyJSON.swift in Sources */,
+				460B535CAD454E9659499D8C /* Pods-Kurskollen-SwiftyJSON-dummy.m in Sources */,
+				6BDC8D58A2E91BD2BA5E4BC8 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6FEBAF6CB4F65BE89FD8E4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED532C8CFA734356566926A3 /* Pods-Kurskollen-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B76094103EE7221207629162 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-Kurskollen-Alamofire";
-			target = E09A32EACC82E6AC6EC77E47 /* Pods-Kurskollen-Alamofire */;
-			targetProxy = F630692FD63A23A1F34E0BA0 /* PBXContainerItemProxy */;
-		};
-		CC254FBAA85DF35E502DB5EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-Kurskollen-SwiftyJSON";
-			target = 4096EACCBAFA446396D7E727 /* Pods-Kurskollen-SwiftyJSON */;
-			targetProxy = 8E85AF2DB0F91ECA7EF79867 /* PBXContainerItemProxy */;
-		};
-		D6114F772492E9F02BD61CE8 /* PBXTargetDependency */ = {
+		34456A0ADB123EA1C59FF15A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Kurskollen-EDStarRating";
-			target = 8164E25A7FFBEE1074999615 /* Pods-Kurskollen-EDStarRating */;
-			targetProxy = 3F266FA8F54BCA7478210D39 /* PBXContainerItemProxy */;
+			target = D12B03436EFBEFC9C61E28AE /* Pods-Kurskollen-EDStarRating */;
+			targetProxy = 3D53978135EBE43B0B19ED31 /* PBXContainerItemProxy */;
+		};
+		5B7E5F564F6A6394E4E58E91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Kurskollen-SwiftyJSON";
+			target = A279F22E7E98DE9404CA6F87 /* Pods-Kurskollen-SwiftyJSON */;
+			targetProxy = 2622CC188FA28F6AFBFB97E2 /* PBXContainerItemProxy */;
+		};
+		9648DDF7F5D6872188FFA170 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Kurskollen-Alamofire";
+			target = FA0ED49E8C45F5632BA1DD62 /* Pods-Kurskollen-Alamofire */;
+			targetProxy = 5DAF04F35444D64FC55BC65F /* PBXContainerItemProxy */;
+		};
+		FDBA06CB57CA9D49701EEEC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Kurskollen-ActionSheetPicker-3.0";
+			target = EBA89D8DED9F14DA8B3D9C6B /* Pods-Kurskollen-ActionSheetPicker-3.0 */;
+			targetProxy = 096A8F9C5DCC8266A3DF48DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		11AC8315C6A40C7ABA18FE70 /* Release */ = {
+		0462BB42A1EC6F64BBC3D529 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEC28C53CAE47404783EA926 /* Pods-Kurskollen-SwiftyJSON-Private.xcconfig */;
+			baseConfigurationReference = B5FB840B5305B73EAB5D4A15 /* Pods-Kurskollen-EDStarRating-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Kurskollen-EDStarRating/Pods-Kurskollen-EDStarRating-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kurskollen-EDStarRating/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Kurskollen-EDStarRating/Pods-Kurskollen-EDStarRating.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = EDStarRating;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		457DAFBA848F4FD9E25B0FBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3C5D6711BEE90CC4BD7B0C1 /* Pods-Kurskollen-SwiftyJSON-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -501,17 +696,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Pods-Kurskollen-SwiftyJSON/Pods-Kurskollen-SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SwiftyJSON;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		2754ADFE8C7D9E076167B08F /* Release */ = {
+		478CA400EF0220145CD4910F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -545,63 +741,9 @@
 			};
 			name = Release;
 		};
-		3F070F7D41452285AB009C71 /* Release */ = {
+		63A2A428BBC1FF6D2CD98F50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8540D7D122D548BE639D6A0B /* Pods-Kurskollen-EDStarRating-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Kurskollen-EDStarRating/Pods-Kurskollen-EDStarRating-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-Kurskollen-EDStarRating/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-Kurskollen-EDStarRating/Pods-Kurskollen-EDStarRating.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = EDStarRating;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		71113B9C77CC491E069034FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8540D7D122D548BE639D6A0B /* Pods-Kurskollen-EDStarRating-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Kurskollen-EDStarRating/Pods-Kurskollen-EDStarRating-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-Kurskollen-EDStarRating/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-Kurskollen-EDStarRating/Pods-Kurskollen-EDStarRating.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = EDStarRating;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		77104CCF468C987400D11271 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 450B8250E42A18789F5B4D47 /* Pods-Kurskollen.debug.xcconfig */;
+			baseConfigurationReference = AA40D699BE95F04DF1679BD2 /* Pods-Kurskollen.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -629,9 +771,36 @@
 			};
 			name = Debug;
 		};
-		81E960A13EED3022B5CAC90F /* Debug */ = {
+		A215C5DCEC7F791C1368BB6B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2807374FBB0B421395AEDB3E /* Pods-Kurskollen-Alamofire-Private.xcconfig */;
+			baseConfigurationReference = 746FA36CC21DB0DB7EC02F23 /* Pods-Kurskollen-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Kurskollen-Alamofire/Pods-Kurskollen-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kurskollen-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Kurskollen-Alamofire/Pods-Kurskollen-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AA90A50071509A0E4A5343C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 746FA36CC21DB0DB7EC02F23 /* Pods-Kurskollen-Alamofire-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -657,7 +826,34 @@
 			};
 			name = Debug;
 		};
-		8D2126BDFBEA15C8C944BA48 /* Debug */ = {
+		B1BB72D5616768919125B465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83714A817060CFB04B227E2A /* Pods-Kurskollen-ActionSheetPicker-3.0-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Kurskollen-ActionSheetPicker-3.0/Pods-Kurskollen-ActionSheetPicker-3.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kurskollen-ActionSheetPicker-3.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Kurskollen-ActionSheetPicker-3.0/Pods-Kurskollen-ActionSheetPicker-3.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BEAA85000DC3F5929BC821CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -696,9 +892,9 @@
 			};
 			name = Debug;
 		};
-		8F32991E5DD7317C5A64B168 /* Debug */ = {
+		D1DD7CA9BED368BBC76A59C3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEC28C53CAE47404783EA926 /* Pods-Kurskollen-SwiftyJSON-Private.xcconfig */;
+			baseConfigurationReference = A3C5D6711BEE90CC4BD7B0C1 /* Pods-Kurskollen-SwiftyJSON-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -713,20 +909,46 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Pods-Kurskollen-SwiftyJSON/Pods-Kurskollen-SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SwiftyJSON;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E473B479FB77E13A38465E84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83714A817060CFB04B227E2A /* Pods-Kurskollen-ActionSheetPicker-3.0-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Kurskollen-ActionSheetPicker-3.0/Pods-Kurskollen-ActionSheetPicker-3.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kurskollen-ActionSheetPicker-3.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Kurskollen-ActionSheetPicker-3.0/Pods-Kurskollen-ActionSheetPicker-3.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ActionSheetPicker_3_0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		95CE862BD31D5B5F9811BD02 /* Release */ = {
+		EA9147AC20B1AAF97E489E35 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44D2CC376F713B3E6290A216 /* Pods-Kurskollen.release.xcconfig */;
+			baseConfigurationReference = 0DDAA7E823FA383B2FD8F4FE /* Pods-Kurskollen.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -753,9 +975,9 @@
 			};
 			name = Release;
 		};
-		B84569743D8C2B95AC685CB0 /* Release */ = {
+		F998D8987039484086E32B3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2807374FBB0B421395AEDB3E /* Pods-Kurskollen-Alamofire-Private.xcconfig */;
+			baseConfigurationReference = B5FB840B5305B73EAB5D4A15 /* Pods-Kurskollen-EDStarRating-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -764,14 +986,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-Kurskollen-Alamofire/Pods-Kurskollen-Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-Kurskollen-Alamofire/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Kurskollen-EDStarRating/Pods-Kurskollen-EDStarRating-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Kurskollen-EDStarRating/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-Kurskollen-Alamofire/Pods-Kurskollen-Alamofire.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Kurskollen-EDStarRating/Pods-Kurskollen-EDStarRating.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
+				PRODUCT_NAME = EDStarRating;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -783,52 +1005,61 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0824425761344CFCE9141E22 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen" */ = {
+		5CC4C1DCA63C3BF7A4BD9DB0 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				77104CCF468C987400D11271 /* Debug */,
-				95CE862BD31D5B5F9811BD02 /* Release */,
+				AA90A50071509A0E4A5343C3 /* Debug */,
+				A215C5DCEC7F791C1368BB6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F3A5F5EEDC1C83E528CA007 /* Build configuration list for PBXProject "Pods" */ = {
+		668746A62129CD19E0DCB232 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8D2126BDFBEA15C8C944BA48 /* Debug */,
-				2754ADFE8C7D9E076167B08F /* Release */,
+				457DAFBA848F4FD9E25B0FBB /* Debug */,
+				D1DD7CA9BED368BBC76A59C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89E847F0C412D7AED090B4FF /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-SwiftyJSON" */ = {
+		8F172611F709490B734F3A0E /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8F32991E5DD7317C5A64B168 /* Debug */,
-				11AC8315C6A40C7ABA18FE70 /* Release */,
+				BEAA85000DC3F5929BC821CA /* Debug */,
+				478CA400EF0220145CD4910F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA012270957915A19AD7AE3B /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-Alamofire" */ = {
+		9920C3462F5FFEBCEF7ACE5A /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-EDStarRating" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				81E960A13EED3022B5CAC90F /* Debug */,
-				B84569743D8C2B95AC685CB0 /* Release */,
+				0462BB42A1EC6F64BBC3D529 /* Debug */,
+				F998D8987039484086E32B3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DCBD0F08A324EDAEEC8769C6 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-EDStarRating" */ = {
+		B774F68C325BEF97C9DB7BB1 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen-ActionSheetPicker-3.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71113B9C77CC491E069034FC /* Debug */,
-				3F070F7D41452285AB009C71 /* Release */,
+				E473B479FB77E13A38465E84 /* Debug */,
+				B1BB72D5616768919125B465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF69A27B03871071EC0F7584 /* Build configuration list for PBXNativeTarget "Pods-Kurskollen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A2A428BBC1FF6D2CD98F50 /* Debug */,
+				EA9147AC20B1AAF97E489E35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 41A1B28A8BDCF46B737C6FF1 /* Project object */;
+	rootObject = 340F8A633F340B6E22D2ECCA /* Project object */;
 }

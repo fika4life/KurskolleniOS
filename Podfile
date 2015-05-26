@@ -6,6 +6,7 @@ target 'Kurskollen' do
 pod 'Alamofire', '~> 1.1'
 pod 'SwiftyJSON', '>= 2.1.3'
 pod 'EDStarRating'
+pod 'ActionSheetPicker-3.0'
 end
 
 target 'KurskollenTests' do

@@ -40,30 +40,35 @@ class MyReviewsTableViewController: UITableViewController {
         
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+    }
+    override func viewDidAppear(animated: Bool) {
         let (email, loginSession) = Util.getLoginCredentials()
         
         let parameters = ["email" : email, "loginsession" : loginSession]
         
         Alamofire.request(.GET, globalConstants.URL + "get-my-reviews", parameters: parameters)
             .validate()
-            .responseJSON{(request,response, data, error) in self.view.endEditing(true)
+            .responseJSON{(request,response, data, error) in
+                self.view.endEditing(true)
+             
+                
+                if(error != nil){
+                    var alert = UIAlertController(title: "Communication error1", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                   
+                }
+                else{
+                    self.reviews = JSON(data!)
+                    self.tableView.reloadData()
                     
-                    
-                    if(error != nil){
-                        var alert = UIAlertController(title: "Communication error1", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
-                        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-                        self.presentViewController(alert, animated: true, completion: nil)
-                        println(error)
-                    }
-                    else{
-                        self.reviews = JSON(data!)
-                        self.tableView.reloadData()
-                       
-                    }
+                }
         }
         
         
         
+    
+
     }
 
 
@@ -204,20 +209,20 @@ class MyReviewsTableViewController: UITableViewController {
             let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
             let reviewid = reviews![indexPath.row]["reviewId"].intValue
             
-            let parameters : [String: String] = ["email" : email!, "loginsession" : loginSession!, "reviewid" : String (reviewid)]
+            let parameters : [String: String] = ["email" : email!, "loginsession" : loginSession!, "reviewId" : String (reviewid)]
             println(parameters)
             
             Alamofire.request(.POST, globalConstants.URL + "remove-review", parameters: parameters)
                 .validate()
                 .response{(_,_,_,error) in
                     if(error != nil){
-                        println(error)
+//                        println(error)
                         var alert = UIAlertController(title: "Communication error2", message: "Could not communicate with server", preferredStyle: UIAlertControllerStyle.Alert)
                         alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
                         self.presentViewController(alert, animated: true, completion: nil)
                     }
                     else{
-                        
+                        Util.showPopup("Raderat", popupText: "Din recension har tagits bort", viewController: self)
                         self.reloadReviews()
                         //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
                     }}

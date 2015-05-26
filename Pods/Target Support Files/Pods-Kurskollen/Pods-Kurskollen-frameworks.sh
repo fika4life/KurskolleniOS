@@ -48,11 +48,13 @@ code_sign() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'ActionSheetPicker_3_0.framework'
   install_framework 'Alamofire.framework'
   install_framework 'EDStarRating.framework'
   install_framework 'SwiftyJSON.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'ActionSheetPicker_3_0.framework'
   install_framework 'Alamofire.framework'
   install_framework 'EDStarRating.framework'
   install_framework 'SwiftyJSON.framework'

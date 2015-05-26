@@ -22,19 +22,20 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     @IBOutlet weak var teacher: UIButton!
     @IBOutlet weak var rating: UILabel!
     
+    
     @IBOutlet weak var reviewTable: UITableView!
     
     var courseData:JSON?
     
 
-    
+   
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        println(self.courseData!["reviews"])
+//        println(self.courseData!["reviews"])
         return self.courseData!["reviews"].count
         
     }
@@ -62,12 +63,26 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject!) {
-        println("segue:" + segue!.identifier!)
+//        println("segue:" + segue!.identifier!)
         if (segue!.identifier == "addReview") {
             var svc = segue!.destinationViewController as AddReviewViewController
             svc.courseId = self.courseData!["id"].int
+        }else if (segue!.identifier == "toTeacher"){
+            
+                let teacherId = 1
+                var svc = segue!.destinationViewController as TeacherViewController
+                svc.teacherId = teacherId
+            
+
         }
     }
+    
+ 
+        
+        
+        
+    
+
    
     override func viewDidLoad() {
         super.viewDidLoad()

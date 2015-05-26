@@ -58,7 +58,6 @@
 		BA0C000B1AD57B2D00F59EFD /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA1C34D81B009EC100ED435A /* MinaReviewsNavbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinaReviewsNavbarViewController.swift; sourceTree = "<group>"; };
-		BA3DEADB1AC963CE006F60AA /* Kurskollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kurskollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3DEADF1AC963CE006F60AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA3DEAE21AC963CE006F60AA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -66,10 +65,11 @@
 		BA3DEAE71AC963CF006F60AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA3DEAE91AC963CF006F60AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BA3DEAEC1AC963CF006F60AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		BA3DEAF21AC963CF006F60AA /* KurskollenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KurskollenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3DEAF21AC963CF006F60AA /* KurskollenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = KurskollenTests.xctest; path = "/Users/fiona/Sites/KurskolleniOS/build/Debug-iphoneos/KurskollenTests.xctest"; sourceTree = "<absolute>"; };
 		BA3DEAF71AC963CF006F60AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurskollenTests.swift; sourceTree = "<group>"; };
 		BA3DEB021AC98658006F60AA /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		BA463D2C1B147255001B1236 /* Kurskollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kurskollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA533A251AF8E11D00F343DF /* MyReviewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewsTableViewController.swift; sourceTree = "<group>"; };
 		BA533A2E1AF8FF2000F343DF /* ReviewListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewListTableCell.swift; path = ../../../.Trash/ReviewListTableCell.swift; sourceTree = "<group>"; };
 		BA533A321AF9004C00F343DF /* MyReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,19 +119,10 @@
 			children = (
 				BA3DEADD1AC963CE006F60AA /* Kurskollen */,
 				BA3DEAF51AC963CF006F60AA /* KurskollenTests */,
-				BA3DEADC1AC963CE006F60AA /* Products */,
 				487AD76308F50618609BF296 /* Pods */,
 				D367B1D479C2DF1F75BAE959 /* Frameworks */,
+				BA463D2C1B147255001B1236 /* Kurskollen.app */,
 			);
-			sourceTree = "<group>";
-		};
-		BA3DEADC1AC963CE006F60AA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BA3DEADB1AC963CE006F60AA /* Kurskollen.app */,
-				BA3DEAF21AC963CF006F60AA /* KurskollenTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		BA3DEADD1AC963CE006F60AA /* Kurskollen */ = {
@@ -222,7 +213,7 @@
 			);
 			name = Kurskollen;
 			productName = Kurskollen;
-			productReference = BA3DEADB1AC963CE006F60AA /* Kurskollen.app */;
+			productReference = BA463D2C1B147255001B1236 /* Kurskollen.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BA3DEAF11AC963CF006F60AA /* KurskollenTests */ = {
@@ -270,7 +261,7 @@
 				Base,
 			);
 			mainGroup = BA3DEAD21AC963CE006F60AA;
-			productRefGroup = BA3DEADC1AC963CE006F60AA /* Products */;
+			productRefGroup = BA3DEAD21AC963CE006F60AA;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

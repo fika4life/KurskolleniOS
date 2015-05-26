@@ -26,7 +26,7 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
     
     var autoCompleteTableView : UITableView?
     
-    var newPost : Bool?
+    var newPost : Bool? = true
     
     
     @IBAction func onType(sender: AnyObject) {
@@ -41,12 +41,11 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
     @IBAction func Done(sender: AnyObject) {
+    
+        
         let text = reviewText.text
         let theRating = rating.text
         let teacher = reviewTeacher.text
-        self.courseId = reviewData?["courseid"].intValue
-        let reviewId = reviewData?["reviewId"].intValue
-        
        
         
         let (email, loginSession) = Util.getLoginCredentials()
@@ -67,13 +66,16 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
                         Util.showPopup("Communication error", popupText: "Could not communicate with server1", viewController: self)
                     }
                     else{
-                        Util.showPopup("Added", popupText: "The review was successfully added", viewController: self)
+                        Util.showPopup("Skapat", popupText: "Recensionen har skapats", viewController: self)
                     }
                     
                     println(parameters)
             }
 
         }else{
+            
+            self.courseId = reviewData?["courseid"].intValue
+            let reviewId = reviewData?["reviewId"].intValue
             
             parameters = ["email" : email, "loginsession" : loginSession,"rating" : theRating, "reviewId": String(reviewId!), "courseid" : String(self.courseId!), "teacher" : teacher, "text" : text]
             
@@ -82,7 +84,8 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
                 .response{(_, response, _, error) in
                     self.view.endEditing(true)
                     if(error != nil){
-                        Util.showPopup("Communication error", popupText: "Could not communicate with server2", viewController: self)
+                        Util.showPopup("Error", popupText: "Kunde inte kommunicera med servern", viewController: self)
+//
                         println(response?.statusCode)
                     }
                     else{
@@ -96,13 +99,15 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
             }
     
     override func viewDidLoad() {
-        //println("reviewDat")
-        //println(reviewData)
+//        println("reviewDat")
+//        println(reviewData)
+        
+        if(!newPost!){
       
         reviewText.text = reviewData!["text"].string
         rating.text =  String (reviewData!["rating"].intValue)
         reviewTeacher.text = self.reviewData?["teacherName"].string
-        
+        }
         
         
         super.viewDidLoad()

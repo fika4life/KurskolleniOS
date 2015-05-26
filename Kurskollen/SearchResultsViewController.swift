@@ -73,6 +73,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
         if let indexPath =  self.tableView.indexPathForSelectedRow(){
             let selectedCell = self.courses![self.indexRow!]
             vc.courseData = selectedCell
+         
             
             
        }
@@ -106,12 +107,12 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
                     var alert = UIAlertController(title: "Communication error", message: "There is an error", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
-                    println(error)
+//                    println(error)
                 }
                 else{
                     self.courses = JSON(data!)
                     self.tableView.reloadData()
-                    println(self.courses)
+//                    println(self.courses)
                 }
             
         }
