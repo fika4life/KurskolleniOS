@@ -25,7 +25,7 @@ class TeacherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("TeacherViewController did load")
+        
         courses.userInteractionEnabled = true
         courses.editable = false
         
@@ -35,17 +35,19 @@ class TeacherViewController: UIViewController {
         
         Alamofire.request(.GET, globalConstants.URL + "get-teacher-info", parameters: parameters)
             .validate()
-            .response{(_, _, data, error) in
+            .responseJSON{(_, _, data, error) in
+                
                 self.view.endEditing(true)
                 if(error != nil){
                     Util.showPopup("Communication error", popupText: "Teachers not gotten", viewController: self)
                 }
                 else{
-                    
+                   
+                  
                     self.teacherInfo = JSON(data!)
-                    println(self.teacherInfo)
-//                   self.teacherName.text = self.teacherInfo["teacherid"]
-//                   self.courses = self.teacherInfo["courses"]
+                   
+//                   self.teacherName.text = self.teacherInfo["teacher"]
+//                   self.courses.text = self.teacherInfo["courses"]
                 }
                 
                 
