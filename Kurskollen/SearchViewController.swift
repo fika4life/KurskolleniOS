@@ -57,7 +57,7 @@ class SearchViewController: UIViewController {
         
         let courseCode = courseCodeField.text
         
-        self.parameters["schoolid"] = self.schoolId÷
+        self.parameters["schoolid"] = String(self.schoolId)
         
         if(course != ""){
             self.parameters["name"] = course
