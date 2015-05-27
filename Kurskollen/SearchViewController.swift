@@ -20,7 +20,7 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var distanceField: UISwitch!
     
-    var schoolId = 1;
+    var schoolId : Int = 1;
     
     @IBOutlet weak var schoolField: UITextField!
     
@@ -30,11 +30,10 @@ class SearchViewController: UIViewController {
             doneBlock: {
                 picker, value, index in
                 
-                //            self.schoolId =  Util.allKeysForValue(globalConstants.SCHOOLS,value)[0];
+                self.schoolId = Util.allKeysForValue(globalConstants.SCHOOLS,val: String(value))[0];
                 
-                println("value = \(value)")
-                println("index = \(index)")
-                println("picker = \(picker)")
+                self.schoolField.text = String(value)
+                
                 return
             },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
         
@@ -58,7 +57,7 @@ class SearchViewController: UIViewController {
         
         let courseCode = courseCodeField.text
         
-            
+        self.parameters["schoolid"] = String(self.schoolId)
         
         if(course != ""){
             self.parameters["name"] = course
