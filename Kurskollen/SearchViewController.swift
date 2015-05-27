@@ -22,6 +22,7 @@ class SearchViewController: UIViewController {
     
     var schoolId = 1;
     
+    @IBOutlet weak var schoolField: UITextField!
     
     @IBAction func SchoolPicker(sender: AnyObject) {
         

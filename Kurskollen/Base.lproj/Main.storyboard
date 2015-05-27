@@ -368,6 +368,7 @@
                         <outlet property="courseCodeField" destination="kR5-PY-cGC" id="DCE-2e-yVA"/>
                         <outlet property="courseField" destination="isa-hn-TcR" id="TBO-yt-Ofj"/>
                         <outlet property="distanceField" destination="8WS-XP-Uen" id="7Ue-Os-Nuh"/>
+                        <outlet property="schoolField" destination="XVP-Xg-5Ok" id="IvS-It-1QZ"/>
                         <segue destination="Ef9-Gz-Y5t" kind="show" identifier="toSearchResults" id="Wng-en-iby"/>
                     </connections>
                 </viewController>
