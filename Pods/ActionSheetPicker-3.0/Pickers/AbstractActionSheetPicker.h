@@ -28,8 +28,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class SWActionSheet;
-
 #define SuppressPerformSelectorLeakWarning(Stuff) \
 do { \
 _Pragma("clang diagnostic push") \
@@ -63,9 +61,6 @@ static NSString *const kActionType    = @"buttonAction";
 static NSString *const kActionTarget  = @"buttonActionTarget";
 
 @interface AbstractActionSheetPicker : NSObject<UIPopoverControllerDelegate>
-@property (nonatomic, strong) SWActionSheet *actionSheet;
-@property (nonatomic, assign) NSInteger tag;
-@property (nonatomic, assign) int borderWidth;
 @property (nonatomic, strong) UIToolbar* toolbar;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) UIView *pickerView;

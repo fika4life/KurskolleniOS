@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-import ActionSheetPicker
+import ActionSheetPicker_3_0
 
 class SearchViewController: UIViewController {
 
@@ -22,18 +22,20 @@ class SearchViewController: UIViewController {
     
     var schoolId = 1;
     
+    
+    
     @IBAction func SchoolPicker(sender: AnyObject) {
-        ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: globalConstants.SCHOOLS.values, initialSelection: 1, doneBlock: {
+        ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: Array(globalConstants.SCHOOLS.values), initialSelection: 1,
+            doneBlock: {
             picker, value, index in
             
-            self.schoolId =  Util.allKeysForValue(globalConstants.SCHOOLS,value)[0];
+//            self.schoolId =  Util.allKeysForValue(globalConstants.SCHOOLS,value)[0];
             
             println("value = \(value)")
             println("index = \(index)")
             println("picker = \(picker)")
             return
-            }, cancelBlock: { ActionStringCancelBlock in return }, origin: sender)
-    
+            },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
         
     }
     @IBAction func addCourse(sender: AnyObject) {
@@ -93,6 +95,9 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        println(globalConstants.SCHOOLS.values)
         
         //add right button
 //        var b = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action:nil)

@@ -19,15 +19,17 @@ class TeacherViewController: UIViewController {
     
     @IBOutlet weak var teacherName: UILabel!
     
-    @IBOutlet weak var courses: UITextView!
+   
+   
+    @IBOutlet weak var courses: UILabel!
+    
     
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        courses.userInteractionEnabled = true
-        courses.editable = false
+        courses.numberOfLines = 0
         
         
         let parameters = ["teacherid" : teacherId!]
@@ -45,9 +47,20 @@ class TeacherViewController: UIViewController {
                    
                   
                     self.teacherInfo = JSON(data!)
+                   println(self.teacherInfo)
+                   self.teacherName.text = self.teacherInfo!["name"].string
                    
-//                   self.teacherName.text = self.teacherInfo["teacher"]
-//                   self.courses.text = self.teacherInfo["courses"]
+//                   for course in self.teacherInfo!["courses"]{
+//                        self.courses.text += course["name"].stringValue
+//                   }
+                    
+                    var courseText = ""
+                    for (index: String, course:JSON) in self.teacherInfo!["courses"]{
+                        courseText += course["name"].stringValue + "\n"
+                    }
+                    self.courses.text  = courseText
+                 
+//                    self.courses.text = " Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
                 }
                 
                 

@@ -670,17 +670,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jt1-Nb-M1z">
-                                <rect key="frame" x="40" y="210" width="508" height="284"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TeacherName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aP5-l3-TCK">
-                                <rect key="frame" x="154" y="123" width="316" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aP5-l3-TCK">
+                                <rect key="frame" x="163" y="104" width="275" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="338" id="JKd-fu-WrE"/>
+                                    <constraint firstAttribute="width" constant="275" id="VYC-j7-l33"/>
+                                    <constraint firstAttribute="height" constant="21" id="i5b-kR-8PX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kurser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7Q-xi-hUc">
+                                <rect key="frame" x="260" y="145" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="k58-B7-PiN"/>
+                                    <constraint firstAttribute="height" constant="21" id="txX-dH-4J9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb4-aK-h23">
+                                <rect key="frame" x="164" y="174" width="273" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="LbG-GL-yv3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -689,16 +702,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jt1-Nb-M1z" firstAttribute="top" secondItem="aP5-l3-TCK" secondAttribute="bottom" constant="34" id="6kd-vl-1s3"/>
-                            <constraint firstItem="Jt1-Nb-M1z" firstAttribute="centerX" secondItem="aP5-l3-TCK" secondAttribute="centerX" id="GxG-kl-NVV"/>
-                            <constraint firstItem="E3C-wx-plD" firstAttribute="top" secondItem="Jt1-Nb-M1z" secondAttribute="bottom" constant="349" id="XAG-HS-vf2"/>
-                            <constraint firstItem="Jt1-Nb-M1z" firstAttribute="centerX" secondItem="wHg-og-DjG" secondAttribute="centerX" id="ZnG-oT-n8K"/>
-                            <constraint firstItem="Jt1-Nb-M1z" firstAttribute="leading" secondItem="wHg-og-DjG" secondAttribute="leadingMargin" constant="30" id="cBL-bh-LDf"/>
-                            <constraint firstItem="aP5-l3-TCK" firstAttribute="top" secondItem="VvU-Ec-Smx" secondAttribute="bottom" constant="4" id="zg3-in-xhG"/>
+                            <constraint firstItem="b7Q-xi-hUc" firstAttribute="centerX" secondItem="Cb4-aK-h23" secondAttribute="centerX" id="EAM-9B-wds"/>
+                            <constraint firstItem="aP5-l3-TCK" firstAttribute="top" secondItem="VvU-Ec-Smx" secondAttribute="bottom" constant="40" id="Y12-wU-2ik"/>
+                            <constraint firstItem="Cb4-aK-h23" firstAttribute="top" secondItem="b7Q-xi-hUc" secondAttribute="bottom" constant="8" symbolic="YES" id="YOS-vO-qZQ"/>
+                            <constraint firstItem="Cb4-aK-h23" firstAttribute="centerX" secondItem="wHg-og-DjG" secondAttribute="centerX" id="bja-ae-rne"/>
+                            <constraint firstItem="b7Q-xi-hUc" firstAttribute="top" secondItem="aP5-l3-TCK" secondAttribute="bottom" constant="20" id="hKh-8n-27G"/>
+                            <constraint firstItem="aP5-l3-TCK" firstAttribute="centerX" secondItem="b7Q-xi-hUc" secondAttribute="centerX" id="lve-cR-S4N"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="courses" destination="Jt1-Nb-M1z" id="gvv-hL-imo"/>
+                        <outlet property="courses" destination="Cb4-aK-h23" id="nah-fX-kf7"/>
                         <outlet property="teacherName" destination="aP5-l3-TCK" id="Zid-i5-1nJ"/>
                     </connections>
                 </viewController>
