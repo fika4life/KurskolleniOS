@@ -315,12 +315,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVP-Xg-5Ok">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVP-Xg-5Ok">
                                 <rect key="frame" x="178" y="296" width="245" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="SchoolPicker:" destination="diM-Bb-HnS" eventType="editingDidEnd" id="dtM-iZ-WON"/>
+                                    <action selector="SchoolPicker:" destination="diM-Bb-HnS" eventType="editingDidEnd" id="yZk-gB-Cuv"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -333,7 +333,10 @@
                             <constraint firstItem="kR5-PY-cGC" firstAttribute="top" secondItem="8fF-T0-T3x" secondAttribute="bottom" constant="8" symbolic="YES" id="DiG-a8-h9W"/>
                             <constraint firstItem="kR5-PY-cGC" firstAttribute="leading" secondItem="Fr1-Fg-HQx" secondAttribute="leading" id="EpV-fZ-y56"/>
                             <constraint firstItem="Fr1-Fg-HQx" firstAttribute="centerX" secondItem="u3b-zx-GiL" secondAttribute="centerX" id="ISm-mc-5gK"/>
+                            <constraint firstItem="XVP-Xg-5Ok" firstAttribute="top" secondItem="iiY-C7-Med" secondAttribute="bottom" constant="8" symbolic="YES" id="To0-R4-Rtc"/>
                             <constraint firstItem="8fF-T0-T3x" firstAttribute="centerX" secondItem="kR5-PY-cGC" secondAttribute="centerX" id="XsL-R4-YSN"/>
+                            <constraint firstItem="XVP-Xg-5Ok" firstAttribute="leading" secondItem="kR5-PY-cGC" secondAttribute="leading" id="XwN-B3-eCs"/>
+                            <constraint firstItem="XVP-Xg-5Ok" firstAttribute="trailing" secondItem="kR5-PY-cGC" secondAttribute="trailing" id="YF0-tM-4Sb"/>
                             <constraint firstItem="aeO-2a-5zb" firstAttribute="centerX" secondItem="8WS-XP-Uen" secondAttribute="centerX" id="Zgu-Pg-tTZ"/>
                             <constraint firstItem="Fr1-Fg-HQx" firstAttribute="top" secondItem="dGa-eG-JRt" secondAttribute="bottom" constant="8" symbolic="YES" id="aD7-zD-mnm"/>
                             <constraint firstItem="Fr1-Fg-HQx" firstAttribute="trailing" secondItem="kR5-PY-cGC" secondAttribute="trailing" id="aQK-Jo-blE"/>
@@ -365,7 +368,6 @@
                         <outlet property="courseCodeField" destination="kR5-PY-cGC" id="DCE-2e-yVA"/>
                         <outlet property="courseField" destination="isa-hn-TcR" id="TBO-yt-Ofj"/>
                         <outlet property="distanceField" destination="8WS-XP-Uen" id="7Ue-Os-Nuh"/>
-                        <outlet property="teacherField" destination="Fr1-Fg-HQx" id="uIp-jC-D7f"/>
                         <segue destination="Ef9-Gz-Y5t" kind="show" identifier="toSearchResults" id="Wng-en-iby"/>
                     </connections>
                 </viewController>

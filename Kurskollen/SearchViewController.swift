@@ -23,22 +23,23 @@ class SearchViewController: UIViewController {
     var schoolId = 1;
     
     
-    
     @IBAction func SchoolPicker(sender: AnyObject) {
+        
         ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: Array(globalConstants.SCHOOLS.values), initialSelection: 1,
             doneBlock: {
-            picker, value, index in
-            
-//            self.schoolId =  Util.allKeysForValue(globalConstants.SCHOOLS,value)[0];
-            
-            println("value = \(value)")
-            println("index = \(index)")
-            println("picker = \(picker)")
-            return
+                picker, value, index in
+                
+                //            self.schoolId =  Util.allKeysForValue(globalConstants.SCHOOLS,value)[0];
+                
+                println("value = \(value)")
+                println("index = \(index)")
+                println("picker = \(picker)")
+                return
             },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
         
+
     }
-    @IBAction func addCourse(sender: AnyObject) {
+       @IBAction func addCourse(sender: AnyObject) {
     }
     
     
