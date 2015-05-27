@@ -28,12 +28,12 @@ class SearchViewController: UIViewController {
     
     
     @IBAction func SchoolPicker(sender: AnyObject) {
-        
-        ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: Array(globalConstants.SCHOOLS.values), initialSelection: 1,
+        let schoolNamesArray = Array(globalConstants.SCHOOLS.values)
+        ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: schoolNamesArray, initialSelection: 1,
             doneBlock: {
                 picker, value, index in
-                println(String(value))
-                self.schoolId = Util.allKeysForValue(globalConstants.SCHOOLS,val: String(value))[0];
+                print(schoolNamesArray[value])
+                self.schoolId = Util.allKeysForValue(globalConstants.SCHOOLS,val: schoolNamesArray[value])[0];
                 
                 self.schoolField.text = String(value)
                 
