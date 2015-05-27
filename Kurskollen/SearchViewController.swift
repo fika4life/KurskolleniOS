@@ -16,13 +16,14 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var courseField: UITextField!
     
     @IBOutlet weak var courseCodeField: UITextField!
-    @IBOutlet weak var teacherField: UITextField!
+    
     
     @IBOutlet weak var distanceField: UISwitch!
+//    @IBOutlet weak var schoolField: UITextField!
     
     var schoolId : Int = 1;
     
-    @IBOutlet weak var schoolField: UITextField!
+    
     
     @IBAction func SchoolPicker(sender: AnyObject) {
         
@@ -39,6 +40,8 @@ class SearchViewController: UIViewController {
         
 
     }
+    
+
        @IBAction func addCourse(sender: AnyObject) {
     }
     
@@ -98,7 +101,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
 
-        println(globalConstants.SCHOOLS.values)
+        
         
         //add right button
 //        var b = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action:nil)
