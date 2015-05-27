@@ -368,7 +368,8 @@
                         <outlet property="courseCodeField" destination="kR5-PY-cGC" id="DCE-2e-yVA"/>
                         <outlet property="courseField" destination="isa-hn-TcR" id="TBO-yt-Ofj"/>
                         <outlet property="distanceField" destination="8WS-XP-Uen" id="7Ue-Os-Nuh"/>
-                        <outlet property="teacherField" destination="Nsg-0t-es6" id="NcU-vI-TA2"/>
+                        <outlet property="schoolField" destination="nuP-bd-k0T" id="su1-fR-LJ2"/>
+                        <outlet property="teacherField" destination="Nsg-0t-es6" id="7uq-hI-xgr"/>
                         <segue destination="Ef9-Gz-Y5t" kind="show" identifier="toSearchResults" id="Wng-en-iby"/>
                     </connections>
                 </viewController>

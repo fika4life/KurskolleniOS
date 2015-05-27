@@ -16,10 +16,12 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var courseField: UITextField!
     
     @IBOutlet weak var courseCodeField: UITextField!
+    @IBOutlet weak var schoolField: UITextField!
     
     
     @IBOutlet weak var distanceField: UISwitch!
-    @IBOutlet weak var schoolField: UITextField!
+    
+   
     @IBOutlet weak var teacherField: UITextField!
     
     
@@ -32,10 +34,10 @@ class SearchViewController: UIViewController {
         ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: schoolNamesArray, initialSelection: 1,
             doneBlock: {
                 picker, value, index in
-                print(schoolNamesArray[value])
+               
                 self.schoolId = Util.allKeysForValue(globalConstants.SCHOOLS,val: schoolNamesArray[value])[0];
-                
-                self.schoolField.text = String(value)
+                              
+                self.schoolField.text = String(schoolNamesArray[value])
                 
                 return
             },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
