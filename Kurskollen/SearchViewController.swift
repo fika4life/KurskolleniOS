@@ -20,6 +20,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var distanceField: UISwitch!
     @IBOutlet weak var schoolField: UITextField!
+    @IBOutlet weak var teacherField: UITextField!
+    
     
     var schoolId : Int = 1;
     
@@ -30,7 +32,7 @@ class SearchViewController: UIViewController {
         ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: Array(globalConstants.SCHOOLS.values), initialSelection: 1,
             doneBlock: {
                 picker, value, index in
-                
+                println(String(value))
                 self.schoolId = Util.allKeysForValue(globalConstants.SCHOOLS,val: String(value))[0];
                 
                 self.schoolField.text = String(value)
