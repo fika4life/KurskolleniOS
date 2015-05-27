@@ -19,7 +19,7 @@ class SearchViewController: UIViewController {
     
     
     @IBOutlet weak var distanceField: UISwitch!
-//    @IBOutlet weak var schoolField: UITextField!
+    @IBOutlet weak var schoolField: UITextField!
     
     @IBOutlet weak var teacherField: UITextField!
     var schoolId = 1;
