@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Alamofire
 
 class SearchCourseDetailViewController: UIViewController, UITableViewDataSource {
     
@@ -31,6 +32,24 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     var courseData:JSON?
     
     @IBAction func addCoursetoFavs(sender: AnyObject) {
+        let (email, loginSession) = Util.getLoginCredentials()
+        let courseId = courseData!["id"].intValue
+    
+        
+        let parameters = ["email" : email, "loginsession" : loginSession, "courseid" : String(courseId)]
+        
+        Alamofire.request(.GET, globalConstants.URL+"add-bookmark", parameters: parameters)
+            .validate()
+            .response{(_, _, _, error) in
+                if(error != nil){
+                    //println(self.suggestions)
+                    Util.showPopup("Error", popupText: "Kunde inte kommunicera med servern", viewController: self)
+                }
+                else{
+                    Util.showPopup("Uppdaterat", popupText: "Kursen har lagts till som favorit", viewController: self)
+                }
+        }
+
     }
     @IBAction func chooseTeacher(sender: AnyObject) {
         println(courseData!["reviews"])
