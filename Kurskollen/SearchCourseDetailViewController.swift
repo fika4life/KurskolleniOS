@@ -31,6 +31,8 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     @IBOutlet weak var reviewTable: UITableView!
     
     var courseData:JSON?
+
+    var reviewsToDisplay : JSON = []
     
     var teacherName : String?
     
@@ -72,10 +74,19 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
                 self.teacherName = String(teachers[value])
 
                 self.teacherField.setTitle(String(teachers[value]),  forState: UIControlState.Normal)
+                let reviews = courseData!["reviews"]
+
+
+                self.reviewsToDisplay = []
+                for (index: String, review: JSON) in reviews {
+                    if(review["teacher"].stringValue == self.teacherName){
+                        self.reviewsToDisplay[index.toInt()] = review
+                    }
+                }
+                self.reviewTable.reloadData()
                 return
             },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
         
-        println(self.teacherName)
     }
 
    
@@ -86,7 +97,7 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        println(self.courseData!["reviews"])
-        return self.courseData!["reviews"].count
+        return self.reviewsToDisplay.count
         
     }
     
@@ -97,7 +108,7 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
         
         
         
-        let review :JSON = self.courseData!["reviews"][indexPath.row]
+        let review :JSON = self.reviewsToDisplay[indexPath.row]
         let timeStamp = review["time"].doubleValue
         
         
@@ -150,6 +161,9 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
         }else{
             self.coursecode.text =  nil
         }
+
+        self.reviewsToDisplay = self.courseData!["reviews"]
+        self.reviewTable.reloadData()
         
         
         // Do any additional setup after loading the view.
