@@ -30,6 +30,8 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     
     var courseData:JSON?
     
+    @IBAction func addCoursetoFavs(sender: AnyObject) {
+    }
     @IBAction func chooseTeacher(sender: AnyObject) {
         println(courseData!["reviews"])
 //        let reviewsbyTeacher = courseData.

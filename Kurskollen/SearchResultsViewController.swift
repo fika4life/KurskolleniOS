@@ -109,12 +109,15 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
                     var alert = UIAlertController(title: "Communication error", message: "There is an error", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
-//                    println(error)
+                        println(error)
                 }
                 else{
+                    println(data)
+                    println("Hej")
+                    println(self.parameters)
                     self.courses = JSON(data!)
                     self.tableView.reloadData()
-//                    println(self.courses)
+                    
                 }
             
         }

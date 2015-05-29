@@ -25,11 +25,12 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var teacherField: UITextField!
     
     
-    var schoolId : Int = 1;
+    var schoolId : Int?
     
     
     
     @IBAction func SchoolPicker(sender: AnyObject) {
+        
         let schoolNamesArray = Array(globalConstants.SCHOOLS.values)
         ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: schoolNamesArray, initialSelection: 1,
             doneBlock: {
@@ -41,6 +42,7 @@ class SearchViewController: UIViewController {
                 
                 return
             },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
+        self.schoolField.resignFirstResponder()
         
 
     }
@@ -64,8 +66,11 @@ class SearchViewController: UIViewController {
         
         let courseCode = courseCodeField.text
         
-        self.parameters["schoolid"] = String(self.schoolId)
-        
+        if (self.schoolId != nil){
+            self.parameters["schoolid"] = String(self.schoolId!)
+            
+        }
+       
         if(course != ""){
             self.parameters["name"] = course
         }
@@ -105,7 +110,6 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
 
-        
         
         //add right button
 //        var b = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action:nil)
