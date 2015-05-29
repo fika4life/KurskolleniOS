@@ -33,6 +33,9 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     var courseData:JSON?
     
     var teacherName : String?
+    var teacherId : Int?
+    
+    
     
     @IBAction func addCoursetoFavs(sender: AnyObject) {
         let (email, loginSession) = Util.getLoginCredentials()
@@ -58,24 +61,23 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     @IBAction func chooseTeacher(sender: AnyObject) {
        
         let reviews = courseData!["reviews"]
-        var teachers = [String]()
-        for (index: String, review: JSON) in reviews {
-            if (!contains(teachers, review["teacher"].stringValue)){
-                teachers.append(review["teacher"].stringValue)
-            }
+        var teachers = Dictionary< String , Int>()
+        for (key: String, review: JSON) in reviews {
+                teachers[review["teacher"].stringValue] = review["teacherid"].intValue
+            
         }
-    
-    
-        ActionSheetStringPicker.showPickerWithTitle("Välj teacher", rows: teachers, initialSelection: 1,
+       var teacherNames = Array(teachers.keys)
+      
+        ActionSheetStringPicker.showPickerWithTitle("Välj teacher", rows: teacherNames, initialSelection: 1,
             doneBlock: {
                 picker, value, index in
-                self.teacherName = String(teachers[value])
-
-                self.teacherField.setTitle(String(teachers[value]),  forState: UIControlState.Normal)
+                teacherNames = String(teacherNames[value])
+                
+                self.teacherId = Util.allKeysForValue(teachers, val:teacherNames[value])[0];
+                self.teacherField.setTitle(String(teachers[value]?),  forState: UIControlState.Normal)
                 return
             },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
         
-        println(self.teacherName)
     }
 
    
@@ -119,9 +121,9 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
             svc.courseId = self.courseData!["id"].int
         }else if (segue!.identifier == "toTeacher"){
             
-                let teacherId = 1
+            
                 var svc = segue!.destinationViewController as TeacherViewController
-                svc.teacherId = teacherId
+                svc.teacherId = self.teacherId
             
 
         }
