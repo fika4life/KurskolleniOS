@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import ActionSheetPicker_3_0
 
 class AddCourseViewController: UIViewController {
     
@@ -23,8 +24,19 @@ class AddCourseViewController: UIViewController {
     @IBOutlet weak var online: UISwitch!
 
     @IBOutlet weak var teacher: UITextField!
+
+    var schoolId : Int;
     
     @IBAction func chooseSchool(sender: AnyObject) {
+        let schoolNamesArray = Array(globalConstants.SCHOOLS.values)
+        ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: schoolNamesArray, initialSelection: 1,
+            doneBlock: {
+                picker, value, index in
+                self.schoolId = Util.allKeysForValue(globalConstants.SCHOOLS,val: schoolNamesArray[value])[0];
+                self.school.text = String(schoolNamesArray[value])
+                return
+            },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
+
     }
     @IBAction func Done(sender: AnyObject) {
         let courseNameText = courseName.text
@@ -35,12 +47,10 @@ class AddCourseViewController: UIViewController {
     
         //Should be changed:
         let courseCode = "DD1234"
-        let schoolId = 1
-        let teacherId = 1
         
         let (email, loginSession) = Util.getLoginCredentials()
         
-        let parameters : [String: String] = ["email": email, "loginsession": loginSession, "coursecode": courseCode, "name": courseNameText, "credits": creditsText,"online": onlineString, "schoolid": String(schoolId)]
+        let parameters : [String: String] = ["email": email, "loginsession": loginSession, "coursecode": courseCode, "name": courseNameText, "credits": creditsText,"online": onlineString, "schoolid": String(self.schoolId)]
         
         Alamofire.request(.POST, globalConstants.URL + "add-course", parameters: parameters)
             .validate()
