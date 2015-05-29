@@ -24,7 +24,8 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
     
     var suggestions : JSON?
     
-    var autoCompleteTableView : UITableView?
+    @IBOutlet weak var autoCompleteTableView: UITableView!
+  
     
     var newPost : Bool? = true
     
@@ -112,13 +113,13 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
         
         super.viewDidLoad()
         
-        self.autoCompleteTableView = UITableView(frame: CGRectMake(0, 80, 320, 120),style:UITableViewStyle.Plain)
+       
         autoCompleteTableView!.dataSource = self
         autoCompleteTableView!.delegate = self
         autoCompleteTableView!.scrollEnabled = true
         autoCompleteTableView!.hidden = true
         
-        self.view.insertSubview(autoCompleteTableView!, belowSubview: reviewTeacher)
+       
 
         // Do any additional setup after loading the view.
         self.autoCompleteTableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -179,7 +180,9 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
                 else{
                     self.autoCompleteTableView!.hidden = false
                 }
+                self.reviewTeacher.becomeFirstResponder()
             }
+        
         
     }
 

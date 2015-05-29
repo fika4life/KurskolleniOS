@@ -537,19 +537,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lärare" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAf-pf-gz4">
-                                <rect key="frame" x="276" y="105" width="49" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lärare" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAf-pf-gz4">
+                                <rect key="frame" x="127" y="117" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6qL-pV-mLz">
-                                <rect key="frame" x="19" y="291" width="563" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Di6-hZ-3kg">
-                                <rect key="frame" x="19" y="134" width="563" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Di6-hZ-3kg">
+                                <rect key="frame" x="32" y="179" width="273" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -557,42 +552,34 @@
                                     <action selector="onType:" destination="77t-HS-Lg6" eventType="valueChanged" id="KZO-E2-qYX"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Betyg (1-5)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9S-7G-MAI">
-                                <rect key="frame" x="258" y="185" width="85" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Betyg (1-5)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9S-7G-MAI">
+                                <rect key="frame" x="109" y="341" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPy-42-tFG">
-                                <rect key="frame" x="19" y="214" width="563" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPy-42-tFG">
+                                <rect key="frame" x="38" y="370" width="227" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skriv text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pun-aM-G9G">
-                                <rect key="frame" x="264" y="262" width="72" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skriv text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pun-aM-G9G">
+                                <rect key="frame" x="115" y="408" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-Fy-KO4">
+                                <rect key="frame" x="32" y="208" width="273" height="125"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6qL-pV-mLz">
+                                <rect key="frame" x="22" y="437" width="269" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="GPy-42-tFG" firstAttribute="trailing" secondItem="6qL-pV-mLz" secondAttribute="trailing" id="1iA-BK-lfW"/>
-                            <constraint firstItem="pAf-pf-gz4" firstAttribute="top" secondItem="C8X-Cv-b96" secondAttribute="bottom" constant="41" id="CVx-lA-VEQ"/>
-                            <constraint firstItem="6qL-pV-mLz" firstAttribute="leading" secondItem="GPy-42-tFG" secondAttribute="leading" id="OER-af-z0y"/>
-                            <constraint firstItem="GPy-42-tFG" firstAttribute="leading" secondItem="Di6-hZ-3kg" secondAttribute="leading" id="V7F-VP-4g1"/>
-                            <constraint firstItem="Di6-hZ-3kg" firstAttribute="trailing" secondItem="GPy-42-tFG" secondAttribute="trailing" id="ZF2-74-ZcA"/>
-                            <constraint firstItem="Di6-hZ-3kg" firstAttribute="top" secondItem="pAf-pf-gz4" secondAttribute="bottom" constant="8" symbolic="YES" id="a45-qp-A0L"/>
-                            <constraint firstItem="6qL-pV-mLz" firstAttribute="top" secondItem="Pun-aM-G9G" secondAttribute="bottom" constant="8" symbolic="YES" id="aog-gv-Yls"/>
-                            <constraint firstItem="h9S-7G-MAI" firstAttribute="top" secondItem="Di6-hZ-3kg" secondAttribute="bottom" constant="21" id="fA6-Oa-OgU"/>
-                            <constraint firstItem="pAf-pf-gz4" firstAttribute="centerX" secondItem="ddD-FS-9ic" secondAttribute="centerX" id="ijY-7e-O7h"/>
-                            <constraint firstItem="Pun-aM-G9G" firstAttribute="centerX" secondItem="6qL-pV-mLz" secondAttribute="centerX" id="kLB-QT-NzG"/>
-                            <constraint firstItem="Pun-aM-G9G" firstAttribute="top" secondItem="GPy-42-tFG" secondAttribute="bottom" constant="18" id="mi5-cN-P6h"/>
-                            <constraint firstItem="GPy-42-tFG" firstAttribute="top" secondItem="h9S-7G-MAI" secondAttribute="bottom" constant="8" symbolic="YES" id="rIa-69-07E"/>
-                            <constraint firstItem="h9S-7G-MAI" firstAttribute="centerX" secondItem="GPy-42-tFG" secondAttribute="centerX" id="yGF-w6-UQX"/>
-                            <constraint firstItem="Di6-hZ-3kg" firstAttribute="leading" secondItem="ddD-FS-9ic" secondAttribute="leadingMargin" constant="3" id="zFx-YQ-iWD"/>
-                            <constraint firstItem="Di6-hZ-3kg" firstAttribute="centerX" secondItem="pAf-pf-gz4" secondAttribute="centerX" id="zdh-dD-Amy"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Skriv recension" id="Fkf-vQ-Vs5">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="Ita-kq-bjY">
@@ -602,6 +589,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="autoCompleteTableView" destination="wGh-Fy-KO4" id="s1g-tC-lPk"/>
                         <outlet property="rating" destination="GPy-42-tFG" id="wBC-oZ-s9z"/>
                         <outlet property="reviewTeacher" destination="Di6-hZ-3kg" id="yUy-8f-F19"/>
                         <outlet property="reviewText" destination="6qL-pV-mLz" id="dhk-LK-P0w"/>
