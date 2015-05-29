@@ -635,15 +635,6 @@
                                     <segue destination="Aoa-d6-Jui" kind="show" identifier="toTeacher" id="IER-2b-b2a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZq-3t-AWi">
-                                <rect key="frame" x="137" y="210" width="67" height="30"/>
-                                <state key="normal" title="Välj lärare">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseTeacher:" destination="SqP-i9-LEe" eventType="touchUpInside" id="W71-SK-XaD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jE-by-aHT">
                                 <rect key="frame" x="93" y="310" width="155" height="30"/>
                                 <state key="normal" title="Spara kurs till favoriter">
@@ -651,6 +642,15 @@
                                 </state>
                                 <connections>
                                     <action selector="addCoursetoFavs:" destination="SqP-i9-LEe" eventType="touchUpInside" id="Owe-sI-HdD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZq-3t-AWi">
+                                <rect key="frame" x="99" y="212" width="139" height="30"/>
+                                <state key="normal" title="Välj lärare">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseTeacher:" destination="SqP-i9-LEe" eventType="touchUpInside" id="W71-SK-XaD"/>
                                 </connections>
                             </button>
                         </subviews>

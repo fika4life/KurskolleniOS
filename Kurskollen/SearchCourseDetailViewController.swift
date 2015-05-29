@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import ActionSheetPicker_3_0
 
 class SearchCourseDetailViewController: UIViewController, UITableViewDataSource {
     
@@ -30,18 +31,29 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     
     var courseData:JSON?
     
+    var teacherName : String?
+    
     @IBAction func addCoursetoFavs(sender: AnyObject) {
     }
     @IBAction func chooseTeacher(sender: AnyObject) {
-        println(courseData!["reviews"])
-//        let reviewsbyTeacher = courseData.
-//        ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: schoolNamesArray, initialSelection: 1,
-//            doneBlock: {
-//                picker, value, index in
-//                self.schoolId = Util.allKeysForValue(globalConstants.SCHOOLS,val: schoolNamesArray[value])[0];
-//                self.school.text = String(schoolNamesArray[value])
-//                return
-//            },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
+       
+        let reviews = courseData!["reviews"]
+        var teachers = [String]()
+        for (index: String, review: JSON) in reviews {
+            if (!contains(teachers, review["teacher"].stringValue)){
+                teachers.append(review["teacher"].stringValue)
+            }
+        }
+    
+    
+        ActionSheetStringPicker.showPickerWithTitle("Välj teacher", rows: teachers, initialSelection: 1,
+            doneBlock: {
+                picker, value, index in
+                self.teacherName = String(teachers[value])
+
+                self.teacherField.setTitle(String(teachers[value]),  forState: UIControlState.Normal)
+                return
+            },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
         
 
     }
