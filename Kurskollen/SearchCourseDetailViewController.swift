@@ -31,7 +31,7 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     var courseData:JSON?
     
     @IBAction func chooseTeacher(sender: AnyObject) {
-        println(courseData)
+        println(courseData!["reviews"])
 //        let reviewsbyTeacher = courseData.
 //        ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: schoolNamesArray, initialSelection: 1,
 //            doneBlock: {
@@ -92,12 +92,6 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
 
         }
     }
-    
- 
-        
-        
-        
-    
 
    
     override func viewDidLoad() {

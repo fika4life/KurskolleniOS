@@ -81,10 +81,12 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource{
         
         
     }
-    
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        println(self.courses?)
         
         //change name of title
         self.title = "Sökresultat"
