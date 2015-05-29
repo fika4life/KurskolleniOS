@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import ActionSheetPicker_3_0
+import Alamofire
 
 class SearchCourseDetailViewController: UIViewController, UITableViewDataSource {
     
@@ -39,16 +40,17 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     
         
         let parameters = ["email" : email, "loginsession" : loginSession, "courseid" : String(courseId)]
-        
+        println(parameters)
         Alamofire.request(.GET, globalConstants.URL+"add-bookmark", parameters: parameters)
             .validate()
             .response{(_, _, _, error) in
                 if(error != nil){
                     //println(self.suggestions)
-                    Util.showPopup("Error", popupText: "Kunde inte kommunicera med servern", viewController: self)
+                     Util.showPopup("Uppdaterat", popupText: "Kursen har lagts till som favorit", viewController: self)
                 }
                 else{
-                    Util.showPopup("Uppdaterat", popupText: "Kursen har lagts till som favorit", viewController: self)
+                  
+                     Util.showPopup("Error", popupText: "Kunde inte kommunicera med servern", viewController: self)
                 }
         }
 
@@ -73,7 +75,7 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
                 return
             },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
         
-
+        println(self.teacherName)
     }
 
    
