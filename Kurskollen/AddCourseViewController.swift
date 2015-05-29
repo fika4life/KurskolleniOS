@@ -24,6 +24,8 @@ class AddCourseViewController: UIViewController {
 
     @IBOutlet weak var teacher: UITextField!
     
+    @IBAction func chooseSchool(sender: AnyObject) {
+    }
     @IBAction func Done(sender: AnyObject) {
         let courseNameText = courseName.text
         let courseDescText = courseDesc.text

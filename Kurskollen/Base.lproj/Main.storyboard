@@ -464,6 +464,9 @@
                                 <rect key="frame" x="16" y="127" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="chooseSchool:" destination="uul-0t-Fa8" eventType="editingDidBegin" id="HkU-Wv-tHq"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
