@@ -19,7 +19,10 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
    
     @IBOutlet weak var coursecode: UILabel!
     @IBOutlet weak var online: UILabel!
-    @IBOutlet weak var teacher: UIButton!
+  
+    
+    @IBOutlet weak var teacherField: UIButton!
+    
     @IBOutlet weak var rating: UILabel!
     
     
@@ -27,6 +30,19 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     
     var courseData:JSON?
     
+    @IBAction func chooseTeacher(sender: AnyObject) {
+        println(courseData)
+//        let reviewsbyTeacher = courseData.
+//        ActionSheetStringPicker.showPickerWithTitle("Välj skola", rows: schoolNamesArray, initialSelection: 1,
+//            doneBlock: {
+//                picker, value, index in
+//                self.schoolId = Util.allKeysForValue(globalConstants.SCHOOLS,val: schoolNamesArray[value])[0];
+//                self.school.text = String(schoolNamesArray[value])
+//                return
+//            },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
+        
+
+    }
 
    
     

@@ -19,13 +19,13 @@ class AddCourseViewController: UIViewController {
     @IBOutlet weak var courseDesc: UITextField!
     
     
+    @IBOutlet weak var courseCodeField: UITextField!
+    
     @IBOutlet weak var credits: UITextField!
     
     @IBOutlet weak var online: UISwitch!
 
-    @IBOutlet weak var teacher: UITextField!
-
-    var schoolId : Int;
+    var schoolId : Int?;
     
     @IBAction func chooseSchool(sender: AnyObject) {
         let schoolNamesArray = Array(globalConstants.SCHOOLS.values)
@@ -44,13 +44,11 @@ class AddCourseViewController: UIViewController {
         let creditsText = credits.text
         let onlineValue = online.on
         let onlineString = onlineValue ? "1" : "0"
-    
-        //Should be changed:
-        let courseCode = "DD1234"
+        let courseCode = courseCodeField.text
         
         let (email, loginSession) = Util.getLoginCredentials()
         
-        let parameters : [String: String] = ["email": email, "loginsession": loginSession, "coursecode": courseCode, "name": courseNameText, "credits": creditsText,"online": onlineString, "schoolid": String(self.schoolId)]
+        let parameters : [String: String] = ["email": email, "loginsession": loginSession, "coursecode": courseCode, "name": courseNameText, "description":courseDescText, "credits": creditsText,"online": onlineString, "link": "", "schoolid": String(self.schoolId!)]
         
         Alamofire.request(.POST, globalConstants.URL + "add-course", parameters: parameters)
             .validate()
@@ -58,6 +56,7 @@ class AddCourseViewController: UIViewController {
                 self.view.endEditing(true)
                 if(error != nil){
                     println(parameters)
+                    println(error)
                     var alert = UIAlertController(title: "Kommunikationsfel", message: "Kunde inte kommunicera med servern", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
                     self.presentViewController(alert, animated: true, completion: nil)
