@@ -61,10 +61,15 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
             
             Alamofire.request(.POST, globalConstants.URL + "create-review", parameters: parameters)
                 .validate()
-                .response{(_, _, _, error) in
+                .response{(_, response, _, error) in
                     self.view.endEditing(true)
                     if(error != nil){
-                        Util.showPopup("Communication error", popupText: "Could not communicate with server1", viewController: self)
+                        if(response?.statusCode == 409){
+                            Util.showPopup("Error", popupText: "Du kan bara skriva en review per kurs", viewController: self)
+                        }
+                        else{
+                            Util.showPopup("Communication error", popupText: "Could not communicate with server1", viewController: self)
+                        }
                     }
                     else{
                         var alert = UIAlertController(title: "Skapat", message: "Recension har skapats", preferredStyle: UIAlertControllerStyle.Alert)
@@ -88,14 +93,7 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
                 .response{(_, response, _, error) in
                     self.view.endEditing(true)
                     if(error != nil){
-                        if(response?.statusCode == 409){
-                            Util.showPopup("Error", popupText: "Du kan bara skriva en review per kurs", viewController: self)
-                        }
-                        else{
-                            Util.showPopup("Error", popupText: "Kunde inte kommunicera med servern", viewController: self)
-                        }
-//
-                        println()
+                        Util.showPopup("Error", popupText: "Kunde inte kommunicera med servern", viewController: self)
                     }
                     else{
                         Util.showPopup("Uppdaterat", popupText: "Recensionen har uppdaterats", viewController: self)
