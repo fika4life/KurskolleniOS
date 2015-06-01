@@ -14,6 +14,8 @@
 		BA0C000C1AD57B2D00F59EFD /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C000B1AD57B2D00F59EFD /* constants.swift */; };
 		BA0C000E1AD5A87F00F59EFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */; };
 		BA1C34D91B009EC100ED435A /* MinaReviewsNavbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1C34D81B009EC100ED435A /* MinaReviewsNavbarViewController.swift */; };
+		BA3B74951B1C7C8F006839BB /* ReviewListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3B74941B1C7C8F006839BB /* ReviewListTableCell.swift */; };
+		BA3B74971B1C9707006839BB /* SearchNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3B74961B1C9707006839BB /* SearchNavViewController.swift */; };
 		BA3DEAE11AC963CE006F60AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */; };
 		BA3DEAE31AC963CE006F60AA /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAE21AC963CE006F60AA /* FirstViewController.swift */; };
 		BA3DEAE51AC963CF006F60AA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAE41AC963CE006F60AA /* SecondViewController.swift */; };
@@ -23,7 +25,6 @@
 		BA3DEAF91AC963CF006F60AA /* KurskollenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEAF81AC963CF006F60AA /* KurskollenTests.swift */; };
 		BA3DEB031AC98658006F60AA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DEB021AC98658006F60AA /* ThirdViewController.swift */; };
 		BA533A261AF8E11D00F343DF /* MyReviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA533A251AF8E11D00F343DF /* MyReviewsTableViewController.swift */; };
-		BA533A2F1AF8FF2000F343DF /* ReviewListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA533A2E1AF8FF2000F343DF /* ReviewListTableCell.swift */; };
 		BA533A341AF9004C00F343DF /* MyReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA533A321AF9004C00F343DF /* MyReviewTableViewCell.swift */; };
 		BA533A351AF9004C00F343DF /* MyReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA533A331AF9004C00F343DF /* MyReviewTableViewCell.xib */; };
 		BA67611C1ADEB1BF00A150B6 /* searchResultsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA67611B1ADEB1BF00A150B6 /* searchResultsTableCell.xib */; };
@@ -59,6 +60,8 @@
 		BA0C000B1AD57B2D00F59EFD /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		BA0C000D1AD5A87E00F59EFD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA1C34D81B009EC100ED435A /* MinaReviewsNavbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinaReviewsNavbarViewController.swift; sourceTree = "<group>"; };
+		BA3B74941B1C7C8F006839BB /* ReviewListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListTableCell.swift; sourceTree = "<group>"; };
+		BA3B74961B1C9707006839BB /* SearchNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNavViewController.swift; sourceTree = "<group>"; };
 		BA3DEADF1AC963CE006F60AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA3DEAE01AC963CE006F60AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA3DEAE21AC963CE006F60AA /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +74,6 @@
 		BA3DEB021AC98658006F60AA /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		BA463D2C1B147255001B1236 /* Kurskollen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kurskollen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA533A251AF8E11D00F343DF /* MyReviewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewsTableViewController.swift; sourceTree = "<group>"; };
-		BA533A2E1AF8FF2000F343DF /* ReviewListTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReviewListTableCell.swift; path = ../../../.Trash/ReviewListTableCell.swift; sourceTree = "<group>"; };
 		BA533A321AF9004C00F343DF /* MyReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyReviewTableViewCell.swift; sourceTree = "<group>"; };
 		BA533A331AF9004C00F343DF /* MyReviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyReviewTableViewCell.xib; sourceTree = "<group>"; };
 		BA67611B1ADEB1BF00A150B6 /* searchResultsTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = searchResultsTableCell.xib; sourceTree = "<group>"; };
@@ -152,7 +154,6 @@
 				BA3DEADE1AC963CE006F60AA /* Supporting Files */,
 				BA67611B1ADEB1BF00A150B6 /* searchResultsTableCell.xib */,
 				B9CD8C0A1AE542F700A45EC4 /* ReviewListTableCell.xib */,
-				BA533A2E1AF8FF2000F343DF /* ReviewListTableCell.swift */,
 				BA67611D1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift */,
 				BAB679261AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift */,
 				BA85B8B81AEA637C00F92471 /* AddCourseViewController.swift */,
@@ -162,6 +163,8 @@
 				BA533A331AF9004C00F343DF /* MyReviewTableViewCell.xib */,
 				BA1C34D81B009EC100ED435A /* MinaReviewsNavbarViewController.swift */,
 				BAD263191B13777200D9F386 /* TeacherViewController.swift */,
+				BA3B74941B1C7C8F006839BB /* ReviewListTableCell.swift */,
+				BA3B74961B1C9707006839BB /* SearchNavViewController.swift */,
 			);
 			path = Kurskollen;
 			sourceTree = "<group>";
@@ -260,7 +263,7 @@
 			};
 			buildConfigurationList = BA3DEAD61AC963CE006F60AA /* Build configuration list for PBXProject "Kurskollen" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = Swedish;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -360,6 +363,7 @@
 				BA67611E1ADEB2AD00A150B6 /* SearchResultsTableViewCell.swift in Sources */,
 				BA1C34D91B009EC100ED435A /* MinaReviewsNavbarViewController.swift in Sources */,
 				B9C30FDE1AF8E87D00280E7B /* Util.swift in Sources */,
+				BA3B74971B1C9707006839BB /* SearchNavViewController.swift in Sources */,
 				BADB81561AD7DE6200E77BDC /* SearchViewController.swift in Sources */,
 				BA3DEAE51AC963CF006F60AA /* SecondViewController.swift in Sources */,
 				BA3DEAE11AC963CE006F60AA /* AppDelegate.swift in Sources */,
@@ -367,11 +371,11 @@
 				BAB679271AE4EBB0004C50E5 /* SearchCourseDetailViewController.swift in Sources */,
 				BA85B8BD1AEA73C900F92471 /* SettingsViewController.swift in Sources */,
 				BA533A341AF9004C00F343DF /* MyReviewTableViewCell.swift in Sources */,
-				BA533A2F1AF8FF2000F343DF /* ReviewListTableCell.swift in Sources */,
 				BA533A261AF8E11D00F343DF /* MyReviewsTableViewController.swift in Sources */,
 				BA90E1351B147F0400DCB507 /* BridgingFile.m in Sources */,
 				B96211DF1AEA6B2B009C3E6F /* BookmarkListTableCell.swift in Sources */,
 				BA3DEB031AC98658006F60AA /* ThirdViewController.swift in Sources */,
+				BA3B74951B1C7C8F006839BB /* ReviewListTableCell.swift in Sources */,
 				BAD2631A1B13777200D9F386 /* TeacherViewController.swift in Sources */,
 				BA0C000C1AD57B2D00F59EFD /* constants.swift in Sources */,
 				BA3DEAE31AC963CE006F60AA /* FirstViewController.swift in Sources */,

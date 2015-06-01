@@ -48,8 +48,6 @@ class SearchViewController: UIViewController {
     }
     
 
-       @IBAction func addCourse(sender: AnyObject) {
-    }
     
     
     
@@ -88,18 +86,21 @@ class SearchViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject!) {
-        println("segue:" + segue!.identifier!)
+    
         if (segue!.identifier == "toSearchResults") {
             var svc = segue!.destinationViewController as SearchResultsViewController;
             svc.parameters = self.parameters
 //            println(self.parameters)
+
             
-            
-            
-            
+        }
+        else{
             
         }
     }
+    
+    
+    
     //hides keyboard if user presses anywhere else on screen
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
@@ -109,8 +110,8 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
+          
+       
         //add right button
 //        var b = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action:nil)
 //        self.navigationItem.leftBarButtonItem = b
@@ -124,7 +125,7 @@ class SearchViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+   
 
     /*
     // MARK: - Navigation

@@ -1,0 +1,174 @@
+
+/* Class = "IBUINavigationItem"; title = "Sök kurs"; ObjectID = "18R-aM-tXA"; */
+"18R-aM-tXA.title" = "Sök kurs";
+
+/* Class = "IBUIBarButtonItem"; title = "Ändra"; ObjectID = "1CP-QG-xVk"; */
+"1CP-QG-xVk.title" = "Ändra";
+
+/* Class = "IBUILabel"; text = "Kurskod"; ObjectID = "1l0-DH-olF"; */
+"1l0-DH-olF.text" = "Kurskod";
+
+/* Class = "IBUILabel"; text = "Lösenord"; ObjectID = "2PX-P4-zBs"; */
+"2PX-P4-zBs.text" = "Lösenord";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "2zj-Ag-G26"; */
+"2zj-Ag-G26.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Course"; ObjectID = "34J-9h-Vfm"; */
+"34J-9h-Vfm.text" = "Course";
+
+/* Class = "IBUINavigationItem"; title = "Skapa konto"; ObjectID = "4k1-ne-1Iu"; */
+"4k1-ne-1Iu.title" = "Skapa konto";
+
+/* Class = "IBUILabel"; text = "Kursnamn*"; ObjectID = "7gj-1S-hLb"; */
+"7gj-1S-hLb.text" = "Kursnamn*";
+
+/* Class = "IBUIButton"; normalTitle = "Spara kurs till favoriter"; ObjectID = "7jE-by-aHT"; */
+"7jE-by-aHT.normalTitle" = "Spara kurs till favoriter";
+
+/* Class = "IBUILabel"; text = "Lösenord"; ObjectID = "82I-KV-csc"; */
+"82I-KV-csc.text" = "Lösenord";
+
+/* Class = "IBUILabel"; text = "Kurskod"; ObjectID = "8fF-T0-T3x"; */
+"8fF-T0-T3x.text" = "Kurskod";
+
+/* Class = "IBUIButton"; normalTitle = "Skapa"; ObjectID = "8gg-F1-k9O"; */
+"8gg-F1-k9O.normalTitle" = "Skapa";
+
+/* Class = "IBUIViewController"; title = "Logga in"; ObjectID = "8rJ-Kc-sve"; */
+"8rJ-Kc-sve.title" = "Logga in";
+
+/* Class = "IBUITabBarItem"; title = "Inställingar"; ObjectID = "9SS-SY-HnR"; */
+"9SS-SY-HnR.title" = "Inställingar";
+
+/* Class = "IBUINavigationItem"; title = "Skapa konto"; ObjectID = "Asy-rX-nkA"; */
+"Asy-rX-nkA.title" = "Skapa konto";
+
+/* Class = "IBUIBarButtonItem"; title = "Klart"; ObjectID = "Blm-0i-1c2"; */
+"Blm-0i-1c2.title" = "Klart";
+
+/* Class = "IBUILabel"; text = "Ändra lösenord"; ObjectID = "CHb-17-3qg"; */
+"CHb-17-3qg.text" = "Ändra lösenord";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "Cb4-aK-h23"; */
+"Cb4-aK-h23.text" = "Label";
+
+/* Class = "IBUIButton"; normalTitle = "Mer info om läraren"; ObjectID = "Cbk-PR-mrW"; */
+"Cbk-PR-mrW.normalTitle" = "Mer info om läraren";
+
+/* Class = "IBUINavigationItem"; title = "Sparade kurser"; ObjectID = "DaL-kk-f3U"; */
+"DaL-kk-f3U.title" = "Sparade kurser";
+
+/* Class = "IBUILabel"; text = "Kurs"; ObjectID = "E20-Kw-eoO"; */
+"E20-Kw-eoO.text" = "Kurs";
+
+/* Class = "IBUINavigationItem"; title = "Skriv recension"; ObjectID = "Fkf-vQ-Vs5"; */
+"Fkf-vQ-Vs5.title" = "Skriv recension";
+
+/* Class = "IBUILabel"; text = "Bekräfta lösenord"; ObjectID = "MPD-P2-QI4"; */
+"MPD-P2-QI4.text" = "Bekräfta lösenord";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "McO-dJ-yNQ"; */
+"McO-dJ-yNQ.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "Ändra användarenamn"; ObjectID = "P5H-43-ly7"; */
+"P5H-43-ly7.text" = "Ändra användarenamn";
+
+/* Class = "IBUILabel"; text = "Skriv text"; ObjectID = "Pun-aM-G9G"; */
+"Pun-aM-G9G.text" = "Skriv text";
+
+/* Class = "IBUILabel"; text = "Hp*"; ObjectID = "QCG-d5-9Yq"; */
+"QCG-d5-9Yq.text" = "Hp*";
+
+/* Class = "IBUILabel"; text = "Recensioner"; ObjectID = "QFs-F3-EPy"; */
+"QFs-F3-EPy.text" = "Recensioner";
+
+/* Class = "IBUIButton"; normalTitle = "Skriv recension"; ObjectID = "Qsv-yr-NEU"; */
+"Qsv-yr-NEU.normalTitle" = "Skriv recension";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "Rhm-KZ-eO2"; */
+"Rhm-KZ-eO2.text" = "Detail";
+
+/* Class = "IBUIBarButtonItem"; title = "Sök"; ObjectID = "SQl-cv-1xf"; */
+"SQl-cv-1xf.title" = "Sök";
+
+/* Class = "IBUILabel"; text = "Skola*"; ObjectID = "UFU-dc-Mje"; */
+"UFU-dc-Mje.text" = "Skola*";
+
+/* Class = "IBUINavigationItem"; title = "Inställningar"; ObjectID = "UnH-Bz-arU"; */
+"UnH-Bz-arU.title" = "Inställningar";
+
+/* Class = "IBUILabel"; text = "Användarnamn"; ObjectID = "XiS-TP-LWt"; */
+"XiS-TP-LWt.text" = "Användarnamn";
+
+/* Class = "IBUILabel"; text = "Epost"; ObjectID = "YpF-MW-xJh"; */
+"YpF-MW-xJh.text" = "Epost";
+
+/* Class = "IBUIButton"; normalTitle = "Logga in"; ObjectID = "Ypk-KZ-nqg"; */
+"Ypk-KZ-nqg.normalTitle" = "Logga in";
+
+/* Class = "IBUILabel"; text = "Distans"; ObjectID = "aeO-2a-5zb"; */
+"aeO-2a-5zb.text" = "Distans";
+
+/* Class = "IBUILabel"; text = "Kurser"; ObjectID = "b7Q-xi-hUc"; */
+"b7Q-xi-hUc.text" = "Kurser";
+
+/* Class = "IBUILabel"; text = "Lärare"; ObjectID = "dGa-eG-JRt"; */
+"dGa-eG-JRt.text" = "Lärare";
+
+/* Class = "IBUIViewController"; title = "Sök kurs"; ObjectID = "diM-Bb-HnS"; */
+"diM-Bb-HnS.title" = "Sök kurs";
+
+/* Class = "IBUIBarButtonItem"; title = "Skapa"; ObjectID = "erS-Er-jLe"; */
+"erS-Er-jLe.title" = "Skapa";
+
+/* Class = "IBUILabel"; text = "Distans"; ObjectID = "g3u-2Y-Tdm"; */
+"g3u-2Y-Tdm.text" = "Distans";
+
+/* Class = "IBUIButton"; normalTitle = "Välj lärare"; ObjectID = "gZq-3t-AWi"; */
+"gZq-3t-AWi.normalTitle" = "Välj lärare";
+
+/* Class = "IBUILabel"; text = "Betyg (1-5)"; ObjectID = "h9S-7G-MAI"; */
+"h9S-7G-MAI.text" = "Betyg (1-5)";
+
+/* Class = "IBUILabel"; text = "Beskrivning"; ObjectID = "h9y-Ia-DsA"; */
+"h9y-Ia-DsA.text" = "Beskrivning";
+
+/* Class = "IBUILabel"; text = "Skola"; ObjectID = "iiY-C7-Med"; */
+"iiY-C7-Med.text" = "Skola";
+
+/* Class = "IBUILabel"; text = "Kurskod"; ObjectID = "joN-zc-HJR"; */
+"joN-zc-HJR.text" = "Kurskod";
+
+/* Class = "IBUINavigationItem"; title = "Mina reviews"; ObjectID = "lHO-55-diY"; */
+"lHO-55-diY.title" = "Mina reviews";
+
+/* Class = "IBUILabel"; text = "Skola"; ObjectID = "npZ-qn-CJM"; */
+"npZ-qn-CJM.text" = "Skola";
+
+/* Class = "IBUILabel"; text = "HP"; ObjectID = "oD9-md-3o0"; */
+"oD9-md-3o0.text" = "HP";
+
+/* Class = "IBUINavigationItem"; title = "Lägg till kurs"; ObjectID = "oYo-kI-sVH"; */
+"oYo-kI-sVH.title" = "Lägg till kurs";
+
+/* Class = "IBUILabel"; text = "Distans"; ObjectID = "oc5-P6-8Ek"; */
+"oc5-P6-8Ek.text" = "Distans";
+
+/* Class = "IBUILabel"; text = "Lärare"; ObjectID = "pAf-pf-gz4"; */
+"pAf-pf-gz4.text" = "Lärare";
+
+/* Class = "IBUITabBarItem"; title = "Mina reviews"; ObjectID = "pGb-BE-TjY"; */
+"pGb-BE-TjY.title" = "Mina reviews";
+
+/* Class = "IBUILabel"; text = "Rating"; ObjectID = "q5l-CI-yqp"; */
+"q5l-CI-yqp.text" = "Rating";
+
+/* Class = "IBUIButton"; normalTitle = "Har du redan ett konto?"; ObjectID = "rbI-CQ-s1V"; */
+"rbI-CQ-s1V.normalTitle" = "Har du redan ett konto?";
+
+/* Class = "IBUILabel"; text = "Bekräfta lösenord"; ObjectID = "y0u-kp-PCl"; */
+"y0u-kp-PCl.text" = "Bekräfta lösenord";
+
+/* Class = "IBUILabel"; text = "Epost"; ObjectID = "yTx-X4-657"; */
+"yTx-X4-657.text" = "Epost";

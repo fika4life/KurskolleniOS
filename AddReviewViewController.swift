@@ -67,7 +67,10 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
                         Util.showPopup("Communication error", popupText: "Could not communicate with server1", viewController: self)
                     }
                     else{
-                        Util.showPopup("Skapat", popupText: "Recensionen har skapats", viewController: self)
+                        var alert = UIAlertController(title: "Skapat", message: "Recension har skapats", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in self.performSegueWithIdentifier("backToSearch", sender: self) }))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                     
                     }
                     
                     println(parameters)

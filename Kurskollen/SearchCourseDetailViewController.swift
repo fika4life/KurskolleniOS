@@ -32,11 +32,16 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     
     var courseData:JSON?
 
-    var reviewsToDisplay : JSON = []
+    var reviewsToDisplay : [JSON] = []
     
     var teacherName : String?
     var teacherId : Int?
     
+    @IBAction func getInfoTeacher(sender: AnyObject) {
+        if(self.teacherId != nil){
+            self.performSegueWithIdentifier("toTeacher", sender: self)
+        }
+    }
     
     
     @IBAction func addCoursetoFavs(sender: AnyObject) {
@@ -45,23 +50,23 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
     
         
         let parameters = ["email" : email, "loginsession" : loginSession, "courseid" : String(courseId)]
-        println(parameters)
-        Alamofire.request(.GET, globalConstants.URL+"add-bookmark", parameters: parameters)
+       
+        Alamofire.request(.POST, globalConstants.URL+"add-bookmark", parameters: parameters)
             .validate()
             .response{(_, _, _, error) in
-                if(error != nil){
+                if(error == nil){
                     //println(self.suggestions)
                      Util.showPopup("Uppdaterat", popupText: "Kursen har lagts till som favorit", viewController: self)
                 }
                 else{
-                  
-                     Util.showPopup("Error", popupText: "Kunde inte kommunicera med servern", viewController: self)
+                    
+                     Util.showPopup("Error", popupText: "Error: Kursen finns redan tillagd", viewController: self)
                 }
         }
 
     }
     @IBAction func chooseTeacher(sender: AnyObject) {
-       
+
         let reviews = courseData!["reviews"]
         var teachers = Dictionary< String , Int>()
         for (key: String, review: JSON) in reviews {
@@ -70,13 +75,27 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
         }
        var teacherNames = Array(teachers.keys)
       
-        ActionSheetStringPicker.showPickerWithTitle("Välj teacher", rows: teacherNames, initialSelection: 1,
+        ActionSheetStringPicker.showPickerWithTitle("Välj lärare", rows: teacherNames, initialSelection: 1,
             doneBlock: {
-                picker, value, index in
-                teacherNames = String(teacherNames[value])
+                picker, index, value in
+               
                 
-                self.teacherId = Util.allKeysForValue(teachers, val:teacherNames[value])[0];
-                self.teacherField.setTitle(String(teachers[value]?),  forState: UIControlState.Normal)
+                self.teacherId = teachers[teacherNames[index]];
+                self.teacherField.setTitle(String(teacherNames[index]),  forState: UIControlState.Normal)
+                self.teacherName = String(teacherNames[index])
+
+              
+                let reviews = self.courseData!["reviews"]
+
+
+                self.reviewsToDisplay = []
+                for (index: String, review: JSON) in reviews {
+                    
+                    if(review["teacher"].stringValue == self.teacherName){
+                        self.reviewsToDisplay.append(review)
+                    }
+                }
+                self.reviewTable.reloadData()
                 return
             },cancelBlock: { ActionStringCancelBlock in return }, origin:sender )
         
@@ -155,11 +174,17 @@ class SearchCourseDetailViewController: UIViewController, UITableViewDataSource 
             self.coursecode.text =  nil
         }
 
-        self.reviewsToDisplay = self.courseData!["reviews"]
+        for (index: String, review: JSON) in self.courseData!["reviews"] {
+                self.reviewsToDisplay.append(review)
+        }
         self.reviewTable.reloadData()
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool){
+       
     }
     
     override func didReceiveMemoryWarning() {

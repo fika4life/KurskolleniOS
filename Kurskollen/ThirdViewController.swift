@@ -18,6 +18,7 @@ class ThirdViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -44,15 +45,15 @@ class ThirdViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if(editingStyle == UITableViewCellEditingStyle.Delete){
-            
+        if(editingStyle == .Delete){
+           
             let userDefaults = NSUserDefaults.standardUserDefaults()
             let email = userDefaults.stringForKey(globalConstants.emailMemoryKey)
             let loginSession = userDefaults.stringForKey(globalConstants.loginSessionMemoryKey)
             let courseid = savedCourses![indexPath.row]["courseId"].intValue
             
             let parameters : [String: String] = ["email" : email!, "loginsession" : loginSession!, "courseid" : String (courseid)]
-            println(parameters)
+            
             
             
             Alamofire.request(.POST, globalConstants.URL + "remove-bookmark", parameters: parameters)
@@ -105,10 +106,17 @@ class ThirdViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    
+        
         var nib = UINib(nibName: "BookmarkListTableCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "bookmarkListTableCell")
         
         self.reloadCourses()
+    }
+    
+    override func viewDidAppear(animated: Bool){
+        self.reloadCourses()
+      
     }
 
     override func didReceiveMemoryWarning() {

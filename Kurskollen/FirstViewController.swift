@@ -68,7 +68,7 @@ class FirstViewController: UIViewController {
                         self.view.endEditing(true)
                         
                         //create alert
-                        let alert: UIAlertController = UIAlertController(title: "Alert", message: "Ett bekräftelsemail har skickats till den angivna epostadressen", preferredStyle: .Alert)
+                        let alert: UIAlertController = UIAlertController(title: "Avisering", message: "Ditt konto har skapats", preferredStyle: .Alert)
                         
                         let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
                             self.performSegueWithIdentifier("segueID", sender: self)
