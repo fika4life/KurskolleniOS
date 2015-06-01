@@ -88,9 +88,14 @@ class AddReviewViewController: UIViewController, UITableViewDataSource, UITableV
                 .response{(_, response, _, error) in
                     self.view.endEditing(true)
                     if(error != nil){
-                        Util.showPopup("Error", popupText: "Kunde inte kommunicera med servern", viewController: self)
+                        if(response?.statusCode == 409){
+                            Util.showPopup("Error", popupText: "Du kan bara skriva en review per kurs", viewController: self)
+                        }
+                        else{
+                            Util.showPopup("Error", popupText: "Kunde inte kommunicera med servern", viewController: self)
+                        }
 //
-                        println(response?.statusCode)
+                        println()
                     }
                     else{
                         Util.showPopup("Uppdaterat", popupText: "Recensionen har uppdaterats", viewController: self)
